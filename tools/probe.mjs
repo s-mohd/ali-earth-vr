@@ -1,0 +1,11 @@
+import { chromium } from 'playwright';
+const file = process.argv[2];
+const browser = await chromium.launch({ args: ['--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader', '--ignore-gpu-blocklist'] });
+const page = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+page.on('console', (m) => console.log('console.' + m.type() + ': ' + m.text().slice(0, 500)));
+page.on('pageerror', (e) => console.log('PAGEERROR: ' + String(e.stack || e.message).slice(0, 1500)));
+await page.goto('file://' + file + '?test&speed=8');
+await page.waitForTimeout(Number(process.argv[3] || 8000));
+console.log('ready=', await page.evaluate(() => !!window.__ali?.ready));
+await page.screenshot({ path: process.argv[4] || new URL('../shots/probe.png', import.meta.url).pathname });
+await browser.close();

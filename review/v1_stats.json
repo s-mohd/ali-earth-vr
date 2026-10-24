@@ -1,0 +1,289 @@
+{
+  "loadMs": 10657,
+  "locations": {
+    "welcome": {
+      "drawCalls": 534,
+      "trianglesRendered": 464132,
+      "programs": 31,
+      "geometriesGPU": 366,
+      "texturesGPU": 22,
+      "meshesTotal": 668,
+      "meshesVisible": 506,
+      "visibleCastShadow": 391,
+      "instancedMeshes": 19,
+      "instances": 1328,
+      "visibleTriangles": 348866,
+      "uniqueMaterialsVisible": 124,
+      "visibleMapTextures": 19,
+      "visibleMapMegapixels": 8.17,
+      "pixelRatio": 1,
+      "shadowMap": true,
+      "toneMapping": 4
+    },
+    "welcome:vr": {
+      "stand": [
+        0.6,
+        -2.8,
+        67.48
+      ],
+      "items": []
+    },
+    "station1_before": {
+      "drawCalls": 254,
+      "trianglesRendered": 354570,
+      "programs": 31,
+      "geometriesGPU": 436,
+      "texturesGPU": 24,
+      "meshesTotal": 668,
+      "meshesVisible": 510,
+      "visibleCastShadow": 392,
+      "instancedMeshes": 19,
+      "instances": 1328,
+      "visibleTriangles": 350046,
+      "uniqueMaterialsVisible": 128,
+      "visibleMapTextures": 21,
+      "visibleMapMegapixels": 8.68,
+      "pixelRatio": 0.85,
+      "shadowMap": true,
+      "toneMapping": 4
+    },
+    "station1_after": {
+      "drawCalls": 259,
+      "trianglesRendered": 356736,
+      "programs": 31,
+      "geometriesGPU": 448,
+      "texturesGPU": 27,
+      "meshesTotal": 668,
+      "meshesVisible": 513,
+      "visibleCastShadow": 393,
+      "instancedMeshes": 19,
+      "instances": 1328,
+      "visibleTriangles": 351224,
+      "uniqueMaterialsVisible": 131,
+      "visibleMapTextures": 22,
+      "visibleMapMegapixels": 8.51,
+      "pixelRatio": 0.85,
+      "shadowMap": true,
+      "toneMapping": 4
+    },
+    "station1:vr": {
+      "stand": [
+        -24.07,
+        0,
+        24.92
+      ],
+      "items": [
+        {
+          "id": "st-earthquake-replay",
+          "dist": 4.67,
+          "heightAboveFloor": 0.8
+        },
+        {
+          "id": "st-earthquake-next",
+          "dist": 5.17,
+          "heightAboveFloor": 0.8
+        }
+      ]
+    },
+    "station2_after": {
+      "drawCalls": 182,
+      "trianglesRendered": 336602,
+      "programs": 31,
+      "geometriesGPU": 463,
+      "texturesGPU": 30,
+      "meshesTotal": 668,
+      "meshesVisible": 516,
+      "visibleCastShadow": 393,
+      "instancedMeshes": 19,
+      "instances": 1328,
+      "visibleTriangles": 351416,
+      "uniqueMaterialsVisible": 134,
+      "visibleMapTextures": 22,
+      "visibleMapMegapixels": 8.55,
+      "pixelRatio": 0.85,
+      "shadowMap": true,
+      "toneMapping": 4
+    },
+    "station3_after": {
+      "drawCalls": 191,
+      "trianglesRendered": 365876,
+      "programs": 31,
+      "geometriesGPU": 487,
+      "texturesGPU": 36,
+      "meshesTotal": 668,
+      "meshesVisible": 528,
+      "visibleCastShadow": 403,
+      "instancedMeshes": 19,
+      "instances": 1328,
+      "visibleTriangles": 356546,
+      "uniqueMaterialsVisible": 138,
+      "visibleMapTextures": 24,
+      "visibleMapMegapixels": 9.68,
+      "pixelRatio": 0.85,
+      "shadowMap": true,
+      "toneMapping": 4
+    },
+    "station4_after": {
+      "drawCalls": 198,
+      "trianglesRendered": 383384,
+      "programs": 31,
+      "geometriesGPU": 509,
+      "texturesGPU": 42,
+      "meshesTotal": 668,
+      "meshesVisible": 534,
+      "visibleCastShadow": 407,
+      "instancedMeshes": 19,
+      "instances": 1328,
+      "visibleTriangles": 357046,
+      "uniqueMaterialsVisible": 141,
+      "visibleMapTextures": 24,
+      "visibleMapMegapixels": 9.82,
+      "pixelRatio": 0.85,
+      "shadowMap": true,
+      "toneMapping": 4
+    },
+    "practice_erosion": {
+      "drawCalls": 198,
+      "trianglesRendered": 383384,
+      "programs": 31,
+      "geometriesGPU": 509,
+      "texturesGPU": 42,
+      "meshesTotal": 668,
+      "meshesVisible": 534,
+      "visibleCastShadow": 407,
+      "instancedMeshes": 19,
+      "instances": 1328,
+      "visibleTriangles": 357046,
+      "uniqueMaterialsVisible": 141,
+      "visibleMapTextures": 24,
+      "visibleMapMegapixels": 9.82,
+      "pixelRatio": 0.85,
+      "shadowMap": true,
+      "toneMapping": 4
+    },
+    "station5_after": {
+      "drawCalls": 355,
+      "trianglesRendered": 387690,
+      "programs": 31,
+      "geometriesGPU": 548,
+      "texturesGPU": 48,
+      "meshesTotal": 668,
+      "meshesVisible": 549,
+      "visibleCastShadow": 419,
+      "instancedMeshes": 19,
+      "instances": 1328,
+      "visibleTriangles": 359054,
+      "uniqueMaterialsVisible": 145,
+      "visibleMapTextures": 24,
+      "visibleMapMegapixels": 9.08,
+      "pixelRatio": 0.85,
+      "shadowMap": true,
+      "toneMapping": 4
+    },
+    "challenge_q1": {
+      "drawCalls": 334,
+      "trianglesRendered": 375576,
+      "programs": 31,
+      "geometriesGPU": 562,
+      "texturesGPU": 53,
+      "meshesTotal": 668,
+      "meshesVisible": 537,
+      "visibleCastShadow": 412,
+      "instancedMeshes": 19,
+      "instances": 1328,
+      "visibleTriangles": 352070,
+      "uniqueMaterialsVisible": 142,
+      "visibleMapTextures": 24,
+      "visibleMapMegapixels": 11.07,
+      "pixelRatio": 0.85,
+      "shadowMap": true,
+      "toneMapping": 4
+    },
+    "challenge:vr": {
+      "stand": [
+        36.57,
+        0,
+        7.77
+      ],
+      "items": [
+        {
+          "id": "card-ch-0",
+          "dist": 10.8,
+          "heightAboveFloor": 2.16
+        },
+        {
+          "id": "card-ch-1",
+          "dist": 10.06,
+          "heightAboveFloor": 2.17
+        },
+        {
+          "id": "card-ch-2",
+          "dist": 10.81,
+          "heightAboveFloor": 2.23
+        }
+      ]
+    },
+    "results": {
+      "drawCalls": 258,
+      "trianglesRendered": 367060,
+      "programs": 31,
+      "geometriesGPU": 584,
+      "texturesGPU": 59,
+      "meshesTotal": 668,
+      "meshesVisible": 551,
+      "visibleCastShadow": 426,
+      "instancedMeshes": 20,
+      "instances": 1488,
+      "visibleTriangles": 355952,
+      "uniqueMaterialsVisible": 151,
+      "visibleMapTextures": 24,
+      "visibleMapMegapixels": 9.34,
+      "pixelRatio": 0.85,
+      "shadowMap": true,
+      "toneMapping": 4
+    },
+    "results:vr": {
+      "stand": [
+        16.74,
+        -0.01,
+        28.99
+      ],
+      "items": [
+        {
+          "id": "res-download",
+          "dist": 10.88,
+          "heightAboveFloor": 1.16
+        },
+        {
+          "id": "res-retry",
+          "dist": 6.41,
+          "heightAboveFloor": 1.01
+        },
+        {
+          "id": "res-review",
+          "dist": 5.14,
+          "heightAboveFloor": 1.01
+        },
+        {
+          "id": "res-home",
+          "dist": 6.22,
+          "heightAboveFloor": 1.01
+        }
+      ]
+    }
+  },
+  "vrSim": {
+    "hudDisplayBefore": "block",
+    "hudDisplayInVR": "none",
+    "active3DIdsAtResults": [
+      "res-download",
+      "res-retry",
+      "res-review",
+      "res-home"
+    ]
+  },
+  "speechVoices": [],
+  "logs": [
+    "warning: THREE.WebGLRenderer: KHR_parallel_shader_compile extension not supported."
+  ]
+}

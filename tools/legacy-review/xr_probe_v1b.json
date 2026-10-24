@@ -1,0 +1,409 @@
+{
+ "playing": {
+  "loc": "{\"type\":\"station\",\"index\":2}",
+  "phase": "playing",
+  "player": [
+   -22.26,
+   0,
+   -26.54
+  ],
+  "targets": [],
+  "text": [
+   {
+    "name": "btn:st-weathering-watch",
+    "canvas": "735x176",
+    "w_m": 2.75,
+    "h_m": 0.66,
+    "dist": 4.32,
+    "ppm": 268,
+    "texelsPerDeg": 20.2
+   },
+   {
+    "name": "",
+    "canvas": "416x144",
+    "w_m": 2.54,
+    "h_m": 0.84,
+    "dist": 6.67,
+    "ppm": 164,
+    "texelsPerDeg": 19.1
+   },
+   {
+    "name": "",
+    "canvas": "416x144",
+    "w_m": 2.54,
+    "h_m": 0.84,
+    "dist": 6.68,
+    "ppm": 164,
+    "texelsPerDeg": 19.1
+   },
+   {
+    "name": "",
+    "canvas": "1320x780",
+    "w_m": 6.6,
+    "h_m": 3.9,
+    "dist": 12.46,
+    "ppm": 200,
+    "texelsPerDeg": 43.5
+   },
+   {
+    "name": "",
+    "canvas": "881x190",
+    "w_m": 4.4,
+    "h_m": 0.95,
+    "dist": 12.94,
+    "ppm": 200,
+    "texelsPerDeg": 45.2
+   },
+   {
+    "name": "",
+    "canvas": "416x144",
+    "w_m": 2.54,
+    "h_m": 0.84,
+    "dist": 21.6,
+    "ppm": 164,
+    "texelsPerDeg": 61.8
+   }
+  ],
+  "bubble": null,
+  "info": {
+   "calls": 303,
+   "tris": 574006,
+   "geos": 447,
+   "texs": 26,
+   "programs": 31
+  }
+ },
+ "practiceAfterMs": 126896,
+ "practice": {
+  "loc": "{\"type\":\"station\",\"index\":2}",
+  "phase": "practice",
+  "player": [
+   -22.26,
+   0,
+   -26.54
+  ],
+  "targets": [
+   {
+    "id": "st-weathering-replay",
+    "dist": 4.44,
+    "centerY": 0.8,
+    "headY": 1.2,
+    "elevDeg": -5.2,
+    "hDeg": 8.1,
+    "wDeg": 30.4,
+    "h_m": 0.63,
+    "w_m": 2.41
+   },
+   {
+    "id": "card-pr-weathering-0",
+    "dist": 13.12,
+    "centerY": 2.91,
+    "headY": 1.2,
+    "elevDeg": 7.5,
+    "hDeg": 14.2,
+    "wDeg": 14.5,
+    "h_m": 3.26,
+    "w_m": 3.34
+   },
+   {
+    "id": "card-pr-weathering-1",
+    "dist": 13.69,
+    "centerY": 2.79,
+    "headY": 1.2,
+    "elevDeg": 6.7,
+    "hDeg": 13.6,
+    "wDeg": 13.9,
+    "h_m": 3.26,
+    "w_m": 3.34
+   }
+  ],
+  "text": [
+   {
+    "name": "btn:st-weathering-replay",
+    "canvas": "734x156",
+    "w_m": 2.72,
+    "h_m": 0.58,
+    "dist": 4.32,
+    "ppm": 270,
+    "texelsPerDeg": 20.4
+   },
+   {
+    "name": "",
+    "canvas": "416x144",
+    "w_m": 2.54,
+    "h_m": 0.84,
+    "dist": 6.67,
+    "ppm": 164,
+    "texelsPerDeg": 19.1
+   },
+   {
+    "name": "",
+    "canvas": "416x144",
+    "w_m": 2.54,
+    "h_m": 0.84,
+    "dist": 6.68,
+    "ppm": 164,
+    "texelsPerDeg": 19.1
+   },
+   {
+    "name": "speechBubble",
+    "canvas": "965x235",
+    "w_m": 5.08,
+    "h_m": 1.24,
+    "dist": 6.72,
+    "ppm": 190,
+    "texelsPerDeg": 22.3
+   },
+   {
+    "name": "",
+    "canvas": "1320x780",
+    "w_m": 6.6,
+    "h_m": 3.9,
+    "dist": 12.46,
+    "ppm": 200,
+    "texelsPerDeg": 43.5
+   },
+   {
+    "name": "",
+    "canvas": "599x570",
+    "w_m": 3.15,
+    "h_m": 3,
+    "dist": 13,
+    "ppm": 190,
+    "texelsPerDeg": 43.1
+   }
+  ],
+  "bubble": {
+   "bubblePos": [
+    -24.88,
+    2.41,
+    -31.13
+   ],
+   "headPos": [
+    -22.25,
+    1.2,
+    -26.53
+   ],
+   "facingDot": 0.85,
+   "distToHead": 5.44
+  },
+  "info": {
+   "calls": 333,
+   "tris": 590702,
+   "geos": 465,
+   "texs": 30,
+   "programs": 31
+  }
+ },
+ "challenge": {
+  "loc": "{\"type\":\"challenge\",\"question\":0}",
+  "phase": null,
+  "player": [
+   36.57,
+   0,
+   7.77
+  ],
+  "targets": [
+   {
+    "id": "card-ch-0",
+    "dist": 10.83,
+    "centerY": 2.22,
+    "headY": 1.2,
+    "elevDeg": 5.4,
+    "hDeg": 22.3,
+    "wDeg": 19.5,
+    "h_m": 4.26,
+    "w_m": 3.73
+   },
+   {
+    "id": "card-ch-1",
+    "dist": 9.76,
+    "centerY": 2.4,
+    "headY": 1.2,
+    "elevDeg": 7.1,
+    "hDeg": 25.8,
+    "wDeg": 22.7,
+    "h_m": 4.47,
+    "w_m": 3.91
+   },
+   {
+    "id": "card-ch-2",
+    "dist": 10.82,
+    "centerY": 2.17,
+    "headY": 1.2,
+    "elevDeg": 5.1,
+    "hDeg": 22.3,
+    "wDeg": 19.5,
+    "h_m": 4.26,
+    "w_m": 3.73
+   }
+  ],
+  "text": [
+   {
+    "name": "",
+    "canvas": "416x144",
+    "w_m": 2.54,
+    "h_m": 0.84,
+    "dist": 6.81,
+    "ppm": 164,
+    "texelsPerDeg": 19.5
+   },
+   {
+    "name": "",
+    "canvas": "416x144",
+    "w_m": 2.54,
+    "h_m": 0.84,
+    "dist": 6.88,
+    "ppm": 164,
+    "texelsPerDeg": 19.7
+   },
+   {
+    "name": "",
+    "canvas": "665x760",
+    "w_m": 3.67,
+    "h_m": 4.2,
+    "dist": 9.63,
+    "ppm": 181,
+    "texelsPerDeg": 30.4
+   },
+   {
+    "name": "",
+    "canvas": "665x760",
+    "w_m": 3.5,
+    "h_m": 4,
+    "dist": 10.71,
+    "ppm": 190,
+    "texelsPerDeg": 35.5
+   },
+   {
+    "name": "",
+    "canvas": "665x760",
+    "w_m": 3.5,
+    "h_m": 4,
+    "dist": 10.71,
+    "ppm": 190,
+    "texelsPerDeg": 35.5
+   },
+   {
+    "name": "speechBubble",
+    "canvas": "523x235",
+    "w_m": 2.75,
+    "h_m": 1.24,
+    "dist": 10.85,
+    "ppm": 190,
+    "texelsPerDeg": 36
+   }
+  ],
+  "bubble": {
+   "bubblePos": [
+    42.49,
+    2.72,
+    16.6
+   ],
+   "headPos": [
+    36.55,
+    1.2,
+    7.77
+   ],
+   "facingDot": -0.82,
+   "distToHead": 10.75
+  },
+  "info": {
+   "calls": 530,
+   "tris": 611732,
+   "geos": 480,
+   "texs": 35,
+   "programs": 31
+  }
+ },
+ "results": {
+  "loc": "{\"type\":\"results\"}",
+  "phase": null,
+  "player": [
+   16.74,
+   0.29,
+   28.99
+  ],
+  "targets": [
+   {
+    "id": "res-retry",
+    "dist": 6.44,
+    "centerY": 1,
+    "headY": 1.49,
+    "elevDeg": -4.4,
+    "hDeg": 0,
+    "wDeg": 0,
+    "h_m": 0,
+    "w_m": 0
+   }
+  ],
+  "text": [
+   {
+    "name": "btn:res-review",
+    "canvas": "931x190",
+    "w_m": 4.66,
+    "h_m": 0.95,
+    "dist": 5.17,
+    "ppm": 200,
+    "texelsPerDeg": 18
+   },
+   {
+    "name": "btn:res-home",
+    "canvas": "970x190",
+    "w_m": 4.85,
+    "h_m": 0.95,
+    "dist": 6.25,
+    "ppm": 200,
+    "texelsPerDeg": 21.8
+   },
+   {
+    "name": "btn:res-retry",
+    "canvas": "795x190",
+    "w_m": 3.97,
+    "h_m": 0.95,
+    "dist": 6.44,
+    "ppm": 200,
+    "texelsPerDeg": 22.5
+   },
+   {
+    "name": "speechBubble",
+    "canvas": "716x409",
+    "w_m": 3.77,
+    "h_m": 2.15,
+    "dist": 9.92,
+    "ppm": 190,
+    "texelsPerDeg": 32.9
+   },
+   {
+    "name": "",
+    "canvas": "1320x920",
+    "w_m": 6.6,
+    "h_m": 4.6,
+    "dist": 12.7,
+    "ppm": 200,
+    "texelsPerDeg": 44.3
+   }
+  ],
+  "bubble": {
+   "bubblePos": [
+    17.5,
+    2.87,
+    38.38
+   ],
+   "headPos": [
+    16.73,
+    1.49,
+    28.98
+   ],
+   "facingDot": -0.99,
+   "distToHead": 9.53
+  },
+  "info": {
+   "calls": 434,
+   "tris": 605204,
+   "geos": 496,
+   "texs": 39,
+   "programs": 31
+  }
+ }
+}

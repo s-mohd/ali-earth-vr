@@ -1,0 +1,2362 @@
+{
+ "eye": 1.2,
+ "xr": {
+  "0": {
+   "place": "hub",
+   "rig": {
+    "pos": [
+     0,
+     0,
+     0
+    ],
+    "yaw": 0
+   },
+   "stats": {
+    "meshes": 622,
+    "visMeshes": 392,
+    "drawCallsPerEye": 392,
+    "drawCallsStereo": 784,
+    "transparentVisible": 51,
+    "texturedVisible": 49,
+    "unlitVisible": 57,
+    "trisPerEye": 590322,
+    "textures": 40,
+    "texMB": 19.8,
+    "maxTexDim": 1080
+   },
+   "targets": [
+    {
+     "label": "١ الزلزال",
+     "dist": 4.1,
+     "centerY": 1.72,
+     "elevDeg": 7.3,
+     "azDeg": null,
+     "hDeg": 3.1,
+     "wDeg": 10.9,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٢ البركان",
+     "dist": 4.09,
+     "centerY": 1.72,
+     "elevDeg": 7.3,
+     "azDeg": null,
+     "hDeg": 3.1,
+     "wDeg": 10.9,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٣ التجوية",
+     "dist": 4.26,
+     "centerY": 1.72,
+     "elevDeg": 7,
+     "azDeg": null,
+     "hDeg": 3,
+     "wDeg": 10.5,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٤ التعرية",
+     "dist": 4.05,
+     "centerY": 1.42,
+     "elevDeg": 3.1,
+     "azDeg": null,
+     "hDeg": 3.3,
+     "wDeg": 11.8,
+     "w_m": 0.83,
+     "h_m": 0.24
+    },
+    {
+     "label": "٥ تغييرات الإنسان",
+     "dist": 4.05,
+     "centerY": 1.42,
+     "elevDeg": 3.1,
+     "azDeg": null,
+     "hDeg": 3.3,
+     "wDeg": 11.8,
+     "w_m": 0.83,
+     "h_m": 0.24
+    },
+    {
+     "label": "قاعة التحدّي",
+     "dist": 4.24,
+     "centerY": 1.42,
+     "elevDeg": 3,
+     "azDeg": null,
+     "hDeg": 3,
+     "wDeg": 10.5,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "ابدأ الرحلة",
+     "dist": 1.4,
+     "centerY": 0.74,
+     "elevDeg": -19.2,
+     "azDeg": null,
+     "hDeg": 9.2,
+     "wDeg": 31.8,
+     "w_m": 0.8,
+     "h_m": 0.22
+    },
+    {
+     "label": "السؤال التالي",
+     "dist": 16.33,
+     "centerY": 0.74,
+     "elevDeg": -1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.5,
+     "w_m": 0.72,
+     "h_m": 0.21
+    },
+    {
+     "label": "ابدأ التحدّي",
+     "dist": 16.33,
+     "centerY": 0.74,
+     "elevDeg": -1.6,
+     "azDeg": null,
+     "hDeg": 0.8,
+     "wDeg": 2.8,
+     "w_m": 0.8,
+     "h_m": 0.22
+    },
+    {
+     "label": "أعِد التحدّي",
+     "dist": 16.33,
+     "centerY": 0.74,
+     "elevDeg": -1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.3,
+     "w_m": 0.66,
+     "h_m": 0.2
+    },
+    {
+     "label": "راجِع المحطات",
+     "dist": 16.33,
+     "centerY": 0.74,
+     "elevDeg": -1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.3,
+     "w_m": 0.66,
+     "h_m": 0.2
+    }
+   ],
+   "text": [
+    {
+     "canvas": "281x79",
+     "w_m": 0.8,
+     "dist": 1.37,
+     "centerY": 0.77,
+     "ppm": 353,
+     "texelsPerDeg": 8.4
+    },
+    {
+     "canvas": "773x325",
+     "w_m": 1.38,
+     "dist": 3.15,
+     "centerY": 1.68,
+     "ppm": 560,
+     "texelsPerDeg": 30.8
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 0.68,
+     "dist": 3.33,
+     "centerY": 0.01,
+     "ppm": 188,
+     "texelsPerDeg": 10.9
+    },
+    {
+     "canvas": "160x100",
+     "w_m": 0.09,
+     "dist": 3.34,
+     "centerY": 0.84,
+     "ppm": 1778,
+     "texelsPerDeg": 103.6
+    },
+    {
+     "canvas": "281x79",
+     "w_m": 0.83,
+     "dist": 4.01,
+     "centerY": 1.42,
+     "ppm": 337,
+     "texelsPerDeg": 23.6
+    },
+    {
+     "canvas": "281x79",
+     "w_m": 0.83,
+     "dist": 4.02,
+     "centerY": 1.42,
+     "ppm": 337,
+     "texelsPerDeg": 23.6
+    },
+    {
+     "canvas": "281x79",
+     "w_m": 0.78,
+     "dist": 4.06,
+     "centerY": 1.72,
+     "ppm": 360,
+     "texelsPerDeg": 25.5
+    },
+    {
+     "canvas": "281x79",
+     "w_m": 0.78,
+     "dist": 4.07,
+     "centerY": 1.72,
+     "ppm": 360,
+     "texelsPerDeg": 25.6
+    },
+    {
+     "canvas": "1080x640",
+     "w_m": 2.7,
+     "dist": 4.15,
+     "centerY": 1.9,
+     "ppm": 400,
+     "texelsPerDeg": 29
+    },
+    {
+     "canvas": "281x79",
+     "w_m": 0.78,
+     "dist": 4.21,
+     "centerY": 1.42,
+     "ppm": 360,
+     "texelsPerDeg": 26.4
+    },
+    {
+     "canvas": "281x79",
+     "w_m": 0.78,
+     "dist": 4.23,
+     "centerY": 1.72,
+     "ppm": 360,
+     "texelsPerDeg": 26.6
+    }
+   ]
+  },
+  "1": {
+   "place": 0,
+   "rig": {
+    "pos": [
+     0,
+     0,
+     -15
+    ],
+    "yaw": 0
+   },
+   "stats": {
+    "meshes": 622,
+    "visMeshes": 400,
+    "drawCallsPerEye": 400,
+    "drawCallsStereo": 800,
+    "transparentVisible": 56,
+    "texturedVisible": 54,
+    "unlitVisible": 60,
+    "trisPerEye": 594488,
+    "textures": 40,
+    "texMB": 19.8,
+    "maxTexDim": 1080
+   },
+   "targets": [
+    {
+     "label": "١ الزلزال",
+     "dist": 10.98,
+     "centerY": 1.72,
+     "elevDeg": 2.7,
+     "azDeg": null,
+     "hDeg": 1.1,
+     "wDeg": 4.1,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٢ البركان",
+     "dist": 10.98,
+     "centerY": 1.72,
+     "elevDeg": 2.7,
+     "azDeg": null,
+     "hDeg": 1.1,
+     "wDeg": 4.1,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٣ التجوية",
+     "dist": 11.04,
+     "centerY": 1.72,
+     "elevDeg": 2.7,
+     "azDeg": null,
+     "hDeg": 1.1,
+     "wDeg": 4,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٤ التعرية",
+     "dist": 10.97,
+     "centerY": 1.42,
+     "elevDeg": 1.1,
+     "azDeg": null,
+     "hDeg": 1.1,
+     "wDeg": 4.1,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٥ تغييرات الإنسان",
+     "dist": 10.97,
+     "centerY": 1.42,
+     "elevDeg": 1.1,
+     "azDeg": null,
+     "hDeg": 1.1,
+     "wDeg": 4.1,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "قاعة التحدّي",
+     "dist": 11.03,
+     "centerY": 1.42,
+     "elevDeg": 1.1,
+     "azDeg": null,
+     "hDeg": 1.1,
+     "wDeg": 4,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "ابدأ الرحلة",
+     "dist": 13.69,
+     "centerY": 0.74,
+     "elevDeg": -1.9,
+     "azDeg": null,
+     "hDeg": 1,
+     "wDeg": 3.4,
+     "w_m": 0.81,
+     "h_m": 0.23
+    },
+    {
+     "label": "السابق",
+     "dist": 1.48,
+     "centerY": 0.78,
+     "elevDeg": -16.6,
+     "azDeg": null,
+     "hDeg": 7.3,
+     "wDeg": 13.9,
+     "w_m": 0.36,
+     "h_m": 0.19
+    },
+    {
+     "label": "شاهِد",
+     "dist": 1.36,
+     "centerY": 0.78,
+     "elevDeg": -18,
+     "azDeg": null,
+     "hDeg": 9.2,
+     "wDeg": 21.6,
+     "w_m": 0.52,
+     "h_m": 0.22
+    },
+    {
+     "label": "التالي",
+     "dist": 1.39,
+     "centerY": 0.78,
+     "elevDeg": -17.8,
+     "azDeg": null,
+     "hDeg": 7.8,
+     "wDeg": 15.6,
+     "w_m": 0.38,
+     "h_m": 0.19
+    },
+    {
+     "label": "الخريطة",
+     "dist": 1.51,
+     "centerY": 0.78,
+     "elevDeg": -16.3,
+     "azDeg": null,
+     "hDeg": 6.5,
+     "wDeg": 12.9,
+     "w_m": 0.34,
+     "h_m": 0.17
+    },
+    {
+     "label": "السؤال التالي",
+     "dist": 15.71,
+     "centerY": 0.74,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 0.8,
+     "wDeg": 2.6,
+     "w_m": 0.72,
+     "h_m": 0.21
+    },
+    {
+     "label": "ابدأ التحدّي",
+     "dist": 15.71,
+     "centerY": 0.74,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 0.8,
+     "wDeg": 2.9,
+     "w_m": 0.8,
+     "h_m": 0.22
+    },
+    {
+     "label": "أعِد التحدّي",
+     "dist": 16.01,
+     "centerY": 0.74,
+     "elevDeg": -1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.4,
+     "w_m": 0.66,
+     "h_m": 0.2
+    },
+    {
+     "label": "راجِع المحطات",
+     "dist": 15.41,
+     "centerY": 0.74,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.5,
+     "w_m": 0.66,
+     "h_m": 0.2
+    }
+   ],
+   "text": [
+    {
+     "canvas": "180x76",
+     "w_m": 0.52,
+     "dist": 1.33,
+     "centerY": 0.8,
+     "ppm": 346,
+     "texelsPerDeg": 8.1
+    },
+    {
+     "canvas": "137x68",
+     "w_m": 0.38,
+     "dist": 1.36,
+     "centerY": 0.8,
+     "ppm": 361,
+     "texelsPerDeg": 8.5
+    },
+    {
+     "canvas": "206x38",
+     "w_m": 1.72,
+     "dist": 1.37,
+     "centerY": 0.76,
+     "ppm": 120,
+     "texelsPerDeg": 2.9
+    },
+    {
+     "canvas": "130x68",
+     "w_m": 0.36,
+     "dist": 1.45,
+     "centerY": 0.8,
+     "ppm": 361,
+     "texelsPerDeg": 9.2
+    },
+    {
+     "canvas": "122x61",
+     "w_m": 0.34,
+     "dist": 1.48,
+     "centerY": 0.8,
+     "ppm": 359,
+     "texelsPerDeg": 9.3
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 0.68,
+     "dist": 3.46,
+     "centerY": 0.43,
+     "ppm": 188,
+     "texelsPerDeg": 11.4
+    },
+    {
+     "canvas": "773x325",
+     "w_m": 1.38,
+     "dist": 3.49,
+     "centerY": 2.1,
+     "ppm": 560,
+     "texelsPerDeg": 34.2
+    },
+    {
+     "canvas": "160x100",
+     "w_m": 0.09,
+     "dist": 3.58,
+     "centerY": 1.27,
+     "ppm": 1778,
+     "texelsPerDeg": 111.2
+    },
+    {
+     "canvas": "792x361",
+     "w_m": 1.8,
+     "dist": 4.41,
+     "centerY": 2.05,
+     "ppm": 440,
+     "texelsPerDeg": 33.9
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 7.8,
+     "dist": 5.21,
+     "centerY": 0.13,
+     "ppm": 16,
+     "texelsPerDeg": 1.5
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 1,
+     "dist": 5.67,
+     "centerY": 0.43,
+     "ppm": 128,
+     "texelsPerDeg": 12.7
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 0.9,
+     "dist": 5.67,
+     "centerY": 0.43,
+     "ppm": 142,
+     "texelsPerDeg": 14.1
+    }
+   ]
+  },
+  "2": {
+   "place": 1,
+   "rig": {
+    "pos": [
+     -12.990381240844727,
+     0,
+     -7.5
+    ],
+    "yaw": 1.0471975511965976
+   },
+   "stats": {
+    "meshes": 622,
+    "visMeshes": 400,
+    "drawCallsPerEye": 400,
+    "drawCallsStereo": 800,
+    "transparentVisible": 56,
+    "texturedVisible": 54,
+    "unlitVisible": 60,
+    "trisPerEye": 594488,
+    "textures": 40,
+    "texMB": 19.8,
+    "maxTexDim": 1080
+   },
+   "targets": [
+    {
+     "label": "١ الزلزال",
+     "dist": 13.9,
+     "centerY": 1.72,
+     "elevDeg": 2.1,
+     "azDeg": null,
+     "hDeg": 0.9,
+     "wDeg": 3.2,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٢ البركان",
+     "dist": 13.07,
+     "centerY": 1.72,
+     "elevDeg": 2.3,
+     "azDeg": null,
+     "hDeg": 1,
+     "wDeg": 3.4,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٣ التجوية",
+     "dist": 12.24,
+     "centerY": 1.72,
+     "elevDeg": 2.4,
+     "azDeg": null,
+     "hDeg": 1,
+     "wDeg": 3.6,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٤ التعرية",
+     "dist": 13.89,
+     "centerY": 1.42,
+     "elevDeg": 0.9,
+     "azDeg": null,
+     "hDeg": 0.9,
+     "wDeg": 3.2,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٥ تغييرات الإنسان",
+     "dist": 13.06,
+     "centerY": 1.42,
+     "elevDeg": 1,
+     "azDeg": null,
+     "hDeg": 1,
+     "wDeg": 3.4,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "قاعة التحدّي",
+     "dist": 12.23,
+     "centerY": 1.42,
+     "elevDeg": 1,
+     "azDeg": null,
+     "hDeg": 1,
+     "wDeg": 3.7,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "ابدأ الرحلة",
+     "dist": 14.39,
+     "centerY": 0.74,
+     "elevDeg": -1.8,
+     "azDeg": null,
+     "hDeg": 0.9,
+     "wDeg": 3.2,
+     "w_m": 0.8,
+     "h_m": 0.22
+    },
+    {
+     "label": "السابق",
+     "dist": 1.48,
+     "centerY": 0.78,
+     "elevDeg": -16.6,
+     "azDeg": null,
+     "hDeg": 7.3,
+     "wDeg": 13.9,
+     "w_m": 0.36,
+     "h_m": 0.19
+    },
+    {
+     "label": "شاهِد",
+     "dist": 1.36,
+     "centerY": 0.78,
+     "elevDeg": -18,
+     "azDeg": null,
+     "hDeg": 9,
+     "wDeg": 21.2,
+     "w_m": 0.51,
+     "h_m": 0.21
+    },
+    {
+     "label": "التالي",
+     "dist": 1.39,
+     "centerY": 0.78,
+     "elevDeg": -17.8,
+     "azDeg": null,
+     "hDeg": 7.8,
+     "wDeg": 15.6,
+     "w_m": 0.38,
+     "h_m": 0.19
+    },
+    {
+     "label": "الخريطة",
+     "dist": 1.51,
+     "centerY": 0.78,
+     "elevDeg": -16.3,
+     "azDeg": null,
+     "hDeg": 6.5,
+     "wDeg": 12.9,
+     "w_m": 0.34,
+     "h_m": 0.17
+    },
+    {
+     "label": "السؤال التالي",
+     "dist": 27.14,
+     "centerY": 0.74,
+     "elevDeg": -1,
+     "azDeg": null,
+     "hDeg": 0.4,
+     "wDeg": 1.5,
+     "w_m": 0.72,
+     "h_m": 0.21
+    },
+    {
+     "label": "ابدأ التحدّي",
+     "dist": 27.14,
+     "centerY": 0.74,
+     "elevDeg": -1,
+     "azDeg": null,
+     "hDeg": 0.5,
+     "wDeg": 1.7,
+     "w_m": 0.8,
+     "h_m": 0.22
+    },
+    {
+     "label": "أعِد التحدّي",
+     "dist": 27.31,
+     "centerY": 0.74,
+     "elevDeg": -1,
+     "azDeg": null,
+     "hDeg": 0.4,
+     "wDeg": 1.4,
+     "w_m": 0.66,
+     "h_m": 0.2
+    },
+    {
+     "label": "راجِع المحطات",
+     "dist": 26.97,
+     "centerY": 0.74,
+     "elevDeg": -1,
+     "azDeg": null,
+     "hDeg": 0.4,
+     "wDeg": 1.4,
+     "w_m": 0.66,
+     "h_m": 0.2
+    }
+   ],
+   "text": [
+    {
+     "canvas": "180x76",
+     "w_m": 0.51,
+     "dist": 1.33,
+     "centerY": 0.8,
+     "ppm": 352,
+     "texelsPerDeg": 8.2
+    },
+    {
+     "canvas": "137x68",
+     "w_m": 0.38,
+     "dist": 1.36,
+     "centerY": 0.8,
+     "ppm": 361,
+     "texelsPerDeg": 8.5
+    },
+    {
+     "canvas": "206x38",
+     "w_m": 1.72,
+     "dist": 1.37,
+     "centerY": 0.76,
+     "ppm": 120,
+     "texelsPerDeg": 2.9
+    },
+    {
+     "canvas": "130x68",
+     "w_m": 0.36,
+     "dist": 1.45,
+     "centerY": 0.8,
+     "ppm": 361,
+     "texelsPerDeg": 9.2
+    },
+    {
+     "canvas": "122x61",
+     "w_m": 0.34,
+     "dist": 1.48,
+     "centerY": 0.8,
+     "ppm": 359,
+     "texelsPerDeg": 9.3
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 0.68,
+     "dist": 3.46,
+     "centerY": 0.43,
+     "ppm": 188,
+     "texelsPerDeg": 11.4
+    },
+    {
+     "canvas": "773x325",
+     "w_m": 1.38,
+     "dist": 3.49,
+     "centerY": 2.1,
+     "ppm": 560,
+     "texelsPerDeg": 34.2
+    },
+    {
+     "canvas": "160x100",
+     "w_m": 0.09,
+     "dist": 3.58,
+     "centerY": 1.26,
+     "ppm": 1778,
+     "texelsPerDeg": 111.2
+    },
+    {
+     "canvas": "792x361",
+     "w_m": 1.8,
+     "dist": 4.41,
+     "centerY": 2.05,
+     "ppm": 440,
+     "texelsPerDeg": 33.9
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 7.8,
+     "dist": 5.21,
+     "centerY": 0.13,
+     "ppm": 16,
+     "texelsPerDeg": 1.5
+    }
+   ]
+  },
+  "3": {
+   "place": 3,
+   "rig": {
+    "pos": [
+     -1.8369700935892946e-15,
+     0,
+     15
+    ],
+    "yaw": 3.141592653589793
+   },
+   "stats": {
+    "meshes": 622,
+    "visMeshes": 400,
+    "drawCallsPerEye": 400,
+    "drawCallsStereo": 800,
+    "transparentVisible": 56,
+    "texturedVisible": 54,
+    "unlitVisible": 60,
+    "trisPerEye": 594488,
+    "textures": 40,
+    "texMB": 19.8,
+    "maxTexDim": 1080
+   },
+   "targets": [
+    {
+     "label": "١ الزلزال",
+     "dist": 19.05,
+     "centerY": 1.72,
+     "elevDeg": 1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.3,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٢ البركان",
+     "dist": 19.05,
+     "centerY": 1.72,
+     "elevDeg": 1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.3,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٣ التجوية",
+     "dist": 19.09,
+     "centerY": 1.72,
+     "elevDeg": 1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.3,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٤ التعرية",
+     "dist": 19.05,
+     "centerY": 1.42,
+     "elevDeg": 0.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.3,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٥ تغييرات الإنسان",
+     "dist": 19.05,
+     "centerY": 1.42,
+     "elevDeg": 0.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.3,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "قاعة التحدّي",
+     "dist": 19.08,
+     "centerY": 1.42,
+     "elevDeg": 0.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.3,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "ابدأ الرحلة",
+     "dist": 16.33,
+     "centerY": 0.74,
+     "elevDeg": -1.6,
+     "azDeg": null,
+     "hDeg": 0.8,
+     "wDeg": 2.7,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "السابق",
+     "dist": 1.48,
+     "centerY": 0.78,
+     "elevDeg": -16.6,
+     "azDeg": null,
+     "hDeg": 7.3,
+     "wDeg": 13.9,
+     "w_m": 0.36,
+     "h_m": 0.19
+    },
+    {
+     "label": "شاهِد",
+     "dist": 1.36,
+     "centerY": 0.78,
+     "elevDeg": -18,
+     "azDeg": null,
+     "hDeg": 8.8,
+     "wDeg": 20.8,
+     "w_m": 0.5,
+     "h_m": 0.21
+    },
+    {
+     "label": "التالي",
+     "dist": 1.39,
+     "centerY": 0.78,
+     "elevDeg": -17.8,
+     "azDeg": null,
+     "hDeg": 7.8,
+     "wDeg": 15.6,
+     "w_m": 0.38,
+     "h_m": 0.19
+    },
+    {
+     "label": "الخريطة",
+     "dist": 1.51,
+     "centerY": 0.78,
+     "elevDeg": -16.3,
+     "azDeg": null,
+     "hDeg": 6.5,
+     "wDeg": 12.9,
+     "w_m": 0.34,
+     "h_m": 0.17
+    },
+    {
+     "label": "السؤال التالي",
+     "dist": 27.14,
+     "centerY": 0.74,
+     "elevDeg": -1,
+     "azDeg": null,
+     "hDeg": 0.4,
+     "wDeg": 1.5,
+     "w_m": 0.72,
+     "h_m": 0.21
+    },
+    {
+     "label": "ابدأ التحدّي",
+     "dist": 27.14,
+     "centerY": 0.74,
+     "elevDeg": -1,
+     "azDeg": null,
+     "hDeg": 0.5,
+     "wDeg": 1.7,
+     "w_m": 0.8,
+     "h_m": 0.22
+    },
+    {
+     "label": "أعِد التحدّي",
+     "dist": 26.97,
+     "centerY": 0.74,
+     "elevDeg": -1,
+     "azDeg": null,
+     "hDeg": 0.4,
+     "wDeg": 1.4,
+     "w_m": 0.66,
+     "h_m": 0.2
+    },
+    {
+     "label": "راجِع المحطات",
+     "dist": 27.31,
+     "centerY": 0.74,
+     "elevDeg": -1,
+     "azDeg": null,
+     "hDeg": 0.4,
+     "wDeg": 1.4,
+     "w_m": 0.66,
+     "h_m": 0.2
+    }
+   ],
+   "text": [
+    {
+     "canvas": "180x76",
+     "w_m": 0.5,
+     "dist": 1.33,
+     "centerY": 0.8,
+     "ppm": 360,
+     "texelsPerDeg": 8.4
+    },
+    {
+     "canvas": "137x68",
+     "w_m": 0.38,
+     "dist": 1.36,
+     "centerY": 0.8,
+     "ppm": 361,
+     "texelsPerDeg": 8.5
+    },
+    {
+     "canvas": "206x38",
+     "w_m": 1.72,
+     "dist": 1.37,
+     "centerY": 0.76,
+     "ppm": 120,
+     "texelsPerDeg": 2.9
+    },
+    {
+     "canvas": "130x68",
+     "w_m": 0.36,
+     "dist": 1.45,
+     "centerY": 0.8,
+     "ppm": 361,
+     "texelsPerDeg": 9.2
+    },
+    {
+     "canvas": "122x61",
+     "w_m": 0.34,
+     "dist": 1.48,
+     "centerY": 0.8,
+     "ppm": 359,
+     "texelsPerDeg": 9.3
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 0.68,
+     "dist": 3.46,
+     "centerY": 0.43,
+     "ppm": 188,
+     "texelsPerDeg": 11.4
+    },
+    {
+     "canvas": "773x325",
+     "w_m": 0.96,
+     "dist": 3.49,
+     "centerY": 2.1,
+     "ppm": 809,
+     "texelsPerDeg": 49.3
+    },
+    {
+     "canvas": "160x100",
+     "w_m": 0.09,
+     "dist": 3.58,
+     "centerY": 1.26,
+     "ppm": 1778,
+     "texelsPerDeg": 111.2
+    },
+    {
+     "canvas": "792x361",
+     "w_m": 1.8,
+     "dist": 4.41,
+     "centerY": 2.05,
+     "ppm": 440,
+     "texelsPerDeg": 33.9
+    },
+    {
+     "canvas": "64x256",
+     "w_m": 1.32,
+     "dist": 4.74,
+     "centerY": 0.45,
+     "ppm": 48,
+     "texelsPerDeg": 4
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 0.3,
+     "dist": 4.74,
+     "centerY": 0.54,
+     "ppm": 427,
+     "texelsPerDeg": 35.3
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 0.3,
+     "dist": 4.79,
+     "centerY": 0.54,
+     "ppm": 427,
+     "texelsPerDeg": 35.7
+    }
+   ]
+  },
+  "4": {
+   "place": 4,
+   "rig": {
+    "pos": [
+     12.990381240844727,
+     0,
+     7.5
+    ],
+    "yaw": 4.1887902047863905
+   },
+   "stats": {
+    "meshes": 626,
+    "visMeshes": 400,
+    "drawCallsPerEye": 400,
+    "drawCallsStereo": 800,
+    "transparentVisible": 56,
+    "texturedVisible": 54,
+    "unlitVisible": 60,
+    "trisPerEye": 594488,
+    "textures": 42,
+    "texMB": 22.2,
+    "maxTexDim": 1080
+   },
+   "targets": [
+    {
+     "label": "١ الزلزال",
+     "dist": 17.04,
+     "centerY": 1.72,
+     "elevDeg": 1.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.6,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٢ البركان",
+     "dist": 17.68,
+     "centerY": 1.72,
+     "elevDeg": 1.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.5,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٣ التجوية",
+     "dist": 18.34,
+     "centerY": 1.72,
+     "elevDeg": 1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.4,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٤ التعرية",
+     "dist": 17.04,
+     "centerY": 1.42,
+     "elevDeg": 0.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.6,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٥ تغييرات الإنسان",
+     "dist": 17.68,
+     "centerY": 1.42,
+     "elevDeg": 0.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.5,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "قاعة التحدّي",
+     "dist": 18.34,
+     "centerY": 1.42,
+     "elevDeg": 0.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.4,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "ابدأ الرحلة",
+     "dist": 15.71,
+     "centerY": 0.74,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 0.8,
+     "wDeg": 2.9,
+     "w_m": 0.79,
+     "h_m": 0.22
+    },
+    {
+     "label": "السابق",
+     "dist": 1.48,
+     "centerY": 0.78,
+     "elevDeg": -16.6,
+     "azDeg": null,
+     "hDeg": 7.3,
+     "wDeg": 13.9,
+     "w_m": 0.36,
+     "h_m": 0.19
+    },
+    {
+     "label": "شاهِد",
+     "dist": 1.36,
+     "centerY": 0.78,
+     "elevDeg": -18,
+     "azDeg": null,
+     "hDeg": 8.9,
+     "wDeg": 21,
+     "w_m": 0.51,
+     "h_m": 0.21
+    },
+    {
+     "label": "التحدّي",
+     "dist": 1.39,
+     "centerY": 0.78,
+     "elevDeg": -17.8,
+     "azDeg": null,
+     "hDeg": 7.8,
+     "wDeg": 15.6,
+     "w_m": 0.38,
+     "h_m": 0.19
+    },
+    {
+     "label": "الخريطة",
+     "dist": 1.51,
+     "centerY": 0.78,
+     "elevDeg": -16.3,
+     "azDeg": null,
+     "hDeg": 6.5,
+     "wDeg": 12.9,
+     "w_m": 0.34,
+     "h_m": 0.17
+    },
+    {
+     "label": "السؤال التالي",
+     "dist": 15.71,
+     "centerY": 0.74,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 0.8,
+     "wDeg": 2.6,
+     "w_m": 0.72,
+     "h_m": 0.21
+    },
+    {
+     "label": "ابدأ التحدّي",
+     "dist": 15.71,
+     "centerY": 0.74,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 0.8,
+     "wDeg": 2.9,
+     "w_m": 0.8,
+     "h_m": 0.22
+    },
+    {
+     "label": "أعِد التحدّي",
+     "dist": 15.41,
+     "centerY": 0.74,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.5,
+     "w_m": 0.66,
+     "h_m": 0.2
+    },
+    {
+     "label": "راجِع المحطات",
+     "dist": 16.01,
+     "centerY": 0.74,
+     "elevDeg": -1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.4,
+     "w_m": 0.66,
+     "h_m": 0.2
+    }
+   ],
+   "text": [
+    {
+     "canvas": "180x76",
+     "w_m": 0.51,
+     "dist": 1.33,
+     "centerY": 0.8,
+     "ppm": 356,
+     "texelsPerDeg": 8.3
+    },
+    {
+     "canvas": "137x68",
+     "w_m": 0.38,
+     "dist": 1.36,
+     "centerY": 0.8,
+     "ppm": 361,
+     "texelsPerDeg": 8.5
+    },
+    {
+     "canvas": "206x38",
+     "w_m": 1.72,
+     "dist": 1.37,
+     "centerY": 0.76,
+     "ppm": 120,
+     "texelsPerDeg": 2.9
+    },
+    {
+     "canvas": "130x68",
+     "w_m": 0.36,
+     "dist": 1.45,
+     "centerY": 0.8,
+     "ppm": 361,
+     "texelsPerDeg": 9.2
+    },
+    {
+     "canvas": "122x61",
+     "w_m": 0.34,
+     "dist": 1.48,
+     "centerY": 0.8,
+     "ppm": 359,
+     "texelsPerDeg": 9.3
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 0.68,
+     "dist": 3.46,
+     "centerY": 0.43,
+     "ppm": 188,
+     "texelsPerDeg": 11.4
+    },
+    {
+     "canvas": "773x325",
+     "w_m": 0.96,
+     "dist": 3.49,
+     "centerY": 2.1,
+     "ppm": 809,
+     "texelsPerDeg": 49.3
+    },
+    {
+     "canvas": "160x100",
+     "w_m": 0.09,
+     "dist": 3.58,
+     "centerY": 1.26,
+     "ppm": 1778,
+     "texelsPerDeg": 111.2
+    },
+    {
+     "canvas": "792x361",
+     "w_m": 1.8,
+     "dist": 4.41,
+     "centerY": 2.05,
+     "ppm": 440,
+     "texelsPerDeg": 33.9
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 7.8,
+     "dist": 5.21,
+     "centerY": 0.13,
+     "ppm": 16,
+     "texelsPerDeg": 1.5
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 1.42,
+     "dist": 5.51,
+     "centerY": 0.43,
+     "ppm": 90,
+     "texelsPerDeg": 8.6
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 1.26,
+     "dist": 7.04,
+     "centerY": 0.43,
+     "ppm": 102,
+     "texelsPerDeg": 12.5
+    }
+   ]
+  },
+  "hub": {
+   "place": "hub",
+   "rig": {
+    "pos": [
+     0,
+     0,
+     0
+    ],
+    "yaw": 0
+   },
+   "stats": {
+    "meshes": 622,
+    "visMeshes": 392,
+    "drawCallsPerEye": 392,
+    "drawCallsStereo": 784,
+    "transparentVisible": 51,
+    "texturedVisible": 49,
+    "unlitVisible": 57,
+    "trisPerEye": 590322,
+    "textures": 40,
+    "texMB": 19.8,
+    "maxTexDim": 1080
+   },
+   "targets": [
+    {
+     "label": "١ الزلزال",
+     "dist": 4.1,
+     "centerY": 1.72,
+     "elevDeg": 7.3,
+     "azDeg": null,
+     "hDeg": 3.1,
+     "wDeg": 10.9,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٢ البركان",
+     "dist": 4.09,
+     "centerY": 1.72,
+     "elevDeg": 7.3,
+     "azDeg": null,
+     "hDeg": 3.1,
+     "wDeg": 10.9,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٣ التجوية",
+     "dist": 4.26,
+     "centerY": 1.72,
+     "elevDeg": 7,
+     "azDeg": null,
+     "hDeg": 3,
+     "wDeg": 10.5,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٤ التعرية",
+     "dist": 4.05,
+     "centerY": 1.42,
+     "elevDeg": 3.1,
+     "azDeg": null,
+     "hDeg": 3.3,
+     "wDeg": 11.8,
+     "w_m": 0.83,
+     "h_m": 0.24
+    },
+    {
+     "label": "٥ تغييرات الإنسان",
+     "dist": 4.05,
+     "centerY": 1.42,
+     "elevDeg": 3.1,
+     "azDeg": null,
+     "hDeg": 3.3,
+     "wDeg": 11.8,
+     "w_m": 0.83,
+     "h_m": 0.24
+    },
+    {
+     "label": "قاعة التحدّي",
+     "dist": 4.24,
+     "centerY": 1.42,
+     "elevDeg": 3,
+     "azDeg": null,
+     "hDeg": 3,
+     "wDeg": 10.5,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "ابدأ الرحلة",
+     "dist": 1.4,
+     "centerY": 0.74,
+     "elevDeg": -19.2,
+     "azDeg": null,
+     "hDeg": 9,
+     "wDeg": 31.2,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "السؤال التالي",
+     "dist": 16.33,
+     "centerY": 0.74,
+     "elevDeg": -1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.5,
+     "w_m": 0.72,
+     "h_m": 0.21
+    },
+    {
+     "label": "ابدأ التحدّي",
+     "dist": 16.33,
+     "centerY": 0.74,
+     "elevDeg": -1.6,
+     "azDeg": null,
+     "hDeg": 0.8,
+     "wDeg": 2.8,
+     "w_m": 0.8,
+     "h_m": 0.22
+    },
+    {
+     "label": "أعِد التحدّي",
+     "dist": 16.33,
+     "centerY": 0.74,
+     "elevDeg": -1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.3,
+     "w_m": 0.66,
+     "h_m": 0.2
+    },
+    {
+     "label": "راجِع المحطات",
+     "dist": 16.33,
+     "centerY": 0.74,
+     "elevDeg": -1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.3,
+     "w_m": 0.66,
+     "h_m": 0.2
+    }
+   ],
+   "text": [
+    {
+     "canvas": "281x79",
+     "w_m": 0.78,
+     "dist": 1.37,
+     "centerY": 0.77,
+     "ppm": 360,
+     "texelsPerDeg": 8.6
+    },
+    {
+     "canvas": "773x325",
+     "w_m": 1.38,
+     "dist": 3.15,
+     "centerY": 1.68,
+     "ppm": 560,
+     "texelsPerDeg": 30.8
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 0.68,
+     "dist": 3.33,
+     "centerY": 0.01,
+     "ppm": 188,
+     "texelsPerDeg": 10.9
+    },
+    {
+     "canvas": "160x100",
+     "w_m": 0.09,
+     "dist": 3.34,
+     "centerY": 0.84,
+     "ppm": 1778,
+     "texelsPerDeg": 103.6
+    },
+    {
+     "canvas": "281x79",
+     "w_m": 0.83,
+     "dist": 4.01,
+     "centerY": 1.42,
+     "ppm": 337,
+     "texelsPerDeg": 23.6
+    },
+    {
+     "canvas": "281x79",
+     "w_m": 0.83,
+     "dist": 4.02,
+     "centerY": 1.42,
+     "ppm": 337,
+     "texelsPerDeg": 23.6
+    },
+    {
+     "canvas": "281x79",
+     "w_m": 0.78,
+     "dist": 4.06,
+     "centerY": 1.72,
+     "ppm": 360,
+     "texelsPerDeg": 25.5
+    },
+    {
+     "canvas": "281x79",
+     "w_m": 0.78,
+     "dist": 4.07,
+     "centerY": 1.72,
+     "ppm": 360,
+     "texelsPerDeg": 25.6
+    },
+    {
+     "canvas": "1080x640",
+     "w_m": 2.7,
+     "dist": 4.15,
+     "centerY": 1.9,
+     "ppm": 400,
+     "texelsPerDeg": 29
+    },
+    {
+     "canvas": "281x79",
+     "w_m": 0.78,
+     "dist": 4.21,
+     "centerY": 1.42,
+     "ppm": 360,
+     "texelsPerDeg": 26.4
+    },
+    {
+     "canvas": "281x79",
+     "w_m": 0.78,
+     "dist": 4.23,
+     "centerY": 1.72,
+     "ppm": 360,
+     "texelsPerDeg": 26.6
+    }
+   ]
+  },
+  "hall": {
+   "place": 4,
+   "rig": {
+    "pos": [
+     12.990381240844727,
+     0,
+     7.5
+    ],
+    "yaw": 4.1887902047863905
+   },
+   "stats": {
+    "meshes": 626,
+    "visMeshes": 400,
+    "drawCallsPerEye": 400,
+    "drawCallsStereo": 800,
+    "transparentVisible": 56,
+    "texturedVisible": 54,
+    "unlitVisible": 60,
+    "trisPerEye": 594488,
+    "textures": 42,
+    "texMB": 22.2,
+    "maxTexDim": 1080
+   },
+   "targets": [
+    {
+     "label": "١ الزلزال",
+     "dist": 17.04,
+     "centerY": 1.72,
+     "elevDeg": 1.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.6,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٢ البركان",
+     "dist": 17.68,
+     "centerY": 1.72,
+     "elevDeg": 1.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.5,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٣ التجوية",
+     "dist": 18.34,
+     "centerY": 1.72,
+     "elevDeg": 1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.4,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٤ التعرية",
+     "dist": 17.04,
+     "centerY": 1.42,
+     "elevDeg": 0.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.6,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٥ تغييرات الإنسان",
+     "dist": 17.68,
+     "centerY": 1.42,
+     "elevDeg": 0.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.5,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "قاعة التحدّي",
+     "dist": 18.34,
+     "centerY": 1.42,
+     "elevDeg": 0.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.4,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "ابدأ الرحلة",
+     "dist": 15.71,
+     "centerY": 0.74,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 0.8,
+     "wDeg": 3,
+     "w_m": 0.81,
+     "h_m": 0.23
+    },
+    {
+     "label": "السابق",
+     "dist": 1.48,
+     "centerY": 0.78,
+     "elevDeg": -16.6,
+     "azDeg": null,
+     "hDeg": 7.3,
+     "wDeg": 13.9,
+     "w_m": 0.36,
+     "h_m": 0.19
+    },
+    {
+     "label": "شاهِد",
+     "dist": 1.36,
+     "centerY": 0.78,
+     "elevDeg": -18,
+     "azDeg": null,
+     "hDeg": 9.1,
+     "wDeg": 21.5,
+     "w_m": 0.52,
+     "h_m": 0.22
+    },
+    {
+     "label": "التحدّي",
+     "dist": 1.39,
+     "centerY": 0.78,
+     "elevDeg": -17.8,
+     "azDeg": null,
+     "hDeg": 7.8,
+     "wDeg": 15.6,
+     "w_m": 0.38,
+     "h_m": 0.19
+    },
+    {
+     "label": "الخريطة",
+     "dist": 1.51,
+     "centerY": 0.78,
+     "elevDeg": -16.3,
+     "azDeg": null,
+     "hDeg": 6.5,
+     "wDeg": 12.9,
+     "w_m": 0.34,
+     "h_m": 0.17
+    },
+    {
+     "label": "السؤال التالي",
+     "dist": 15.71,
+     "centerY": 0.74,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 0.8,
+     "wDeg": 2.6,
+     "w_m": 0.72,
+     "h_m": 0.21
+    },
+    {
+     "label": "ابدأ التحدّي",
+     "dist": 15.71,
+     "centerY": 0.74,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 0.8,
+     "wDeg": 2.9,
+     "w_m": 0.8,
+     "h_m": 0.22
+    },
+    {
+     "label": "أعِد التحدّي",
+     "dist": 15.41,
+     "centerY": 0.74,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.5,
+     "w_m": 0.66,
+     "h_m": 0.2
+    },
+    {
+     "label": "راجِع المحطات",
+     "dist": 16.01,
+     "centerY": 0.74,
+     "elevDeg": -1.6,
+     "azDeg": null,
+     "hDeg": 0.7,
+     "wDeg": 2.4,
+     "w_m": 0.66,
+     "h_m": 0.2
+    }
+   ],
+   "text": [
+    {
+     "canvas": "180x76",
+     "w_m": 0.52,
+     "dist": 1.33,
+     "centerY": 0.8,
+     "ppm": 347,
+     "texelsPerDeg": 8.1
+    },
+    {
+     "canvas": "137x68",
+     "w_m": 0.38,
+     "dist": 1.36,
+     "centerY": 0.8,
+     "ppm": 361,
+     "texelsPerDeg": 8.5
+    },
+    {
+     "canvas": "206x38",
+     "w_m": 1.72,
+     "dist": 1.37,
+     "centerY": 0.76,
+     "ppm": 120,
+     "texelsPerDeg": 2.9
+    },
+    {
+     "canvas": "130x68",
+     "w_m": 0.36,
+     "dist": 1.45,
+     "centerY": 0.8,
+     "ppm": 361,
+     "texelsPerDeg": 9.2
+    },
+    {
+     "canvas": "122x61",
+     "w_m": 0.34,
+     "dist": 1.48,
+     "centerY": 0.8,
+     "ppm": 359,
+     "texelsPerDeg": 9.3
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 0.68,
+     "dist": 3.46,
+     "centerY": 0.43,
+     "ppm": 188,
+     "texelsPerDeg": 11.4
+    },
+    {
+     "canvas": "773x325",
+     "w_m": 1.38,
+     "dist": 3.49,
+     "centerY": 2.1,
+     "ppm": 560,
+     "texelsPerDeg": 34.2
+    },
+    {
+     "canvas": "160x100",
+     "w_m": 0.09,
+     "dist": 3.58,
+     "centerY": 1.26,
+     "ppm": 1778,
+     "texelsPerDeg": 111.2
+    },
+    {
+     "canvas": "792x361",
+     "w_m": 1.8,
+     "dist": 4.41,
+     "centerY": 2.05,
+     "ppm": 440,
+     "texelsPerDeg": 33.9
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 7.8,
+     "dist": 5.21,
+     "centerY": 0.13,
+     "ppm": 16,
+     "texelsPerDeg": 1.5
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 1.42,
+     "dist": 5.51,
+     "centerY": 0.43,
+     "ppm": 90,
+     "texelsPerDeg": 8.6
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 1.26,
+     "dist": 7.04,
+     "centerY": 0.43,
+     "ppm": 102,
+     "texelsPerDeg": 12.5
+    }
+   ]
+  },
+  "practice0": {
+   "place": 0,
+   "stats": {
+    "meshes": 626,
+    "visMeshes": 393,
+    "drawCallsPerEye": 393,
+    "drawCallsStereo": 786,
+    "transparentVisible": 53,
+    "texturedVisible": 51,
+    "unlitVisible": 57,
+    "trisPerEye": 590978,
+    "textures": 42,
+    "texMB": 22.2,
+    "maxTexDim": 1080
+   },
+   "targets": [
+    {
+     "label": "١ الزلزال",
+     "dist": 10.98,
+     "centerY": 1.72,
+     "elevDeg": 2.7,
+     "azDeg": null,
+     "hDeg": 1.1,
+     "wDeg": 4.1,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٢ البركان",
+     "dist": 10.98,
+     "centerY": 1.72,
+     "elevDeg": 2.7,
+     "azDeg": null,
+     "hDeg": 1.1,
+     "wDeg": 4.1,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٣ التجوية",
+     "dist": 11.04,
+     "centerY": 1.72,
+     "elevDeg": 2.7,
+     "azDeg": null,
+     "hDeg": 1.1,
+     "wDeg": 4,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٤ التعرية",
+     "dist": 10.97,
+     "centerY": 1.42,
+     "elevDeg": 1.1,
+     "azDeg": null,
+     "hDeg": 1.1,
+     "wDeg": 4.1,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٥ تغييرات الإنسان",
+     "dist": 10.97,
+     "centerY": 1.42,
+     "elevDeg": 1.1,
+     "azDeg": null,
+     "hDeg": 1.1,
+     "wDeg": 4.1,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "قاعة التحدّي",
+     "dist": 11.03,
+     "centerY": 1.42,
+     "elevDeg": 1.1,
+     "azDeg": null,
+     "hDeg": 1.1,
+     "wDeg": 4,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "ابدأ الرحلة",
+     "dist": 13.69,
+     "centerY": 0.74,
+     "elevDeg": -1.9,
+     "azDeg": null,
+     "hDeg": 1,
+     "wDeg": 3.4,
+     "w_m": 0.81,
+     "h_m": 0.23
+    },
+    {
+     "label": "السابق",
+     "dist": 1.48,
+     "centerY": 0.78,
+     "elevDeg": -16.6,
+     "azDeg": null,
+     "hDeg": 7.3,
+     "wDeg": 13.9,
+     "w_m": 0.36,
+     "h_m": 0.19
+    },
+    {
+     "label": "أعِد المشاهدة",
+     "dist": 1.36,
+     "centerY": 0.78,
+     "elevDeg": -18,
+     "azDeg": null,
+     "hDeg": 8.8,
+     "wDeg": 20.8,
+     "w_m": 0.5,
+     "h_m": 0.21
+    },
+    {
+     "label": "التالي",
+     "dist": 1.39,
+     "centerY": 0.78,
+     "elevDeg": -17.8,
+     "azDeg": null,
+     "hDeg": 8.1,
+     "wDeg": 16.2,
+     "w_m": 0.39,
+     "h_m": 0.2
+    },
+    {
+     "label": "الخريطة",
+     "dist": 1.51,
+     "centerY": 0.78,
+     "elevDeg": -16.3,
+     "azDeg": null,
+     "hDeg": 6.5,
+     "wDeg": 12.9,
+     "w_m": 0.34,
+     "h_m": 0.17
+    },
+    {
+     "label": "ابدأ التحدّي",
+     "dist": 15.71,
+     "centerY": 0.74,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 0.8,
+     "wDeg": 3,
+     "w_m": 0.83,
+     "h_m": 0.23
+    }
+   ],
+   "text": [
+    {
+     "canvas": "180x76",
+     "w_m": 0.5,
+     "dist": 1.34,
+     "centerY": 0.8,
+     "ppm": 360,
+     "texelsPerDeg": 8.4
+    },
+    {
+     "canvas": "137x68",
+     "w_m": 0.39,
+     "dist": 1.36,
+     "centerY": 0.8,
+     "ppm": 348,
+     "texelsPerDeg": 8.2
+    },
+    {
+     "canvas": "206x38",
+     "w_m": 1.72,
+     "dist": 1.37,
+     "centerY": 0.76,
+     "ppm": 120,
+     "texelsPerDeg": 2.9
+    },
+    {
+     "canvas": "130x68",
+     "w_m": 0.36,
+     "dist": 1.45,
+     "centerY": 0.8,
+     "ppm": 361,
+     "texelsPerDeg": 9.2
+    },
+    {
+     "canvas": "122x61",
+     "w_m": 0.34,
+     "dist": 1.48,
+     "centerY": 0.8,
+     "ppm": 359,
+     "texelsPerDeg": 9.3
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 0.68,
+     "dist": 3.46,
+     "centerY": 0.43,
+     "ppm": 188,
+     "texelsPerDeg": 11.4
+    },
+    {
+     "canvas": "773x325",
+     "w_m": 1.21,
+     "dist": 3.49,
+     "centerY": 2.1,
+     "ppm": 641,
+     "texelsPerDeg": 39.1
+    },
+    {
+     "canvas": "160x100",
+     "w_m": 0.09,
+     "dist": 3.58,
+     "centerY": 1.26,
+     "ppm": 1778,
+     "texelsPerDeg": 111.2
+    },
+    {
+     "canvas": "792x361",
+     "w_m": 1.8,
+     "dist": 4.41,
+     "centerY": 2.05,
+     "ppm": 440,
+     "texelsPerDeg": 33.9
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 7.8,
+     "dist": 5.21,
+     "centerY": 0.13,
+     "ppm": 16,
+     "texelsPerDeg": 1.5
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 1,
+     "dist": 5.67,
+     "centerY": 0.43,
+     "ppm": 128,
+     "texelsPerDeg": 12.7
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 0.9,
+     "dist": 5.67,
+     "centerY": 0.43,
+     "ppm": 142,
+     "texelsPerDeg": 14.1
+    }
+   ]
+  },
+  "quiz1": {
+   "stats": {
+    "meshes": 638,
+    "visMeshes": 390,
+    "drawCallsPerEye": 390,
+    "drawCallsStereo": 780,
+    "transparentVisible": 50,
+    "texturedVisible": 51,
+    "unlitVisible": 57,
+    "trisPerEye": 587294,
+    "textures": 51,
+    "texMB": 29.5,
+    "maxTexDim": 1080
+   },
+   "targets": [
+    {
+     "label": "١ الزلزال",
+     "dist": 13.01,
+     "centerY": 1.72,
+     "elevDeg": 2.3,
+     "azDeg": null,
+     "hDeg": 1,
+     "wDeg": 3.4,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٢ البركان",
+     "dist": 13.84,
+     "centerY": 1.72,
+     "elevDeg": 2.2,
+     "azDeg": null,
+     "hDeg": 0.9,
+     "wDeg": 3.2,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٣ التجوية",
+     "dist": 14.67,
+     "centerY": 1.72,
+     "elevDeg": 2,
+     "azDeg": null,
+     "hDeg": 0.9,
+     "wDeg": 3,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٤ التعرية",
+     "dist": 13,
+     "centerY": 1.42,
+     "elevDeg": 1,
+     "azDeg": null,
+     "hDeg": 1,
+     "wDeg": 3.4,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "٥ تغييرات الإنسان",
+     "dist": 13.83,
+     "centerY": 1.42,
+     "elevDeg": 0.9,
+     "azDeg": null,
+     "hDeg": 0.9,
+     "wDeg": 3.2,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "قاعة التحدّي",
+     "dist": 14.67,
+     "centerY": 1.42,
+     "elevDeg": 0.9,
+     "azDeg": null,
+     "hDeg": 0.9,
+     "wDeg": 3,
+     "w_m": 0.78,
+     "h_m": 0.22
+    },
+    {
+     "label": "ابدأ الرحلة",
+     "dist": 14.39,
+     "centerY": 0.74,
+     "elevDeg": -1.8,
+     "azDeg": null,
+     "hDeg": 0.9,
+     "wDeg": 3.2,
+     "w_m": 0.8,
+     "h_m": 0.22
+    },
+    {
+     "label": "بركان تخرج منه الحمم",
+     "dist": 2.7,
+     "centerY": 1.12,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 19.6,
+     "wDeg": 17.2,
+     "w_m": 0.81,
+     "h_m": 0.93
+    },
+    {
+     "label": "طريق متشقّق بسبب زلزال",
+     "dist": 2.55,
+     "centerY": 1.12,
+     "elevDeg": -1.8,
+     "azDeg": null,
+     "hDeg": 19.1,
+     "wDeg": 16.7,
+     "w_m": 0.75,
+     "h_m": 0.86
+    },
+    {
+     "label": "صخرة تتفتّت إلى أجزاء صغيرة",
+     "dist": 2.7,
+     "centerY": 1.12,
+     "elevDeg": -1.7,
+     "azDeg": null,
+     "hDeg": 14.8,
+     "wDeg": 12.9,
+     "w_m": 0.61,
+     "h_m": 0.7
+    }
+   ],
+   "text": [
+    {
+     "canvas": "302x113",
+     "w_m": 0.71,
+     "dist": 2.54,
+     "centerY": 0.84,
+     "ppm": 426,
+     "texelsPerDeg": 18.9
+    },
+    {
+     "canvas": "302x113",
+     "w_m": 0.77,
+     "dist": 2.69,
+     "centerY": 0.82,
+     "ppm": 392,
+     "texelsPerDeg": 18.4
+    },
+    {
+     "canvas": "302x113",
+     "w_m": 0.58,
+     "dist": 2.69,
+     "centerY": 0.9,
+     "ppm": 522,
+     "texelsPerDeg": 24.5
+    },
+    {
+     "canvas": "903x235",
+     "w_m": 2.15,
+     "dist": 3.18,
+     "centerY": 1.98,
+     "ppm": 420,
+     "texelsPerDeg": 23.3
+    },
+    {
+     "canvas": "400x64",
+     "w_m": 1,
+     "dist": 3.3,
+     "centerY": 2.32,
+     "ppm": 400,
+     "texelsPerDeg": 23
+    },
+    {
+     "canvas": "773x325",
+     "w_m": 1.4,
+     "dist": 3.37,
+     "centerY": 1.68,
+     "ppm": 552,
+     "texelsPerDeg": 32.5
+    },
+    {
+     "canvas": "128x128",
+     "w_m": 0.68,
+     "dist": 3.54,
+     "centerY": 0.01,
+     "ppm": 188,
+     "texelsPerDeg": 11.6
+    },
+    {
+     "canvas": "160x100",
+     "w_m": 0.09,
+     "dist": 3.57,
+     "centerY": 0.84,
+     "ppm": 1778,
+     "texelsPerDeg": 110.6
+    },
+    {
+     "canvas": "1040x200",
+     "w_m": 2.6,
+     "dist": 5.64,
+     "centerY": 3.45,
+     "ppm": 400,
+     "texelsPerDeg": 39.4
+    }
+   ]
+  }
+ },
+ "aliHeight": 1.42,
+ "xrEnter": {
+  "inVR": true,
+  "introHidden": true
+ }
+}

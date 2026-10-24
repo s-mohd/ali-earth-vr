@@ -1,0 +1,282 @@
+{
+  "splits": [
+    {
+      "label": "welcome",
+      "total": {
+        "calls": 534,
+        "tris": 464132
+      },
+      "mainPassOnly": {
+        "calls": 411,
+        "tris": 323106
+      },
+      "shadowPass": {
+        "calls": 123,
+        "tris": 141026
+      }
+    },
+    {
+      "label": "station1",
+      "total": {
+        "calls": 254,
+        "tris": 354570
+      },
+      "mainPassOnly": {
+        "calls": 144,
+        "tris": 218704
+      },
+      "shadowPass": {
+        "calls": 110,
+        "tris": 135866
+      }
+    }
+  ],
+  "breakdown": {
+    "ali": {
+      "meshes": 64,
+      "tris": 20410,
+      "castShadow": 14
+    },
+    "aliOutlineMeshes": 12,
+    "terrain": {
+      "meshes": 1,
+      "tris": 56448,
+      "castShadow": 0
+    },
+    "water": {
+      "meshes": 1,
+      "tris": 96,
+      "castShadow": 0
+    },
+    "sky": {
+      "meshes": 1,
+      "tris": 960,
+      "castShadow": 0
+    },
+    "worldRootAll": {
+      "meshes": 596,
+      "tris": 371042,
+      "castShadow": 473
+    },
+    "worldInstanced": [
+      {
+        "count": 260,
+        "trisEach": 20,
+        "castShadow": false
+      },
+      {
+        "count": 20,
+        "trisEach": 756,
+        "castShadow": true
+      },
+      {
+        "count": 20,
+        "trisEach": 756,
+        "castShadow": true
+      },
+      {
+        "count": 20,
+        "trisEach": 756,
+        "castShadow": true
+      },
+      {
+        "count": 13,
+        "trisEach": 756,
+        "castShadow": true
+      },
+      {
+        "count": 15,
+        "trisEach": 848,
+        "castShadow": true
+      },
+      {
+        "count": 16,
+        "trisEach": 848,
+        "castShadow": true
+      },
+      {
+        "count": 16,
+        "trisEach": 92,
+        "castShadow": true
+      },
+      {
+        "count": 40,
+        "trisEach": 240,
+        "castShadow": true
+      },
+      {
+        "count": 40,
+        "trisEach": 240,
+        "castShadow": true
+      },
+      {
+        "count": 398,
+        "trisEach": 40,
+        "castShadow": false
+      },
+      {
+        "count": 296,
+        "trisEach": 36,
+        "castShadow": false
+      },
+      {
+        "count": 28,
+        "trisEach": 80,
+        "castShadow": true
+      },
+      {
+        "count": 14,
+        "trisEach": 80,
+        "castShadow": true
+      }
+    ],
+    "stations": [
+      {
+        "id": "earthquake",
+        "meshes": 72,
+        "tris": 14214,
+        "castShadow": 62,
+        "modelOnly": {
+          "meshes": 58,
+          "tris": 9992,
+          "castShadow": 56
+        }
+      },
+      {
+        "id": "volcano",
+        "meshes": 28,
+        "tris": 8382,
+        "castShadow": 17,
+        "modelOnly": {
+          "meshes": 14,
+          "tris": 4160,
+          "castShadow": 11
+        }
+      },
+      {
+        "id": "weathering",
+        "meshes": 49,
+        "tris": 15672,
+        "castShadow": 35,
+        "modelOnly": {
+          "meshes": 25,
+          "tris": 9086,
+          "castShadow": 25
+        }
+      },
+      {
+        "id": "erosion",
+        "meshes": 39,
+        "tris": 33362,
+        "castShadow": 25,
+        "modelOnly": {
+          "meshes": 18,
+          "tris": 27368,
+          "castShadow": 16
+        }
+      },
+      {
+        "id": "human",
+        "meshes": 110,
+        "tris": 28360,
+        "castShadow": 96,
+        "modelOnly": {
+          "meshes": 90,
+          "tris": 22368,
+          "castShadow": 88
+        }
+      }
+    ],
+    "hall": {
+      "meshes": 117,
+      "tris": 33638,
+      "castShadow": 116
+    },
+    "results": {
+      "meshes": 62,
+      "tris": 16788,
+      "castShadow": 61
+    },
+    "textures": {
+      "count": 56,
+      "megapixels": 18.05,
+      "approxGPU_MB_with_mips": 91.6,
+      "sizes": [
+        "1000x708",
+        "1098x176",
+        "128x128",
+        "1320x1000",
+        "1320x290",
+        "1320x780",
+        "1320x780",
+        "1320x780",
+        "1320x780",
+        "1320x920",
+        "1380x350",
+        "1380x350",
+        "1480x470",
+        "2200x670",
+        "256x64",
+        "256x64",
+        "256x64",
+        "256x64",
+        "256x64",
+        "416x144",
+        "416x144",
+        "416x144",
+        "416x144",
+        "416x144",
+        "416x144",
+        "588x156",
+        "599x570",
+        "599x570",
+        "599x684",
+        "599x684",
+        "665x760",
+        "665x760",
+        "665x760",
+        "734x156",
+        "734x156",
+        "734x156",
+        "734x156",
+        "734x156",
+        "735x176",
+        "753x176",
+        "781x176",
+        "792x176",
+        "795x190",
+        "806x221",
+        "823x176",
+        "823x176",
+        "823x176",
+        "823x176",
+        "838x190",
+        "881x190",
+        "881x190",
+        "885x221",
+        "888x176",
+        "888x210",
+        "931x190",
+        "970x190"
+      ]
+    },
+    "materialsByType": {
+      "MeshBasicMaterial": 61,
+      "MeshStandardMaterial": 174,
+      "SpriteMaterial": 28,
+      "ShaderMaterial": 7
+    },
+    "renderer": {
+      "shadowMapType": 1,
+      "sunShadowMapSize": [
+        2048,
+        2048
+      ],
+      "toneMapping": 4,
+      "pixelRatio": 1,
+      "xrFramebufferScale": null,
+      "antialias": true,
+      "programs": 31
+    }
+  }
+}

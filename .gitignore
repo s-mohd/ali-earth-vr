@@ -1,0 +1,10 @@
+node_modules/
+shots/
+.snap/
+lab/
+dist/*
+!dist/index.html
+tools/review_probe/*.html
+tools/review_probe/*.png
+tools/review_probe/*.json
+tools/review_probe/e2e/

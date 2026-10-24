@@ -1,0 +1,2183 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>مغامرة المستكشف علي</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="عالم واقع افتراضي تعليمي لدرس «الأرض تتغيّر» — علوم الصف الثالث الابتدائي، مملكة البحرين">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;600;700;800&display=swap">
+<style>
+/* Layout: full-bleed 3D canvas; a floating start card and a slim toolbar sit above it. One daytime pastel look, by design. */
+:root{
+  --sky:#cbe9f6; --paper:#fffaf3; --ink:#3b3456; --ink-soft:#6b6386; --teal:#4fb3a9; --teal-dark:#2f8f86;
+  --coral:#f08a78; --lav:#a497df; --sun:#ffcf6b; --line:#e6dff5;
+  --font:"Baloo Bhaijaan 2","Tajawal","Noto Naskh Arabic","Geeza Pro","Segoe UI",Tahoma,sans-serif;
+  color-scheme:light;
+}
+[hidden]{display:none!important;}
+html,body{height:100%;}
+body{margin:0;background:var(--sky);color:var(--ink);font-family:var(--font);overflow:hidden;-webkit-tap-highlight-color:transparent;}
+#c{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none;outline:none;}
+button{font-family:inherit;}
+.overlay{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+  padding-block:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-bottom,0px));
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));
+  background:radial-gradient(120% 90% at 50% 10%,rgba(255,250,243,.35),rgba(203,233,246,.55));z-index:5;overflow:auto;}
+.card{position:relative;background:var(--paper);border-radius:28px;max-width:640px;width:100%;
+  box-shadow:0 2px 0 #e9dcc8,0 24px 60px -20px rgba(59,52,86,.35);padding:28px 28px 22px;border:3px solid #fff;}
+.badge-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;}
+.chip{font-size:.85rem;font-weight:700;padding:3px 12px;border-radius:999px;background:#e9f6f4;color:var(--teal-dark);}
+.chip.alt{background:#efeafc;color:#6c5bb8;}
+h1{font-size:clamp(1.9rem,6vw,2.7rem);line-height:1.15;margin:4px 0 2px;font-weight:800;text-wrap:balance;}
+.sub{margin:0 0 18px;font-size:1.15rem;color:var(--ink-soft);font-weight:600;}
+.hero{display:flex;gap:16px;align-items:center;margin-bottom:18px;}
+.ali-face{flex:0 0 auto;width:86px;height:86px;}
+.speech{background:#fff;border:3px solid var(--teal);border-radius:22px;padding:10px 16px;font-size:1.1rem;font-weight:700;position:relative;min-width:0;}
+.actions{display:flex;gap:12px;flex-wrap:wrap;}
+.btn{flex:1 1 220px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:1.25rem;font-weight:800;
+  border:0;border-radius:18px;padding:14px 18px;cursor:pointer;color:#fff;background:var(--coral);box-shadow:0 5px 0 #d06e5d;transition:transform .12s,box-shadow .12s;}
+.btn.vr{background:var(--teal);box-shadow:0 5px 0 var(--teal-dark);}
+.btn:hover{transform:translateY(-2px);} .btn:active{transform:translateY(3px);box-shadow:0 2px 0 #d06e5d;}
+.btn:focus-visible,.tool:focus-visible,summary:focus-visible{outline:4px solid var(--sun);outline-offset:3px;}
+.btn[disabled]{background:#cfcadb;box-shadow:0 5px 0 #b3adc2;cursor:not-allowed;transform:none;}
+.btn svg{width:26px;height:26px;flex:0 0 auto;}
+.note{font-size:.95rem;color:var(--ink-soft);margin:10px 2px 0;}
+.how{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0 6px;}
+.how div{background:#f7f3ff;border-radius:16px;padding:10px 12px;min-width:0;}
+.how b{display:block;font-size:1rem;margin-bottom:2px;}
+.how span{font-size:.92rem;color:var(--ink-soft);line-height:1.45;}
+details{margin-top:14px;background:#fff6e4;border-radius:16px;padding:10px 14px;}
+summary{cursor:pointer;font-weight:800;}
+details ul{margin:8px 0 2px;padding-inline-start:20px;line-height:1.7;font-size:.97rem;}
+#lastResult{margin:12px 2px 0;font-weight:700;color:var(--teal-dark);}
+#hud{position:fixed;top:calc(10px + env(safe-area-inset-top,0px));left:calc(10px + env(safe-area-inset-left,0px));display:flex;gap:8px;z-index:4;flex-wrap:wrap;max-width:calc(100% - 20px);}
+.tool{display:flex;align-items:center;gap:6px;border:0;border-radius:14px;padding:8px 12px;background:rgba(255,250,243,.92);color:var(--ink);font-weight:700;font-size:.95rem;cursor:pointer;box-shadow:0 3px 0 rgba(59,52,86,.15);}
+.tool.vr{background:var(--teal);color:#fff;}
+.tool svg{width:20px;height:20px;}
+#hint{position:fixed;bottom:calc(14px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:rgba(59,52,86,.78);color:#fff;
+  border-radius:999px;padding:8px 18px;font-weight:700;z-index:4;transition:opacity 1s;pointer-events:none;white-space:nowrap;max-width:calc(100% - 32px);overflow:hidden;text-overflow:ellipsis;}
+#hint.fade{opacity:0;}
+#toast{position:fixed;bottom:calc(64px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--paper);color:var(--ink);border:3px solid var(--coral);border-radius:18px;padding:10px 16px;font-weight:700;z-index:6;max-width:min(520px,calc(100% - 32px));}
+#loading{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;z-index:7;background:var(--sky);font-size:1.3rem;font-weight:800;}
+.dots{display:flex;gap:8px}.dots i{width:14px;height:14px;border-radius:50%;background:var(--teal);animation:b 1s infinite}.dots i:nth-child(2){animation-delay:.15s;background:var(--coral)}.dots i:nth-child(3){animation-delay:.3s;background:var(--lav)}
+@keyframes b{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+#nogl{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;padding:24px;text-align:center;font-size:1.2rem;font-weight:700;z-index:8;background:var(--sky);}
+body.in-vr #hud,body.in-vr #hint{display:none;}
+@media (max-width:560px){.how{grid-template-columns:1fr;}.card{padding:20px 18px 16px;}.ali-face{width:64px;height:64px;}.tool span{display:none;}}
+@media (prefers-reduced-motion:reduce){.dots i{animation:none}.btn{transition:none}}
+</style>
+<div dir="rtl" lang="ar">
+<canvas id="c" tabindex="0" aria-label="العالم الافتراضي: مغامرة المستكشف علي"></canvas>
+
+<div id="loading" role="status"><div class="dots"><i></i><i></i><i></i></div>جارٍ تجهيز عالم المستكشف علي…</div>
+<div id="nogl" hidden>هذا الجهاز أو المتصفح لا يدعم الرسوم ثلاثية الأبعاد (WebGL2). جرّب متصفح Chrome أو Edge أو Safari حديثًا.</div>
+
+<div id="intro" class="overlay" hidden>
+  <div class="card" role="dialog" aria-labelledby="t1">
+    <div class="badge-row"><span class="chip">علوم · الصف الثالث</span><span class="chip alt">درس: الأرض تتغيّر</span></div>
+    <h1 id="t1">مغامرة المستكشف علي</h1>
+    <p class="sub">في عالم الأرض المتغيّرة</p>
+    <div class="hero">
+      <svg class="ali-face" viewBox="0 0 100 100" aria-hidden="true">
+        <circle cx="50" cy="56" r="34" fill="#e9b98f"/><path d="M16 56a34 34 0 0 1 68 0c-6-14-20-20-34-20s-28 6-34 20z" fill="#4b3a3c"/>
+        <ellipse cx="50" cy="30" rx="44" ry="7" fill="#e8c78c"/><path d="M26 30c2-16 46-16 48 0z" fill="#e8c78c"/><rect x="26" y="25" width="48" height="5" fill="#4fb3a9"/>
+        <ellipse cx="38" cy="56" rx="5" ry="6" fill="#3a2f46"/><ellipse cx="62" cy="56" rx="5" ry="6" fill="#3a2f46"/>
+        <circle cx="36.5" cy="54" r="1.6" fill="#fff"/><circle cx="60.5" cy="54" r="1.6" fill="#fff"/>
+        <path d="M40 70q10 9 20 0" stroke="#a3505a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <circle cx="29" cy="66" r="5" fill="#f6a0a0" opacity=".6"/><circle cx="71" cy="66" r="5" fill="#f6a0a0" opacity=".6"/>
+      </svg>
+      <div class="speech">مرحبًا! أنا علي. سنكتشف معًا خمسة مظاهر لتغيّر سطح الأرض.</div>
+    </div>
+    <div class="actions">
+      <button id="startVR" class="btn vr" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M3 8.5C3 7.1 4.1 6 5.5 6h13C19.9 6 21 7.1 21 8.5v6c0 1.4-1.1 2.5-2.5 2.5H16l-2-2.5h-4L8 17H5.5C4.1 17 3 15.9 3 14.5z"/><circle cx="8" cy="11.5" r="1.6" fill="currentColor"/><circle cx="16" cy="11.5" r="1.6" fill="currentColor"/></svg>ادخل بنظارة VR</button>
+      <button id="startScreen" class="btn" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="12" rx="2"/><path d="M9 20h6M12 16.5V20"/></svg>ابدأ على الشاشة</button>
+    </div>
+    <p id="vrNote" class="note"></p>
+    <div class="how">
+      <div><b>على الحاسوب</b><span>اسحب بالفأرة للنظر حولك، وانقر على الأزرار والبطاقات.</span></div>
+      <div><b>على الجهاز اللوحي</b><span>اسحب بإصبعك للنظر، والمس الزر لاختياره.</span></div>
+      <div><b>بالنظارة</b><span>وجّه شعاع وحدة التحكم واضغط الزناد، أو انظر إلى الزر لحظة حتى تمتلئ الدائرة.</span></div>
+    </div>
+    <details>
+      <summary>للمعلّم: السلامة وطريقة الاستخدام</summary>
+      <ul>
+        <li>التزم بالحد الأدنى للعمر الذي تحدّده الشركة المصنّعة للنظارة، واستخدمها تحت إشراف مباشر.</li>
+        <li>جلسات قصيرة (10–15 دقيقة) مع استراحة، ويُفضَّل أن يجلس الطالب أو يقف في مساحة خالية.</li>
+        <li>لا يوجد مشي أو حركة سريعة داخل العالم؛ الانتقال بين المحطات بتلاشٍ هادئ، والدوران بخطوات 30°.</li>
+        <li>عند الشعور بدوار أو إجهاد: يخلع الطالب النظارة فورًا ويكمل من وضع الشاشة.</li>
+        <li>وضع الشاشة يقدّم المحتوى والأسئلة نفسها لمن لا يستخدم النظارة.</li>
+      </ul>
+    </details>
+    <p id="voiceNote" class="note" hidden>ملاحظة: لا يتوفر صوت عربي في هذا المتصفح، لذلك تظهر كلمات علي مكتوبة في الفقاعة.</p>
+    <p id="lastResult" hidden></p>
+  </div>
+</div>
+
+<div id="hud" hidden>
+  <button id="hudVR" class="tool vr" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M3 8.5C3 7.1 4.1 6 5.5 6h13C19.9 6 21 7.1 21 8.5v6c0 1.4-1.1 2.5-2.5 2.5H16l-2-2.5h-4L8 17H5.5C4.1 17 3 15.9 3 14.5z"/></svg><span>دخول VR</span></button>
+  <button id="hudSound" class="tool" type="button" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></svg><span>المؤثرات: تشغيل</span></button>
+  <button id="hudVoice" class="tool" type="button" aria-pressed="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M5 5h14v10H10l-4 4v-4H5z"/></svg><span>صوت علي: تشغيل</span></button>
+  <button id="hudHelp" class="tool" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg><span>التعليمات</span></button>
+</div>
+<div id="hint" hidden>اسحب للنظر حولك • انقر على الأزرار</div>
+<div id="toast" role="status" hidden></div>
+
+<script>
+/* =========================================================================
+   محرك ثلاثي الأبعاد صغير (WebGL2 + WebXR) بلا مكتبات خارجية
+   Mini 3D engine: math, scene graph, geometry, renderer, raycasting, WebXR
+   ========================================================================= */
+(function (global) {
+  'use strict';
+
+  // ---------------------------------------------------------------- math
+  const m4 = {
+    create() { const m = new Float32Array(16); m[0] = m[5] = m[10] = m[15] = 1; return m; },
+    identity(o) { o.fill(0); o[0] = o[5] = o[10] = o[15] = 1; return o; },
+    copy(o, a) { o.set(a); return o; },
+    mul(o, a, b) {
+      const a00 = a[0], a01 = a[1], a02 = a[2], a03 = a[3], a10 = a[4], a11 = a[5], a12 = a[6], a13 = a[7],
+        a20 = a[8], a21 = a[9], a22 = a[10], a23 = a[11], a30 = a[12], a31 = a[13], a32 = a[14], a33 = a[15];
+      for (let i = 0; i < 4; i++) {
+        const b0 = b[i * 4], b1 = b[i * 4 + 1], b2 = b[i * 4 + 2], b3 = b[i * 4 + 3];
+        o[i * 4] = b0 * a00 + b1 * a10 + b2 * a20 + b3 * a30;
+        o[i * 4 + 1] = b0 * a01 + b1 * a11 + b2 * a21 + b3 * a31;
+        o[i * 4 + 2] = b0 * a02 + b1 * a12 + b2 * a22 + b3 * a32;
+        o[i * 4 + 3] = b0 * a03 + b1 * a13 + b2 * a23 + b3 * a33;
+      }
+      return o;
+    },
+    invert(o, a) {
+      const a00 = a[0], a01 = a[1], a02 = a[2], a03 = a[3], a10 = a[4], a11 = a[5], a12 = a[6], a13 = a[7],
+        a20 = a[8], a21 = a[9], a22 = a[10], a23 = a[11], a30 = a[12], a31 = a[13], a32 = a[14], a33 = a[15];
+      const b00 = a00 * a11 - a01 * a10, b01 = a00 * a12 - a02 * a10, b02 = a00 * a13 - a03 * a10,
+        b03 = a01 * a12 - a02 * a11, b04 = a01 * a13 - a03 * a11, b05 = a02 * a13 - a03 * a12,
+        b06 = a20 * a31 - a21 * a30, b07 = a20 * a32 - a22 * a30, b08 = a20 * a33 - a23 * a30,
+        b09 = a21 * a32 - a22 * a31, b10 = a21 * a33 - a23 * a31, b11 = a22 * a33 - a23 * a32;
+      let det = b00 * b11 - b01 * b10 + b02 * b09 + b03 * b08 - b04 * b07 + b05 * b06;
+      if (!det) return m4.identity(o);
+      det = 1 / det;
+      o[0] = (a11 * b11 - a12 * b10 + a13 * b09) * det; o[1] = (a02 * b10 - a01 * b11 - a03 * b09) * det;
+      o[2] = (a31 * b05 - a32 * b04 + a33 * b03) * det; o[3] = (a22 * b04 - a21 * b05 - a23 * b03) * det;
+      o[4] = (a12 * b08 - a10 * b11 - a13 * b07) * det; o[5] = (a00 * b11 - a02 * b08 + a03 * b07) * det;
+      o[6] = (a32 * b02 - a30 * b05 - a33 * b01) * det; o[7] = (a20 * b05 - a22 * b02 + a23 * b01) * det;
+      o[8] = (a10 * b10 - a11 * b08 + a13 * b06) * det; o[9] = (a01 * b08 - a00 * b10 - a03 * b06) * det;
+      o[10] = (a30 * b04 - a31 * b02 + a33 * b00) * det; o[11] = (a21 * b02 - a20 * b04 - a23 * b00) * det;
+      o[12] = (a11 * b07 - a10 * b09 - a12 * b06) * det; o[13] = (a00 * b09 - a01 * b07 + a02 * b06) * det;
+      o[14] = (a31 * b01 - a30 * b03 - a32 * b00) * det; o[15] = (a20 * b03 - a21 * b01 + a22 * b00) * det;
+      return o;
+    },
+    perspective(o, fovy, aspect, near, far) {
+      const f = 1 / Math.tan(fovy / 2), nf = 1 / (near - far);
+      o.fill(0); o[0] = f / aspect; o[5] = f; o[10] = (far + near) * nf; o[11] = -1; o[14] = 2 * far * near * nf;
+      return o;
+    },
+    // Euler order YXZ  (R = Ry * Rx * Rz)
+    compose(o, p, r, s) {
+      const cx = Math.cos(r[0]), sx = Math.sin(r[0]), cy = Math.cos(r[1]), sy = Math.sin(r[1]),
+        cz = Math.cos(r[2]), sz = Math.sin(r[2]);
+      // rows of R
+      const m00 = cy * cz + sy * sx * sz, m01 = -cy * sz + sy * sx * cz, m02 = sy * cx;
+      const m10 = cx * sz, m11 = cx * cz, m12 = -sx;
+      const m20 = -sy * cz + cy * sx * sz, m21 = sy * sz + cy * sx * cz, m22 = cy * cx;
+      o[0] = m00 * s[0]; o[1] = m10 * s[0]; o[2] = m20 * s[0]; o[3] = 0;
+      o[4] = m01 * s[1]; o[5] = m11 * s[1]; o[6] = m21 * s[1]; o[7] = 0;
+      o[8] = m02 * s[2]; o[9] = m12 * s[2]; o[10] = m22 * s[2]; o[11] = 0;
+      o[12] = p[0]; o[13] = p[1]; o[14] = p[2]; o[15] = 1;
+      return o;
+    },
+    lookAtView(o, eye, target, up) {
+      let zx = eye[0] - target[0], zy = eye[1] - target[1], zz = eye[2] - target[2];
+      let l = Math.hypot(zx, zy, zz); zx /= l; zy /= l; zz /= l;
+      let xx = up[1] * zz - up[2] * zy, xy = up[2] * zx - up[0] * zz, xz = up[0] * zy - up[1] * zx;
+      l = Math.hypot(xx, xy, xz); xx /= l; xy /= l; xz /= l;
+      const yx = zy * xz - zz * xy, yy = zz * xx - zx * xz, yz = zx * xy - zy * xx;
+      o[0] = xx; o[1] = yx; o[2] = zx; o[3] = 0;
+      o[4] = xy; o[5] = yy; o[6] = zy; o[7] = 0;
+      o[8] = xz; o[9] = yz; o[10] = zz; o[11] = 0;
+      o[12] = -(xx * eye[0] + xy * eye[1] + xz * eye[2]);
+      o[13] = -(yx * eye[0] + yy * eye[1] + yz * eye[2]);
+      o[14] = -(zx * eye[0] + zy * eye[1] + zz * eye[2]); o[15] = 1;
+      return o;
+    },
+    translation(o, x, y, z) { m4.identity(o); o[12] = x; o[13] = y; o[14] = z; return o; },
+    point(m, p) {
+      const x = p[0], y = p[1], z = p[2];
+      return [m[0] * x + m[4] * y + m[8] * z + m[12], m[1] * x + m[5] * y + m[9] * z + m[13], m[2] * x + m[6] * y + m[10] * z + m[14]];
+    },
+    dir(m, d) {
+      const x = d[0], y = d[1], z = d[2];
+      return [m[0] * x + m[4] * y + m[8] * z, m[1] * x + m[5] * y + m[9] * z, m[2] * x + m[6] * y + m[10] * z];
+    },
+    normalMat(o3, m) { // inverse-transpose of upper 3x3
+      const a00 = m[0], a01 = m[1], a02 = m[2], a10 = m[4], a11 = m[5], a12 = m[6], a20 = m[8], a21 = m[9], a22 = m[10];
+      const b01 = a22 * a11 - a12 * a21, b11 = -a22 * a10 + a12 * a20, b21 = a21 * a10 - a11 * a20;
+      let det = a00 * b01 + a01 * b11 + a02 * b21; det = det ? 1 / det : 0;
+      o3[0] = b01 * det; o3[3] = (-a22 * a01 + a02 * a21) * det; o3[6] = (a12 * a01 - a02 * a11) * det;
+      o3[1] = b11 * det; o3[4] = (a22 * a00 - a02 * a20) * det; o3[7] = (-a12 * a00 + a02 * a10) * det;
+      o3[2] = b21 * det; o3[5] = (-a21 * a00 + a01 * a20) * det; o3[8] = (a11 * a00 - a01 * a10) * det;
+      return o3;
+    }
+  };
+  const v3 = {
+    sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
+    add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
+    scale: (a, s) => [a[0] * s, a[1] * s, a[2] * s],
+    len: (a) => Math.hypot(a[0], a[1], a[2]),
+    norm: (a) => { const l = Math.hypot(a[0], a[1], a[2]) || 1; return [a[0] / l, a[1] / l, a[2] / l]; },
+    cross: (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]],
+    dot: (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2],
+    lerp: (a, b, t) => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t]
+  };
+
+  function hexToRgb(h) {
+    if (Array.isArray(h)) return h;
+    const n = parseInt(h.replace('#', ''), 16);
+    return [((n >> 16) & 255) / 255, ((n >> 8) & 255) / 255, (n & 255) / 255];
+  }
+
+  // ---------------------------------------------------------------- scene graph
+  let nodeId = 0;
+  class Node {
+    constructor(name) {
+      this.id = ++nodeId; this.name = name || '';
+      this.position = [0, 0, 0]; this.rotation = [0, 0, 0]; this.scale = [1, 1, 1];
+      this.children = []; this.parent = null; this.visible = true;
+      this.local = m4.create(); this.world = m4.create(); this.matrixOverride = null;
+      this.userData = {};
+    }
+    add(...cs) { for (const c of cs) { if (c.parent) c.parent.remove(c); c.parent = this; this.children.push(c); } return this; }
+    remove(c) { const i = this.children.indexOf(c); if (i >= 0) { this.children.splice(i, 1); c.parent = null; } return this; }
+    setPos(x, y, z) { this.position[0] = x; this.position[1] = y; this.position[2] = z; return this; }
+    setRot(x, y, z) { this.rotation[0] = x; this.rotation[1] = y; this.rotation[2] = z; return this; }
+    setScale(x, y, z) { if (y === undefined) y = z = x; this.scale[0] = x; this.scale[1] = y; this.scale[2] = z; return this; }
+    updateWorld(parentWorld) {
+      if (this.matrixOverride) this.local.set(this.matrixOverride);
+      else m4.compose(this.local, this.position, this.rotation, this.scale);
+      if (parentWorld) m4.mul(this.world, parentWorld, this.local); else this.world.set(this.local);
+      const ch = this.children;
+      for (let i = 0; i < ch.length; i++) ch[i].updateWorld(this.world);
+    }
+    shown() { let n = this; while (n) { if (!n.visible) return false; n = n.parent; } return true; }
+    worldPos() { return [this.world[12], this.world[13], this.world[14]]; }
+    localToWorld(p) { return m4.point(this.world, p); }
+    traverse(fn) { fn(this); for (const c of this.children) c.traverse(fn); }
+  }
+
+  class Mesh extends Node {
+    constructor(geometry, material, name) { super(name); this.geometry = geometry; this.material = material; this.renderOrder = 0; }
+  }
+
+  class Material {
+    constructor(o = {}) {
+      this.color = hexToRgb(o.color || '#ffffff');
+      this.emissive = hexToRgb(o.emissive || '#000000');
+      this.opacity = o.opacity == null ? 1 : o.opacity;
+      this.transparent = !!o.transparent || this.opacity < 1 || !!o.map;
+      this.map = o.map || null;
+      this.unlit = !!o.unlit;
+      this.fog = o.fog !== false;
+      this.depthTest = o.depthTest !== false;
+      this.depthWrite = o.depthWrite != null ? o.depthWrite : !this.transparent;
+      this.doubleSided = o.doubleSided !== false; // default double sided (cheap and forgiving)
+      this.uvOffset = [0, 0]; this.uvRepeat = o.uvRepeat || [1, 1];
+      this.rim = o.rim == null ? 1 : o.rim;
+    }
+    setColor(h) { this.color = hexToRgb(h); }
+  }
+
+  // ---------------------------------------------------------------- geometry
+  class Geometry {
+    constructor(pos, nrm, uv, idx, col) {
+      this.pos = pos instanceof Float32Array ? pos : new Float32Array(pos);
+      this.nrm = nrm instanceof Float32Array ? nrm : new Float32Array(nrm);
+      this.uv = uv ? (uv instanceof Float32Array ? uv : new Float32Array(uv)) : new Float32Array((this.pos.length / 3) * 2);
+      this.col = col ? (col instanceof Float32Array ? col : new Float32Array(col)) : null;
+      const vc = this.pos.length / 3;
+      if (idx && idx.length === 0) idx = null;
+      this.idx = idx ? (vc > 65535 ? new Uint32Array(idx) : new Uint16Array(idx)) : null;
+      this.count = this.idx ? this.idx.length : vc;
+      this.drawCount = null; // partial drawing
+      this.gl = null;
+      this.computeBounds();
+    }
+    computeBounds() {
+      const p = this.pos; const mn = [1e9, 1e9, 1e9], mx = [-1e9, -1e9, -1e9];
+      for (let i = 0; i < p.length; i += 3) for (let k = 0; k < 3; k++) { const v = p[i + k]; if (v < mn[k]) mn[k] = v; if (v > mx[k]) mx[k] = v; }
+      this.bmin = mn; this.bmax = mx;
+    }
+  }
+
+  class GB { // geometry builder
+    constructor() { this.p = []; this.n = []; this.u = []; this.c = []; this.i = []; this.hasCol = false; }
+    v(x, y, z, nx, ny, nz, u, w, col) {
+      this.p.push(x, y, z); this.n.push(nx, ny, nz); this.u.push(u || 0, w || 0);
+      if (col) { this.hasCol = true; this.c.push(col[0], col[1], col[2]); } else this.c.push(1, 1, 1);
+      return this.p.length / 3 - 1;
+    }
+    t(a, b, c) { this.i.push(a, b, c); }
+    q(a, b, c, d) { this.i.push(a, b, c, a, c, d); }
+    build() { return new Geometry(this.p, this.n, this.u, this.i, this.hasCol ? this.c : null); }
+  }
+
+  const G = {};
+  G.plane = (w, h) => {
+    const b = new GB(), x = w / 2, y = h / 2;
+    const a = b.v(-x, -y, 0, 0, 0, 1, 0, 0), c = b.v(x, -y, 0, 0, 0, 1, 1, 0), d = b.v(x, y, 0, 0, 0, 1, 1, 1), e = b.v(-x, y, 0, 0, 0, 1, 0, 1);
+    b.q(a, c, d, e); return b.build();
+  };
+  G.box = (w, h, d) => G.roundedBox(w, h, d, 0, 1);
+  G.roundedBox = (w, h, d, r, seg = 3) => {
+    const hs = [w / 2, h / 2, d / 2];
+    r = Math.min(r, hs[0], hs[1], hs[2]);
+    const coords = (hh) => {
+      if (r <= 0) return [-hh, hh];
+      const out = [];
+      for (let k = 0; k <= seg; k++) out.push(-(hh - r) - r * Math.cos((Math.PI / 2) * k / seg));
+      for (let k = seg; k >= 0; k--) out.push((hh - r) + r * Math.cos((Math.PI / 2) * k / seg));
+      return out;
+    };
+    const cs = [coords(hs[0]), coords(hs[1]), coords(hs[2])];
+    const b = new GB();
+    const faces = [ // [axis normal, sign, u axis, v axis]
+      [2, 1, 0, 1], [2, -1, 0, 1], [0, 1, 2, 1], [0, -1, 2, 1], [1, 1, 0, 2], [1, -1, 0, 2]
+    ];
+    for (const [ax, sg, ua, va] of faces) {
+      const U = cs[ua], V = cs[va], base = b.p.length / 3;
+      for (let j = 0; j < V.length; j++) for (let i = 0; i < U.length; i++) {
+        const p = [0, 0, 0]; p[ax] = sg * hs[ax]; p[ua] = U[i]; p[va] = V[j];
+        let n = [0, 0, 0]; n[ax] = sg;
+        if (r > 0) {
+          const inner = [0, 1, 2].map(k => Math.max(-(hs[k] - r), Math.min(hs[k] - r, p[k])));
+          const dv = v3.sub(p, inner); const L = v3.len(dv);
+          if (L > 1e-6) { n = v3.scale(dv, 1 / L); const q = v3.add(inner, v3.scale(n, r)); p[0] = q[0]; p[1] = q[1]; p[2] = q[2]; }
+        }
+        b.v(p[0], p[1], p[2], n[0], n[1], n[2], (U[i] / hs[ua] + 1) / 2, (V[j] / hs[va] + 1) / 2);
+      }
+      const nu = U.length;
+      for (let j = 0; j < V.length - 1; j++) for (let i = 0; i < nu - 1; i++) {
+        const a = base + j * nu + i, c = a + 1, d = a + nu + 1, e = a + nu;
+        // keep outward winding
+        const flip = (ax === 2 && sg < 0) || (ax === 0 && sg > 0) || (ax === 1 && sg > 0);
+        if (flip) b.q(a, e, d, c); else b.q(a, c, d, e);
+      }
+    }
+    return G.fixWinding(b.build());
+  };
+  G.sphere = (r, ws = 16, hs = 12, phiLen = Math.PI) => {
+    const b = new GB();
+    for (let y = 0; y <= hs; y++) {
+      const v = y / hs, th = v * phiLen;
+      for (let x = 0; x <= ws; x++) {
+        const u = x / ws, ph = u * Math.PI * 2;
+        const nx = -Math.cos(ph) * Math.sin(th), ny = Math.cos(th), nz = Math.sin(ph) * Math.sin(th);
+        b.v(nx * r, ny * r, nz * r, nx, ny, nz, u, 1 - v);
+      }
+    }
+    for (let y = 0; y < hs; y++) for (let x = 0; x < ws; x++) {
+      const a = y * (ws + 1) + x, c = a + ws + 1;
+      b.t(a, c, a + 1); b.t(a + 1, c, c + 1);
+    }
+    return G.fixWinding(b.build());
+  };
+  G.cylinder = (rt, rb, h, seg = 16, open = false, t0 = 0, tl = Math.PI * 2) => {
+    const b = new GB(), hh = h / 2, slope = (rb - rt) / h;
+    for (let y = 0; y <= 1; y++) {
+      const r = y ? rt : rb, py = y ? hh : -hh;
+      for (let i = 0; i <= seg; i++) {
+        const a = t0 + tl * i / seg, s = Math.sin(a), c = Math.cos(a);
+        const n = v3.norm([s, slope, c]);
+        b.v(r * s, py, r * c, n[0], n[1], n[2], i / seg, y);
+      }
+    }
+    for (let i = 0; i < seg; i++) { const a = i, c = i + seg + 1; b.t(a, a + 1, c + 1); b.t(a, c + 1, c); }
+    if (!open) for (const top of [1, 0]) {
+      const r = top ? rt : rb; if (r <= 0) continue; const py = top ? hh : -hh, ny = top ? 1 : -1;
+      const cen = b.v(0, py, 0, 0, ny, 0, 0.5, 0.5);
+      const st = b.p.length / 3;
+      for (let i = 0; i <= seg; i++) { const a = t0 + tl * i / seg; b.v(r * Math.sin(a), py, r * Math.cos(a), 0, ny, 0, 0.5 + Math.sin(a) / 2, 0.5 + Math.cos(a) / 2); }
+      for (let i = 0; i < seg; i++) top ? b.t(cen, st + i, st + i + 1) : b.t(cen, st + i + 1, st + i);
+    }
+    return G.fixWinding(b.build());
+  };
+  G.cone = (r, h, seg = 16) => G.cylinder(0, r, h, seg);
+  G.disc = (r, seg = 32) => { // facing +Y
+    const b = new GB(); const c = b.v(0, 0, 0, 0, 1, 0, 0.5, 0.5);
+    for (let i = 0; i <= seg; i++) { const a = i / seg * Math.PI * 2; b.v(Math.cos(a) * r, 0, -Math.sin(a) * r, 0, 1, 0, 0.5 + Math.cos(a) / 2, 0.5 + Math.sin(a) / 2); }
+    for (let i = 0; i < seg; i++) b.t(c, i + 1, i + 2);
+    return b.build();
+  };
+  G.ring = (ri, ro, seg = 48, arc = Math.PI * 2, start = Math.PI / 2) => { // facing +Z, ordered for drawCount progress
+    const b = new GB();
+    for (let i = 0; i <= seg; i++) {
+      const a = start - arc * i / seg, c = Math.cos(a), s = Math.sin(a);
+      b.v(c * ri, s * ri, 0, 0, 0, 1, i / seg, 0); b.v(c * ro, s * ro, 0, 0, 0, 1, i / seg, 1);
+    }
+    for (let i = 0; i < seg; i++) { const a = i * 2; b.t(a, a + 2, a + 3); b.t(a, a + 3, a + 1); }
+    return b.build();
+  };
+  G.torus = (R, r, rs = 8, ts = 24, arc = Math.PI * 2) => {
+    const b = new GB();
+    for (let j = 0; j <= rs; j++) for (let i = 0; i <= ts; i++) {
+      const u = i / ts * arc, v = j / rs * Math.PI * 2;
+      const cx = Math.cos(u) * R, cy = Math.sin(u) * R;
+      const nx = Math.cos(u) * Math.cos(v), ny = Math.sin(u) * Math.cos(v), nz = Math.sin(v);
+      b.v(cx + nx * r, cy + ny * r, nz * r, nx, ny, nz, i / ts, j / rs);
+    }
+    for (let j = 0; j < rs; j++) for (let i = 0; i < ts; i++) {
+      const a = j * (ts + 1) + i, c = a + ts + 1; b.t(a, c, a + 1); b.t(c, c + 1, a + 1);
+    }
+    return G.fixWinding(b.build());
+  };
+  G.lathe = (pts, seg = 24, smooth = false) => { // pts: [[r,y],...]
+    const b = new GB(), n = pts.length;
+    const nr = pts.map((p, j) => { const a = pts[Math.max(j - 1, 0)], c = pts[Math.min(j + 1, n - 1)]; let x = c[1] - a[1], y = -(c[0] - a[0]); const l = Math.hypot(x, y) || 1; x /= l; y /= l; if (x < 0 || (x === 0 && y < 0 && p[1] > 0)) { x = -x; y = -y; } return [x, y]; });
+    for (let i = 0; i <= seg; i++) {
+      const a = i / seg * Math.PI * 2, s = Math.sin(a), c = Math.cos(a);
+      for (let j = 0; j < n; j++) b.v(pts[j][0] * s, pts[j][1], pts[j][0] * c, nr[j][0] * s, nr[j][1], nr[j][0] * c, i / seg, j / (n - 1));
+    }
+    for (let i = 0; i < seg; i++) for (let j = 0; j < n - 1; j++) {
+      const a = i * n + j, c = (i + 1) * n + j; b.t(a, c, c + 1); b.t(a, c + 1, a + 1);
+    }
+    return smooth ? G.fixWinding(b.build()) : G.flat(b.build());
+  };
+  // make triangle winding agree with vertex normals (needed for correct double-sided lighting)
+  G.fixWinding = (g) => {
+    const I = g.idx, P = g.pos, N = g.nrm;
+    for (let k = 0; k < I.length; k += 3) {
+      const a = I[k], b = I[k + 1], c = I[k + 2];
+      const e1 = [P[b * 3] - P[a * 3], P[b * 3 + 1] - P[a * 3 + 1], P[b * 3 + 2] - P[a * 3 + 2]], e2 = [P[c * 3] - P[a * 3], P[c * 3 + 1] - P[a * 3 + 1], P[c * 3 + 2] - P[a * 3 + 2]];
+      const f = v3.cross(e1, e2); const vn = [N[a * 3] + N[b * 3] + N[c * 3], N[a * 3 + 1] + N[b * 3 + 1] + N[c * 3 + 1], N[a * 3 + 2] + N[b * 3 + 2] + N[c * 3 + 2]];
+      if (v3.dot(f, vn) < 0) { I[k + 1] = c; I[k + 2] = b; }
+    }
+    return g;
+  };
+  G.tube = (path, radius, rs = 6, radiusFn) => { // path: array of [x,y,z]
+    const b = new GB(); const N = path.length;
+    let prevN = null;
+    for (let i = 0; i < N; i++) {
+      const p = path[i];
+      const tg = v3.norm(v3.sub(path[Math.min(i + 1, N - 1)], path[Math.max(i - 1, 0)]));
+      let nn = prevN ? v3.norm(v3.sub(prevN, v3.scale(tg, v3.dot(prevN, tg)))) : v3.norm(v3.cross(tg, Math.abs(tg[1]) < 0.9 ? [0, 1, 0] : [1, 0, 0]));
+      prevN = nn; const bn = v3.cross(tg, nn);
+      const rr = radiusFn ? radiusFn(i / (N - 1)) * radius : radius;
+      for (let j = 0; j <= rs; j++) {
+        const a = j / rs * Math.PI * 2, c = Math.cos(a), s = Math.sin(a);
+        const n = [nn[0] * c + bn[0] * s, nn[1] * c + bn[1] * s, nn[2] * c + bn[2] * s];
+        b.v(p[0] + n[0] * rr, p[1] + n[1] * rr, p[2] + n[2] * rr, n[0], n[1], n[2], i / (N - 1), j / rs);
+      }
+    }
+    for (let i = 0; i < N - 1; i++) for (let j = 0; j < rs; j++) {
+      const a = i * (rs + 1) + j, c = a + rs + 1; b.t(a, c, a + 1); b.t(c, c + 1, a + 1);
+    }
+    const g = G.fixWinding(b.build()); g.segIndexCount = rs * 6; g.segments = N - 1; return g;
+  };
+  G.star = (ro, ri, n, depth) => {
+    const b = new GB(), pts = [];
+    for (let i = 0; i < n * 2; i++) { const a = Math.PI / 2 + i * Math.PI / n, r = i % 2 ? ri : ro; pts.push([Math.cos(a) * r, Math.sin(a) * r]); }
+    for (const z of [depth / 2, -depth / 2]) {
+      const nz = z > 0 ? 1 : -1, c = b.v(0, 0, z * 1.6, 0, 0, nz, 0.5, 0.5), st = b.p.length / 3;
+      for (const p of pts) b.v(p[0], p[1], z, 0, 0, nz);
+      for (let i = 0; i < pts.length; i++) { const a = st + i, d = st + (i + 1) % pts.length; nz > 0 ? b.t(c, a, d) : b.t(c, d, a); }
+    }
+    for (let i = 0; i < pts.length; i++) {
+      const p = pts[i], q = pts[(i + 1) % pts.length]; const e = [q[0] - p[0], q[1] - p[1]]; const nn = v3.norm([e[1], -e[0], 0]);
+      const a = b.v(p[0], p[1], depth / 2, ...nn), c = b.v(q[0], q[1], depth / 2, ...nn), d = b.v(q[0], q[1], -depth / 2, ...nn), f = b.v(p[0], p[1], -depth / 2, ...nn);
+      b.q(a, f, d, c);
+    }
+    return G.flat(b.build());
+  };
+  G.ico = (r, detail = 0, jitter = 0, rnd = Math.random) => {
+    const t = (1 + Math.sqrt(5)) / 2;
+    let verts = [[-1, t, 0], [1, t, 0], [-1, -t, 0], [1, -t, 0], [0, -1, t], [0, 1, t], [0, -1, -t], [0, 1, -t], [t, 0, -1], [t, 0, 1], [-t, 0, -1], [-t, 0, 1]].map(v3.norm);
+    let faces = [[0, 11, 5], [0, 5, 1], [0, 1, 7], [0, 7, 10], [0, 10, 11], [1, 5, 9], [5, 11, 4], [11, 10, 2], [10, 7, 6], [7, 1, 8], [3, 9, 4], [3, 4, 2], [3, 2, 6], [3, 6, 8], [3, 8, 9], [4, 9, 5], [2, 4, 11], [6, 2, 10], [8, 6, 7], [9, 8, 1]];
+    for (let d = 0; d < detail; d++) {
+      const cache = {}, nf = [];
+      const mid = (a, b) => { const k = a < b ? a + '_' + b : b + '_' + a; if (cache[k] == null) { verts.push(v3.norm(v3.lerp(verts[a], verts[b], 0.5))); cache[k] = verts.length - 1; } return cache[k]; };
+      for (const [a, b, c] of faces) { const ab = mid(a, b), bc = mid(b, c), ca = mid(c, a); nf.push([a, ab, ca], [b, bc, ab], [c, ca, bc], [ab, bc, ca]); }
+      faces = nf;
+    }
+    const pv = verts.map(v => v3.scale(v, r * (1 + (rnd() * 2 - 1) * jitter)));
+    const b = new GB();
+    for (const f of faces) for (const k of f) b.v(pv[k][0], pv[k][1], pv[k][2], 0, 1, 0);
+    return G.flat(b.build());
+  };
+  // flat shading: unindex + face normals
+  G.flat = (g) => {
+    const idx = g.idx || [...Array(g.pos.length / 3).keys()];
+    const P = [], N = [], U = [], C = [];
+    for (let i = 0; i < idx.length; i += 3) {
+      const vs = [idx[i], idx[i + 1], idx[i + 2]];
+      const a = [g.pos[vs[0] * 3], g.pos[vs[0] * 3 + 1], g.pos[vs[0] * 3 + 2]], b = [g.pos[vs[1] * 3], g.pos[vs[1] * 3 + 1], g.pos[vs[1] * 3 + 2]], c = [g.pos[vs[2] * 3], g.pos[vs[2] * 3 + 1], g.pos[vs[2] * 3 + 2]];
+      const n = v3.norm(v3.cross(v3.sub(b, a), v3.sub(c, a)));
+      for (const k of vs) { P.push(g.pos[k * 3], g.pos[k * 3 + 1], g.pos[k * 3 + 2]); N.push(...n); U.push(g.uv[k * 2], g.uv[k * 2 + 1]); if (g.col) C.push(g.col[k * 3], g.col[k * 3 + 1], g.col[k * 3 + 2]); }
+    }
+    return new Geometry(P, N, U, null, g.col ? C : null);
+  };
+  // merge geometries into one with vertex colors: items [{g, m (mat4), color}]
+  G.merge = (items) => {
+    const P = [], N = [], U = [], C = [], I = []; let off = 0; const nm = new Float32Array(9);
+    for (const it of items) {
+      const g = it.g, m = it.m, col = hexToRgb(it.color || '#ffffff');
+      m4.normalMat(nm, m);
+      const vc = g.pos.length / 3;
+      for (let k = 0; k < vc; k++) {
+        const p = m4.point(m, [g.pos[k * 3], g.pos[k * 3 + 1], g.pos[k * 3 + 2]]);
+        const x = g.nrm[k * 3], y = g.nrm[k * 3 + 1], z = g.nrm[k * 3 + 2];
+        const n = v3.norm([nm[0] * x + nm[3] * y + nm[6] * z, nm[1] * x + nm[4] * y + nm[7] * z, nm[2] * x + nm[5] * y + nm[8] * z]);
+        P.push(...p); N.push(...n); U.push(g.uv[k * 2], g.uv[k * 2 + 1]);
+        if (g.col) C.push(g.col[k * 3] * col[0], g.col[k * 3 + 1] * col[1], g.col[k * 3 + 2] * col[2]); else C.push(...col);
+      }
+      if (g.idx) for (const i of g.idx) I.push(i + off); else for (let k = 0; k < vc; k++) I.push(k + off);
+      off += vc;
+    }
+    return new Geometry(P, N, U, I, C);
+  };
+
+  // ---------------------------------------------------------------- textures
+  class Texture {
+    constructor(canvas) { this.canvas = canvas || null; this.glTex = null; this.needsUpdate = true; this.repeat = false; }
+  }
+  class RenderTarget {
+    constructor(w, h) { this.w = w; this.h = h; this.texture = new Texture(null); this.texture.rt = this; this.fbo = null; }
+  }
+
+  // ---------------------------------------------------------------- renderer
+  const VS = `#version 300 es
+  layout(location=0) in vec3 aPos; layout(location=1) in vec3 aNrm; layout(location=2) in vec2 aUv; layout(location=3) in vec3 aCol;
+  uniform mat4 uModel, uVP; uniform mat3 uNM;
+  out vec3 vN; out vec2 vUv; out vec3 vCol; out vec3 vW;
+  void main(){ vec4 w=uModel*vec4(aPos,1.0); vW=w.xyz; vN=uNM*aNrm; vUv=aUv; vCol=aCol; gl_Position=uVP*w; }`;
+  const FS = `#version 300 es
+  precision highp float;
+  in vec3 vN; in vec2 vUv; in vec3 vCol; in vec3 vW;
+  uniform vec3 uColor, uEmissive, uLightDir, uSky, uGround, uLightCol, uCam, uFogCol;
+  uniform float uOpacity, uRim; uniform vec2 uFog, uUvOff, uUvRep; uniform int uUnlit, uUseTex, uFogOn;
+  uniform sampler2D uTex;
+  out vec4 o;
+  void main(){
+    vec4 base=vec4(uColor*vCol,1.0);
+    if(uUseTex==1){ vec4 t=texture(uTex, vUv*uUvRep+uUvOff); base=vec4(base.rgb*t.rgb, t.a); }
+    vec3 c;
+    if(uUnlit==0){
+      vec3 n=normalize(vN); if(!gl_FrontFacing) n=-n;
+      float d=dot(n,uLightDir);
+      float band=smoothstep(-0.3,0.35,d)*0.7+smoothstep(0.35,0.8,d)*0.3;
+      vec3 hemi=mix(uGround,uSky,n.y*0.5+0.5);
+      c=base.rgb*(hemi+uLightCol*band);
+      vec3 v=normalize(uCam-vW); float rim=pow(1.0-max(dot(n,v),0.0),3.0);
+      c+=rim*0.10*uRim*base.a;
+    } else c=base.rgb;
+    c+=uEmissive*base.a;
+    float a=base.a*uOpacity; c*=uOpacity;
+    if(uFogOn==1){ float dist=length(vW-uCam); float f=clamp((dist-uFog.x)/(uFog.y-uFog.x),0.0,1.0); c=mix(c,uFogCol*a,f*f*(3.0-2.0*f)); }
+    if(a<0.004) discard;
+    o=vec4(c,a);
+  }`;
+  const QVS = `#version 300 es
+  layout(location=0) in vec3 aPos; void main(){ gl_Position=vec4(aPos.xy,0.0,1.0); }`;
+  const QFS = `#version 300 es
+  precision mediump float; uniform vec4 uC; out vec4 o; void main(){ o=vec4(uC.rgb*uC.a,uC.a); }`;
+
+  class Renderer {
+    constructor(canvas) {
+      this.canvas = canvas;
+      const gl = canvas.getContext('webgl2', { antialias: true, alpha: false, xrCompatible: true, powerPreference: 'high-performance' });
+      if (!gl) throw new Error('webgl2');
+      this.gl = gl;
+      this.prog = this.program(VS, FS);
+      this.qprog = this.program(QVS, QFS);
+      this.loc = {}; for (const n of ['uModel', 'uVP', 'uNM', 'uColor', 'uEmissive', 'uLightDir', 'uSky', 'uGround', 'uLightCol', 'uCam', 'uFogCol', 'uOpacity', 'uRim', 'uFog', 'uUvOff', 'uUvRep', 'uUnlit', 'uUseTex', 'uFogOn', 'uTex']) this.loc[n] = gl.getUniformLocation(this.prog, n);
+      this.qC = gl.getUniformLocation(this.qprog, 'uC');
+      this.quad = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, this.quad);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 0, 3, -1, 0, -1, 3, 0]), gl.STATIC_DRAW);
+      this.qvao = gl.createVertexArray(); gl.bindVertexArray(this.qvao); gl.enableVertexAttribArray(0); gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 0, 0); gl.bindVertexArray(null);
+      this.white = this.makeTex1(); this.env = { lightDir: v3.norm([0.4, 0.85, 0.35]), sky: [0.66, 0.66, 0.7], ground: [0.5, 0.46, 0.52], lightCol: [0.42, 0.4, 0.36], fogCol: [0.98, 0.9, 0.86], fog: [40, 150] };
+      this.clearColor = [0.8, 0.9, 0.96];
+      this.nm = new Float32Array(9); this.vp = m4.create(); this.list = []; this.tlist = [];
+      this.anisoExt = gl.getExtension('EXT_texture_filter_anisotropic');
+    }
+    program(vs, fs) {
+      const gl = this.gl, p = gl.createProgram();
+      for (const [t, s] of [[gl.VERTEX_SHADER, vs], [gl.FRAGMENT_SHADER, fs]]) {
+        const sh = gl.createShader(t); gl.shaderSource(sh, s); gl.compileShader(sh);
+        if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(sh));
+        gl.attachShader(p, sh);
+      }
+      gl.linkProgram(p); if (!gl.getProgramParameter(p, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(p));
+      return p;
+    }
+    makeTex1() { const gl = this.gl, t = gl.createTexture(); gl.bindTexture(gl.TEXTURE_2D, t); gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, new Uint8Array([255, 255, 255, 255])); return t; }
+    upload(g) {
+      const gl = this.gl; const vao = gl.createVertexArray(); gl.bindVertexArray(vao);
+      const buf = (data, loc, size) => { const b = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, b); gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc, size, gl.FLOAT, false, 0, 0); return b; };
+      buf(g.pos, 0, 3); buf(g.nrm, 1, 3); buf(g.uv, 2, 2);
+      if (g.col) buf(g.col, 3, 3); else { gl.disableVertexAttribArray(3); }
+      let ib = null; if (g.idx) { ib = gl.createBuffer(); gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, ib); gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, g.idx, gl.STATIC_DRAW); }
+      gl.bindVertexArray(null);
+      g.gl = { vao, ib, type: g.idx instanceof Uint32Array ? gl.UNSIGNED_INT : gl.UNSIGNED_SHORT };
+    }
+    texUpload(tex) {
+      const gl = this.gl;
+      if (tex.rt) { if (!tex.rt.fbo) this.makeRT(tex.rt); return; }
+      if (!tex.glTex) tex.glTex = gl.createTexture();
+      gl.bindTexture(gl.TEXTURE_2D, tex.glTex);
+      gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, true); gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, tex.canvas);
+      gl.pixelStorei(gl.UNPACK_PREMULTIPLY_ALPHA_WEBGL, false); gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, false);
+      gl.generateMipmap(gl.TEXTURE_2D);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+      const wrap = tex.repeat ? gl.REPEAT : gl.CLAMP_TO_EDGE;
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, wrap); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, wrap);
+      if (this.anisoExt) gl.texParameterf(gl.TEXTURE_2D, this.anisoExt.TEXTURE_MAX_ANISOTROPY_EXT, 4);
+      tex.needsUpdate = false;
+    }
+    makeRT(rt) {
+      const gl = this.gl, t = gl.createTexture();
+      gl.bindTexture(gl.TEXTURE_2D, t);
+      gl.texStorage2D(gl.TEXTURE_2D, Math.floor(Math.log2(Math.max(rt.w, rt.h))) + 1, gl.RGBA8, rt.w, rt.h);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR);
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+      const fbo = gl.createFramebuffer(); gl.bindFramebuffer(gl.FRAMEBUFFER, fbo);
+      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, t, 0);
+      const rb = gl.createRenderbuffer(); gl.bindRenderbuffer(gl.RENDERBUFFER, rb); gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT24, rt.w, rt.h);
+      gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, rb);
+      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+      rt.fbo = fbo; rt.texture.glTex = t; rt.texture.needsUpdate = false;
+    }
+    renderToTarget(rt, scene, view, proj, camPos) {
+      const gl = this.gl; if (!rt.fbo) this.makeRT(rt);
+      gl.bindFramebuffer(gl.FRAMEBUFFER, rt.fbo);
+      this.clear([0, 0, rt.w, rt.h]); this.collect(scene);
+      this.drawScene(scene, view, proj, camPos, [0, 0, rt.w, rt.h], null);
+      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+      gl.bindTexture(gl.TEXTURE_2D, rt.texture.glTex); gl.generateMipmap(gl.TEXTURE_2D);
+    }
+    clear(vp) {
+      const gl = this.gl; gl.viewport(vp[0], vp[1], vp[2], vp[3]);
+      gl.clearColor(this.clearColor[0], this.clearColor[1], this.clearColor[2], 1); gl.depthMask(true);
+      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+    }
+    collect(scene) {
+      this.list.length = 0; this.tlist.length = 0;
+      const walk = (n) => {
+        if (!n.visible) return;
+        if (n.geometry && n.material) (n.material.transparent ? this.tlist : this.list).push(n);
+        for (const c of n.children) walk(c);
+      };
+      walk(scene);
+    }
+    drawScene(scene, view, proj, camPos, vp, fade) {
+      const gl = this.gl, L = this.loc, env = this.env;
+      gl.viewport(vp[0], vp[1], vp[2], vp[3]);
+      m4.mul(this.vp, proj, view);
+      gl.useProgram(this.prog);
+      gl.uniformMatrix4fv(L.uVP, false, this.vp);
+      gl.uniform3fv(L.uLightDir, env.lightDir); gl.uniform3fv(L.uSky, env.sky); gl.uniform3fv(L.uGround, env.ground);
+      gl.uniform3fv(L.uLightCol, env.lightCol); gl.uniform3fv(L.uCam, camPos); gl.uniform3fv(L.uFogCol, env.fogCol); gl.uniform2fv(L.uFog, env.fog);
+      gl.uniform1i(L.uTex, 0); gl.activeTexture(gl.TEXTURE0);
+      gl.enable(gl.DEPTH_TEST); gl.disable(gl.CULL_FACE);
+      gl.enable(gl.BLEND); gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+      gl.depthMask(true);
+      for (const n of this.list) this.drawMesh(n);
+      // transparent: back-to-front
+      const t = this.tlist; for (const n of t) { const p = n.world; n._d = (p[12] - camPos[0]) ** 2 + (p[13] - camPos[1]) ** 2 + (p[14] - camPos[2]) ** 2; }
+      t.sort((a, b) => (a.renderOrder - b.renderOrder) || (b._d - a._d));
+      for (const n of t) this.drawMesh(n);
+      if (fade && fade > 0.001) {
+        gl.disable(gl.DEPTH_TEST); gl.useProgram(this.qprog); gl.uniform4f(this.qC, 0.98, 0.95, 0.92, Math.min(1, fade));
+        gl.bindVertexArray(this.qvao); gl.drawArrays(gl.TRIANGLES, 0, 3); gl.bindVertexArray(null); gl.enable(gl.DEPTH_TEST);
+      }
+    }
+    drawMesh(n) {
+      const gl = this.gl, L = this.loc, g = n.geometry, m = n.material;
+      if (!g.gl) this.upload(g);
+      gl.uniformMatrix4fv(L.uModel, false, n.world);
+      m4.normalMat(this.nm, n.world); gl.uniformMatrix3fv(L.uNM, false, this.nm);
+      gl.uniform3fv(L.uColor, m.color); gl.uniform3fv(L.uEmissive, m.emissive);
+      gl.uniform1f(L.uOpacity, m.opacity); gl.uniform1f(L.uRim, m.rim);
+      gl.uniform1i(L.uUnlit, m.unlit ? 1 : 0); gl.uniform1i(L.uFogOn, m.fog ? 1 : 0);
+      gl.uniform2fv(L.uUvOff, m.uvOffset); gl.uniform2fv(L.uUvRep, m.uvRepeat);
+      if (m.map) { if (m.map.needsUpdate || (!m.map.glTex)) this.texUpload(m.map); gl.bindTexture(gl.TEXTURE_2D, m.map.glTex); gl.uniform1i(L.uUseTex, 1); }
+      else { gl.bindTexture(gl.TEXTURE_2D, this.white); gl.uniform1i(L.uUseTex, 0); }
+      if (m.depthTest) gl.enable(gl.DEPTH_TEST); else gl.disable(gl.DEPTH_TEST);
+      gl.depthMask(m.depthWrite);
+      gl.bindVertexArray(g.gl.vao);
+      if (!g.col) gl.vertexAttrib3f(3, 1, 1, 1);
+      const cnt = g.drawCount == null ? g.count : Math.min(g.drawCount, g.count);
+      if (cnt > 0) { if (g.idx) gl.drawElements(gl.TRIANGLES, cnt, g.gl.type, 0); else gl.drawArrays(gl.TRIANGLES, 0, cnt); }
+      gl.bindVertexArray(null);
+    }
+  }
+
+  // ---------------------------------------------------------------- raycasting (ray vs local AABB)
+  const _inv = m4.create();
+  function rayHitNode(n, o, d) {
+    const g = n.geometry; if (!g) return null;
+    m4.invert(_inv, n.world);
+    const lo = m4.point(_inv, o), ld = m4.dir(_inv, d);
+    let tmin = -Infinity, tmax = Infinity;
+    for (let k = 0; k < 3; k++) {
+      const mn = g.bmin[k], mx = g.bmax[k];
+      if (Math.abs(ld[k]) < 1e-9) { if (lo[k] < mn - 1e-4 || lo[k] > mx + 1e-4) return null; }
+      else { let t1 = (mn - lo[k]) / ld[k], t2 = (mx - lo[k]) / ld[k]; if (t1 > t2) [t1, t2] = [t2, t1]; tmin = Math.max(tmin, t1); tmax = Math.min(tmax, t2); }
+    }
+    if (tmax < Math.max(tmin, 0)) return null;
+    const t = tmin > 0 ? tmin : tmax;
+    const lp = [lo[0] + ld[0] * t, lo[1] + ld[1] * t, lo[2] + ld[2] * t];
+    const wp = m4.point(n.world, lp);
+    return { point: wp, dist: v3.len(v3.sub(wp, o)), node: n };
+  }
+  function raycast(list, o, d) {
+    let best = null;
+    for (const n of list) { if (!n.shown()) continue; const h = rayHitNode(n, o, d); if (h && (!best || h.dist < best.dist)) best = h; }
+    return best;
+  }
+
+  global.M3 = { m4, v3, Node, Mesh, Material, Geometry, GB, G, Texture, RenderTarget, Renderer, raycast, hexToRgb };
+})(window);
+
+</script>
+<script>
+/* =========================================================================
+   واجهة ثلاثية الأبعاد: نصوص عربية على لوحات، أزرار، بطاقات، أصوات، تعليق صوتي
+   ========================================================================= */
+(function (global) {
+  'use strict';
+  const { G, Mesh, Node, Material, Texture } = M3;
+
+  const FONT = '"Baloo Bhaijaan 2", "Tajawal", "Noto Naskh Arabic", "Geeza Pro", "Segoe UI", Tahoma, "DejaVu Sans", sans-serif';
+  const COL = {
+    ink: '#3b3456', inkSoft: '#6b6386', paper: '#fffaf3', teal: '#4fb3a9', tealDark: '#2f8f86',
+    coral: '#f08a78', lav: '#a497df', sun: '#ffcf6b', green: '#5cc58a', greenDark: '#2f9b62', wrong: '#f3a48e', sky: '#8fd0ee'
+  };
+
+  // ------------------------------------------------------------ canvas helpers
+  function makeCanvas(w, h) { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; }
+  function rr(ctx, x, y, w, h, r) { ctx.beginPath(); ctx.moveTo(x + r, y); ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r); ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath(); }
+  function setFont(ctx, size, weight) { ctx.font = `${weight || 700} ${size}px ${FONT}`; ctx.direction = 'rtl'; ctx.textBaseline = 'middle'; }
+  function wrap(ctx, text, maxW) {
+    const out = [];
+    for (const para of String(text).split('\n')) {
+      const words = para.split(' '); let cur = '';
+      for (const w of words) { const t = cur ? cur + ' ' + w : w; if (cur && ctx.measureText(t).width > maxW) { out.push(cur); cur = w; } else cur = t; }
+      out.push(cur);
+    }
+    return out;
+  }
+  // draws wrapped text centred in a box, shrinking to fit
+  function textBox(ctx, text, cx, cy, maxW, maxH, size, opts = {}) {
+    let s = size, lines, lh;
+    for (; s > 14; s -= 2) { setFont(ctx, s, opts.weight); lines = wrap(ctx, text, maxW); lh = s * (opts.lh || 1.38); if (lines.length * lh <= maxH && lines.length <= (opts.maxLines || 9)) break; }
+    ctx.fillStyle = opts.color || COL.ink; ctx.textAlign = opts.align || 'center';
+    const x = opts.align === 'right' ? cx + maxW / 2 : cx;
+    const y0 = cy - (lines.length - 1) * lh / 2;
+    lines.forEach((l, i) => ctx.fillText(l, x, y0 + i * lh));
+    return s;
+  }
+  // simple vector icons drawn inside a size box centred at (x,y)
+  function icon(ctx, name, x, y, s, color) {
+    ctx.save(); ctx.translate(x, y); ctx.fillStyle = color; ctx.strokeStyle = color; ctx.lineWidth = s * 0.14; ctx.lineCap = 'round'; ctx.lineJoin = 'round';
+    const h = s / 2;
+    if (name === 'play') { ctx.beginPath(); ctx.moveTo(-h * 0.6, -h * 0.8); ctx.lineTo(h * 0.85, 0); ctx.lineTo(-h * 0.6, h * 0.8); ctx.closePath(); ctx.fill(); }
+    else if (name === 'replay') { ctx.beginPath(); ctx.arc(0, 0, h * 0.68, -Math.PI * 0.35, Math.PI * 1.35); ctx.stroke(); ctx.beginPath(); const a = -Math.PI * 0.35, px = Math.cos(a) * h * 0.68, py = Math.sin(a) * h * 0.68; ctx.moveTo(px + h * 0.42, py - h * 0.05); ctx.lineTo(px - h * 0.05, py - h * 0.42); ctx.lineTo(px - h * 0.12, py + h * 0.22); ctx.closePath(); ctx.fill(); }
+    else if (name === 'next' || name === 'prev') { const d = name === 'next' ? -1 : 1; ctx.beginPath(); ctx.moveTo(-d * h * 0.7, 0); ctx.lineTo(d * h * 0.7, 0); ctx.stroke(); ctx.beginPath(); ctx.moveTo(d * h * 0.75, 0); ctx.lineTo(d * h * 0.15, -h * 0.55); ctx.lineTo(d * h * 0.15, h * 0.55); ctx.closePath(); ctx.fill(); }
+    else if (name === 'home') { ctx.beginPath(); ctx.moveTo(0, -h * 0.85); ctx.lineTo(h * 0.85, -h * 0.05); ctx.lineTo(h * 0.6, -h * 0.05); ctx.lineTo(h * 0.6, h * 0.8); ctx.lineTo(-h * 0.6, h * 0.8); ctx.lineTo(-h * 0.6, -h * 0.05); ctx.lineTo(-h * 0.85, -h * 0.05); ctx.closePath(); ctx.fill(); }
+    else if (name === 'check') { ctx.lineWidth = s * 0.2; ctx.beginPath(); ctx.moveTo(-h * 0.6, 0); ctx.lineTo(-h * 0.15, h * 0.48); ctx.lineTo(h * 0.65, -h * 0.5); ctx.stroke(); }
+    else if (name === 'cross') { ctx.lineWidth = s * 0.18; ctx.beginPath(); ctx.moveTo(-h * 0.5, -h * 0.5); ctx.lineTo(h * 0.5, h * 0.5); ctx.moveTo(h * 0.5, -h * 0.5); ctx.lineTo(-h * 0.5, h * 0.5); ctx.stroke(); }
+    else if (name === 'star') { ctx.beginPath(); for (let i = 0; i < 10; i++) { const r = i % 2 ? h * 0.42 : h * 0.95, a = -Math.PI / 2 + i * Math.PI / 5; ctx.lineTo(Math.cos(a) * r, Math.sin(a) * r); } ctx.closePath(); ctx.fill(); }
+    else if (name === 'trophy') { ctx.beginPath(); ctx.moveTo(-h * 0.55, -h * 0.75); ctx.lineTo(h * 0.55, -h * 0.75); ctx.lineTo(h * 0.45, -h * 0.05); ctx.quadraticCurveTo(0, h * 0.35, -h * 0.45, -h * 0.05); ctx.closePath(); ctx.fill(); ctx.fillRect(-h * 0.1, h * 0.1, h * 0.2, h * 0.4); ctx.fillRect(-h * 0.45, h * 0.5, h * 0.9, h * 0.22); }
+    ctx.restore();
+  }
+
+  // ------------------------------------------------------------ panel (board)
+  class Panel extends Node {
+    constructor(w, h, o = {}) {
+      super('panel');
+      this.w = w; this.h = h; this.ppm = o.ppm || 400;
+      this.depth = o.depth == null ? 0.05 : o.depth;
+      if (this.depth > 0) {
+        this.back = new Mesh(G.roundedBox(w, h, this.depth, Math.min(0.06, h / 4), 3), new Material({ color: o.frame || COL.teal }));
+        this.add(this.back);
+      }
+      this.canvas = makeCanvas(Math.round(w * this.ppm), Math.round(h * this.ppm));
+      this.ctx = this.canvas.getContext('2d');
+      this.tex = new Texture(this.canvas);
+      this.face = new Mesh(G.plane(w, h), new Material({ map: this.tex, unlit: true, fog: false }));
+      this.face.position[2] = this.depth / 2 + 0.003; this.face.renderOrder = 1;
+      this.add(this.face);
+      this.bg = o.bg === undefined ? COL.paper : o.bg; this.inset = o.inset == null ? 0.022 : o.inset;
+    }
+    draw(fn) {
+      const c = this.ctx, W = this.canvas.width, H = this.canvas.height;
+      c.clearRect(0, 0, W, H);
+      if (this.bg) { const i = this.inset * this.ppm; c.fillStyle = this.bg; rr(c, i, i, W - 2 * i, H - 2 * i, Math.min(H / 4, 0.05 * this.ppm)); c.fill(); }
+      fn && fn(c, W, H);
+      this.tex.needsUpdate = true;
+      return this;
+    }
+    text(t, size, opts) { return this.draw((c, W, H) => textBox(c, t, W / 2, H / 2, W - 0.12 * this.ppm, H - 0.08 * this.ppm, size, opts)); }
+  }
+
+  // ------------------------------------------------------------ interactive registry
+  const UI = { targets: [], hovered: new Set() };
+
+  class Button extends Node {
+    constructor(w, h, o = {}) {
+      super('button');
+      this.w = w; this.h = h; this.o = o; this.enabled = true; this.hover = 0; this.hoverTarget = 0; this.press = 0; this.glow = 0;
+      this.color = o.color || COL.teal;
+      this.body = new Mesh(G.roundedBox(w, h, 0.06, Math.min(h / 2.2, 0.07), 4), new Material({ color: this.color }));
+      this.body.userData.ctl = this;
+      this.ppm = 360;
+      this.canvas = makeCanvas(Math.round(w * this.ppm), Math.round(h * this.ppm)); this.ctx = this.canvas.getContext('2d');
+      this.tex = new Texture(this.canvas);
+      this.face = new Mesh(G.plane(w, h), new Material({ map: this.tex, unlit: true, fog: false }));
+      this.face.position[2] = 0.034; this.face.renderOrder = 2;
+      this.inner = new Node(); this.inner.add(this.body, this.face); this.add(this.inner);
+      this.onClick = o.onClick || null;
+      this.setLabel(o.label || '', o.icon);
+      UI.targets.push(this.body);
+    }
+    setLabel(label, ic) {
+      this.label = label; if (ic !== undefined) this.icon = ic;
+      const c = this.ctx, W = this.canvas.width, H = this.canvas.height, tc = this.o.textColor || '#ffffff';
+      c.clearRect(0, 0, W, H);
+      let size = this.o.size || Math.round(H * 0.42);
+      setFont(c, size, 800);
+      const iconS = this.icon ? H * 0.42 : 0, gap = this.icon && label ? H * 0.16 : 0;
+      let tw = c.measureText(label).width;
+      while (tw + iconS + gap > W * 0.88 && size > 12) { size -= 2; setFont(c, size, 800); tw = c.measureText(label).width; }
+      const total = tw + iconS + gap; const right = W / 2 + total / 2;
+      if (this.icon) icon(c, this.icon, right - iconS / 2, H / 2, iconS, tc);
+      c.fillStyle = tc; c.textAlign = 'right';
+      if (label) c.fillText(label, right - iconS - gap, H / 2 + size * 0.06);
+      this.tex.needsUpdate = true;
+    }
+    setColor(h) { this.color = h; this.body.material.setColor(h); }
+    setEnabled(e) { this.enabled = e; this.body.material.opacity = 1; this.body.material.setColor(e ? this.color : '#cfcadb'); this.face.material.opacity = e ? 1 : 0.75; }
+    click() { if (!this.enabled || !this.shown()) return false; this.press = 1; Sfx.click(); this.onClick && this.onClick(this); return true; }
+    update(dt, t) {
+      this.hover += (this.hoverTarget - this.hover) * Math.min(1, dt * 14);
+      this.press = Math.max(0, this.press - dt * 5);
+      const pulse = this.glow ? (Math.sin(t * 4) * 0.5 + 0.5) * this.glow : 0;
+      const s = 1 + this.hover * 0.07 + pulse * 0.04 - this.press * 0.06;
+      this.inner.setScale(s, s, s); this.inner.position[2] = this.hover * 0.02 - this.press * 0.02;
+      const e = this.enabled ? this.hover * 0.14 + pulse * 0.1 : 0; this.body.material.emissive = [e, e, e * 0.9];
+    }
+  }
+
+  // ------------------------------------------------------------ answer card (picture + label)
+  const LETTERS = ['أ', 'ب', 'ج'];
+  class Card extends Node {
+    constructor(o) { // {tex (picture texture or null), text, letter index, w}
+      super('card');
+      const w = o.w || 0.74, picH = o.tex ? (w - 0.08) * 0.75 : 0, labH = o.tex ? 0.27 : 0.42;
+      const h = 0.06 + picH + labH + (o.tex ? 0.03 : 0);
+      this.w = w; this.h = h; this.enabled = true; this.hover = 0; this.hoverTarget = 0; this.press = 0; this.state = 'idle'; this.pop = 0;
+      this.body = new Mesh(G.roundedBox(w, h, 0.05, 0.05, 3), new Material({ color: '#ffffff' }));
+      this.body.userData.ctl = this;
+      this.inner = new Node(); this.inner.add(this.body); this.add(this.inner);
+      if (o.tex) {
+        const pic = new Mesh(G.plane(w - 0.08, picH), new Material({ map: o.tex, unlit: true, fog: false }));
+        pic.material.transparent = false; pic.material.depthWrite = true;
+        pic.position[1] = h / 2 - 0.04 - picH / 2; pic.position[2] = 0.027; this.inner.add(pic);
+      }
+      this.lab = new Panel(w - 0.04, labH, { depth: 0, bg: null, ppm: 420 });
+      this.lab.position[1] = -h / 2 + 0.02 + labH / 2; this.lab.position[2] = 0.028; this.inner.add(this.lab);
+      this.text = o.text; this.letter = LETTERS[o.index] || ''; this.big = !o.tex;
+      // badge (check / cross)
+      this.badge = new Panel(0.2, 0.2, { depth: 0, bg: null, ppm: 300 }); this.badge.position = [w / 2 - 0.06, h / 2 - 0.06, 0.06]; this.badge.visible = false; this.inner.add(this.badge);
+      this.onClick = o.onClick || null;
+      this.drawLabel();
+      UI.targets.push(this.body);
+    }
+    drawLabel() {
+      const st = this.state;
+      const fg = st === 'correct' ? '#ffffff' : st === 'wrong' ? '#7a3b2e' : COL.ink;
+      this.lab.draw((c, W, H) => {
+        const lr = H * (this.big ? 0.2 : 0.34), lx = W - lr - 8, ly = this.big ? lr + 10 : H / 2;
+        c.fillStyle = st === 'correct' ? '#ffffff' : COL.lav; c.beginPath(); c.arc(lx, ly, lr, 0, Math.PI * 2); c.fill();
+        setFont(c, lr * 1.25, 800); c.textAlign = 'center'; c.fillStyle = st === 'correct' ? COL.greenDark : '#ffffff'; c.fillText(this.letter, lx, ly + lr * 0.08);
+        const tw = this.big ? W - 40 : W - 2 * lr - 30, cx = this.big ? W / 2 : (W - 2 * lr - 18) / 2;
+        textBox(c, this.text, cx, this.big ? H / 2 + 10 : H / 2, tw, this.big ? H - 30 : H - 6, this.big ? Math.round(H * 0.3) : Math.round(H * 0.34), { color: fg, weight: 800, lh: 1.2, maxLines: 2 });
+      });
+    }
+    setState(st) {
+      this.state = st;
+      const col = st === 'correct' ? COL.green : st === 'wrong' ? COL.wrong : '#ffffff';
+      this.body.material.setColor(col);
+      this.drawLabel();
+      if (st === 'correct' || st === 'wrong') {
+        this.badge.visible = true; this.pop = 0;
+        this.badge.draw((c, W, H) => { c.fillStyle = st === 'correct' ? COL.greenDark : '#e07a62'; c.beginPath(); c.arc(W / 2, H / 2, W * 0.46, 0, Math.PI * 2); c.fill(); c.strokeStyle = '#fff'; c.lineWidth = W * 0.05; c.stroke(); icon(c, st === 'correct' ? 'check' : 'cross', W / 2, H / 2, W * 0.6, '#ffffff'); });
+      } else this.badge.visible = false;
+    }
+    setEnabled(e) { this.enabled = e; }
+    click() { if (!this.enabled || !this.shown()) return false; this.press = 1; Sfx.click(); this.onClick && this.onClick(this); return true; }
+    update(dt) {
+      this.hover += ((this.enabled ? this.hoverTarget : 0) - this.hover) * Math.min(1, dt * 14);
+      this.press = Math.max(0, this.press - dt * 5);
+      const dim = this.state === 'dim' ? -0.05 : 0;
+      const s = 1 + this.hover * 0.06 - this.press * 0.05 + dim + (this.state === 'correct' ? 0.04 : 0);
+      this.inner.setScale(s, s, s); this.inner.position[2] = this.hover * 0.04;
+      const e = this.hover * 0.1; this.body.material.emissive = [e, e, e];
+      if (this.badge.visible) { this.pop = Math.min(1, this.pop + dt * 4); const k = this.pop < 1 ? 1 + Math.sin(this.pop * Math.PI) * 0.4 : 1; this.badge.setScale(k * this.pop, k * this.pop, 1); }
+    }
+    dispose() { const i = UI.targets.indexOf(this.body); if (i >= 0) UI.targets.splice(i, 1); }
+  }
+
+  // ------------------------------------------------------------ sound effects (WebAudio, soft)
+  const Sfx = {
+    ctx: null, master: null, on: true, loops: {},
+    init() {
+      if (this.ctx) { if (this.ctx.state === 'suspended') this.ctx.resume(); return; }
+      try { this.ctx = new (window.AudioContext || window.webkitAudioContext)(); this.master = this.ctx.createGain(); this.master.gain.value = 0.55; this.master.connect(this.ctx.destination); } catch (e) { this.ctx = null; }
+    },
+    setOn(v) { this.on = v; if (this.master) this.master.gain.value = v ? 0.55 : 0; },
+    tone(freq, dur, type = 'sine', vol = 0.12, delay = 0, slide = 0) {
+      if (!this.ctx || !this.on) return; const t = this.ctx.currentTime + delay;
+      const o = this.ctx.createOscillator(), g = this.ctx.createGain(); o.type = type; o.frequency.setValueAtTime(freq, t);
+      if (slide) o.frequency.exponentialRampToValueAtTime(freq * slide, t + dur);
+      g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + 0.02); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      o.connect(g); g.connect(this.master); o.start(t); o.stop(t + dur + 0.05);
+    },
+    noise(dur, freq, vol = 0.1, q = 0.8, type = 'lowpass', attack = 0.3) {
+      if (!this.ctx || !this.on) return null; const t = this.ctx.currentTime;
+      const len = Math.floor(this.ctx.sampleRate * Math.min(dur, 12)); const buf = this.ctx.createBuffer(1, len, this.ctx.sampleRate); const d = buf.getChannelData(0);
+      let last = 0; for (let i = 0; i < len; i++) { last = last * 0.92 + (Math.random() * 2 - 1) * 0.08; d[i] = last * 4; }
+      const src = this.ctx.createBufferSource(); src.buffer = buf; const f = this.ctx.createBiquadFilter(); f.type = type; f.frequency.value = freq; f.Q.value = q;
+      const g = this.ctx.createGain(); g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(vol, t + attack); g.gain.setValueAtTime(vol, t + Math.max(attack, dur - 0.6)); g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+      src.connect(f); f.connect(g); g.connect(this.master); src.start(t); src.stop(t + dur + 0.1);
+      return { src, f, g };
+    },
+    click() { this.tone(660, 0.09, 'triangle', 0.08); },
+    hover() { this.tone(980, 0.05, 'sine', 0.025); },
+    correct() { this.tone(523, 0.18, 'triangle', 0.12); this.tone(659, 0.18, 'triangle', 0.12, 0.12); this.tone(784, 0.32, 'triangle', 0.13, 0.24); },
+    gentle() { this.tone(392, 0.22, 'sine', 0.1); this.tone(349, 0.3, 'sine', 0.09, 0.18); },
+    whoosh() { this.noise(0.7, 900, 0.05, 0.6, 'bandpass', 0.25); },
+    pop() { this.tone(700, 0.12, 'sine', 0.08, 0, 1.6); },
+    celebrate() { [523, 659, 784, 1047, 784, 1047].forEach((f, i) => this.tone(f, 0.25, 'triangle', 0.11, i * 0.13)); },
+    rumble(d) { this.noise(d, 120, 0.22, 0.7, 'lowpass', 0.5); },
+    water(d) { this.noise(d, 1400, 0.05, 0.4, 'bandpass', 0.6); },
+    bubble(d) { this.noise(d, 260, 0.12, 1.2, 'lowpass', 0.8); for (let i = 0; i < d * 2; i++) this.tone(140 + Math.random() * 120, 0.18, 'sine', 0.05, 0.6 + i * 0.5 + Math.random() * 0.3, 1.5); },
+    engine(d) { if (!this.ctx || !this.on) return; const t = this.ctx.currentTime, o = this.ctx.createOscillator(), g = this.ctx.createGain(), f = this.ctx.createBiquadFilter(); o.type = 'sawtooth'; o.frequency.value = 62; f.type = 'lowpass'; f.frequency.value = 260; g.gain.setValueAtTime(0.0001, t); g.gain.exponentialRampToValueAtTime(0.05, t + 0.5); g.gain.setValueAtTime(0.05, t + d - 0.6); g.gain.exponentialRampToValueAtTime(0.0001, t + d); o.connect(f); f.connect(g); g.connect(this.master); o.start(t); o.stop(t + d + 0.1); },
+    crumble(d) { for (let i = 0; i < 9; i++) this.tone(180 + Math.random() * 260, 0.08, 'triangle', 0.05, Math.random() * d, 0.6); },
+    chirp() { const b = 1800 + Math.random() * 900; this.tone(b, 0.09, 'sine', 0.018, 0, 1.25); this.tone(b * 1.1, 0.08, 'sine', 0.015, 0.13, 1.3); }
+  };
+
+  // ------------------------------------------------------------ Arabic narration (browser speech synthesis, if an Arabic voice exists)
+  const Voice = {
+    on: true, voice: null, ready: false,
+    init() {
+      if (!('speechSynthesis' in window)) return;
+      const pick = () => { const vs = speechSynthesis.getVoices(); this.voice = vs.find(v => /^ar[-_]?(SA|BH|AE)/i.test(v.lang)) || vs.find(v => /^ar/i.test(v.lang)) || null; this.ready = true; };
+      pick(); speechSynthesis.onvoiceschanged = pick;
+    },
+    available() { return !!this.voice; },
+    say(text) {
+      if (!this.on || !this.voice || !('speechSynthesis' in window)) return;
+      try { speechSynthesis.cancel(); const u = new SpeechSynthesisUtterance(text.replace(/[«»]/g, '')); u.voice = this.voice; u.lang = this.voice.lang; u.rate = 0.92; u.pitch = 1.25; speechSynthesis.speak(u); } catch (e) { }
+    },
+    stop() { try { 'speechSynthesis' in window && speechSynthesis.cancel(); } catch (e) { } }
+  };
+
+  global.UIK = { FONT, COL, makeCanvas, rr, setFont, wrap, textBox, icon, Panel, Button, Card, UI, Sfx, Voice };
+})(window);
+
+</script>
+<script>
+/* =========================================================================
+   العالم: الجزيرة، المستكشف علي، والمحطات الخمس
+   كل محطة تُرسم من قيمة تقدّم واحدة t بين 0 و 1 (تشغيل، إعادة، صور مصغّرة)
+   ========================================================================= */
+(function (global) {
+  'use strict';
+  const { G, Mesh, Node, Material, Texture, m4, v3, GB } = M3;
+  const { Panel, COL, makeCanvas, rr, setFont, textBox, icon } = UIK;
+
+  // ------------------------------------------------------------ helpers
+  function rng(seed) { return function () { seed |= 0; seed = seed + 0x6D2B79F5 | 0; let t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  const clamp = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x));
+  const seg = (t, a, b) => clamp((t - a) / (b - a));
+  const ease = (x) => x < 0.5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2;
+  const easeOut = (x) => 1 - Math.pow(1 - x, 3);
+  const backOut = (x) => { const c = 1.6; return 1 + (c + 1) * Math.pow(x - 1, 3) + c * Math.pow(x - 1, 2); };
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const matCache = {};
+  function mat(color, o) { if (o) return new Material(Object.assign({ color }, o)); return matCache[color] || (matCache[color] = new Material({ color })); }
+  function mk(g, color, parent, pos, rot, scl, o) {
+    const m = new Mesh(g, color instanceof Material ? color : mat(color, o));
+    if (pos) m.setPos(pos[0], pos[1], pos[2]); if (rot) m.setRot(rot[0], rot[1], rot[2]); if (scl) m.setScale(scl[0], scl[1], scl[2]);
+    if (parent) parent.add(m); return m;
+  }
+  const TRS = (p, r, s) => m4.compose(m4.create(), p || [0, 0, 0], r || [0, 0, 0], s || [1, 1, 1]);
+
+  const P = { // pastel palette
+    grass: '#bfe6a6', grass2: '#a9db97', grassDark: '#93cf8a', sand: '#f6e3bb', path: '#f3e6cf', road: '#b8b3cb', roadLine: '#ffffff',
+    trunk: '#b98f78', leaf1: '#97d494', leaf2: '#86c99a', leaf3: '#addf9f', palm: '#8fd08a', rock: '#c3b8cc', rock2: '#b3a8bf', soil: '#b88f6f', soil2: '#a57d60',
+    water: '#8fd5ea', lava: '#ff9a6e', lava2: '#ffbf80', volcano: '#d5ae9e', volcano2: '#c79d8f', crack: '#5e5172', yellow: '#ffd36b', cream: '#fff6e6',
+    wallA: '#fff1dd', wallB: '#fbd7d2', wallC: '#d6efe3', parapet: '#efd9bd', door: '#c08f73', window: '#a6dbf0'
+  };
+
+
+  // ------------------------------------------------------------ natural vegetation (date palms, broadleaf trees)
+  const C3 = (h) => M3.hexToRgb(h);
+  function palmItems(x, z, s, lean, R) {
+    const items = [];
+    const H = (4.4 + R() * 1.6) * s, bend = (0.25 + R() * 0.45) * s, lx = Math.sin(lean), lz = Math.cos(lean);
+    const pts = []; const N = 30;
+    for (let k = 0; k <= N; k++) { const u = k / N; pts.push([x + lx * bend * u * u, u * H, z + lz * bend * u * u]); }
+    // ringed trunk: slightly wider base, rings from old frond bases
+    items.push({ g: G.tube(pts, 0.17 * s, 10, (u) => (1.25 - 0.3 * u - 0.2 * Math.max(0, 0.15 - u) * -4) * (1 + 0.06 * Math.abs(Math.sin(u * Math.PI * 22)))), m: TRS(), color: '#9c7b5e' });
+    const top = pts[N];
+    items.push({ g: G.sphere(0.2 * s, 12, 8), m: TRS([top[0], top[1] - 0.08 * s, top[2]], null, [1, 1.1, 1]), color: '#8d8a55' });
+    const fb = new GB();
+    const greens = ['#5e9d4f', '#6bab58', '#78b562', '#56924a'];
+    const frond = (a, el, L, droop, colA, colB, n) => {
+      const d = [Math.cos(el) * Math.sin(a), Math.sin(el), Math.cos(el) * Math.cos(a)];
+      const P = (t) => [top[0] + d[0] * L * t, top[1] - 0.05 * s + d[1] * L * t - droop * t * t, top[2] + d[2] * L * t];
+      const spine = []; for (let k = 0; k <= 14; k++) spine.push(P(k / 14));
+      items.push({ g: G.tube(spine, 0.022 * s, 4, (u) => 1 - u * 0.7), m: TRS(), color: colB });
+      const cA = C3(colA), cB = C3(colB);
+      for (let i = 0; i < n; i++) {
+        const t = 0.12 + 0.86 * i / (n - 1), p = P(t), q = P(Math.min(1, t + 0.02));
+        const T = v3.norm(v3.sub(q, p)); const side = v3.norm(v3.cross(T, [0, 1, 0]));
+        const len = s * (0.62 - 0.42 * t) * Math.min(1, (t - 0.08) / 0.15), w = 0.045 * s;
+        const col = v3.lerp(cA, cB, R() * 0.5);
+        for (const sg of [-1, 1]) {
+          const dir = v3.norm(v3.add(v3.add(v3.scale(side, sg * 0.82), v3.scale(T, 0.5)), [0, 0.22 - t * 0.25, 0]));
+          const wv = v3.scale(v3.norm(v3.cross(dir, T)), w / 2);
+          const m1 = v3.add(p, v3.scale(dir, len * 0.45)), tip = v3.add(p, v3.scale(dir, len));
+          const vs = [v3.add(p, v3.scale(wv, 0.4)), v3.sub(p, v3.scale(wv, 0.4)), v3.add(m1, wv), v3.sub(m1, wv), tip];
+          const nrm = v3.norm(v3.cross(v3.sub(vs[2], vs[0]), v3.sub(vs[1], vs[0])));
+          const b0 = fb.p.length / 3; vs.forEach(v => fb.v(v[0], v[1], v[2], nrm[0], nrm[1], nrm[2], 0, 0, col));
+          fb.t(b0, b0 + 1, b0 + 2); fb.t(b0 + 1, b0 + 3, b0 + 2); fb.t(b0 + 2, b0 + 3, b0 + 4);
+        }
+      }
+    };
+    const nF = 16;
+    for (let f = 0; f < nF; f++) {
+      const layer = f % 3, a = f / nF * Math.PI * 2 + R() * 0.3;
+      const el = [1.05, 0.55, 0.1][layer] + (R() - 0.5) * 0.2, L = (layer === 0 ? 2.0 : 2.6 + R() * 0.5) * s;
+      frond(a, el, L, L * (0.18 + 0.22 * layer), greens[f % 4], '#a4a85c', 18);
+    }
+    for (let f = 0; f < 3; f++) frond(f * 2.1 + R(), -0.55, 1.9 * s, 0.5 * s, '#b99a6a', '#9f8459', 12); // dry lower fronds
+    items.push({ g: fb.build(), m: TRS(), color: '#ffffff' });
+    // hanging date clusters
+    for (let k = 0; k < 3; k++) {
+      const a = k * 2.1 + R(); const cx = top[0] + Math.sin(a) * 0.26 * s, cz = top[2] + Math.cos(a) * 0.26 * s, cy = top[1] - 0.3 * s;
+      items.push({ g: G.tube([[top[0] + Math.sin(a) * 0.1 * s, top[1] - 0.1 * s, top[2] + Math.cos(a) * 0.1 * s], [cx, cy + 0.12 * s, cz]], 0.015 * s, 4), m: TRS(), color: '#c9a35a' });
+      for (let i = 0; i < 16; i++) { const h = R(), rr = (0.03 + h * 0.1) * s, b = R() * 6.28; items.push({ g: G.sphere(0.028 * s, 6, 5), m: TRS([cx + Math.cos(b) * rr, cy - h * 0.3 * s, cz + Math.sin(b) * rr], null, [1, 1.4, 1]), color: R() > 0.5 ? '#d8892f' : '#b8662a' }); }
+    }
+    return items;
+  }
+  function treeItems(x, z, s, R) {
+    const items = [];
+    const h = (1.3 + R() * 0.4) * s, lean = R() * 6.28, lx = Math.sin(lean) * 0.12 * s, lz = Math.cos(lean) * 0.12 * s;
+    const trunk = []; for (let k = 0; k <= 8; k++) { const u = k / 8; trunk.push([x + lx * u, u * h, z + lz * u]); }
+    items.push({ g: G.tube(trunk, 0.11 * s, 8, (u) => 1.3 - 0.5 * u), m: TRS(), color: '#8e6c55' });
+    const top = trunk[8];
+    for (let k = 0; k < 3; k++) { const a = k * 2.1 + R(), br = [[top[0], top[1] - 0.2 * s, top[2]], [top[0] + Math.sin(a) * 0.45 * s, top[1] + 0.35 * s, top[2] + Math.cos(a) * 0.45 * s]]; items.push({ g: G.tube(br, 0.05 * s, 6, (u) => 1 - 0.5 * u), m: TRS(), color: '#8e6c55' }); }
+    const cols = ['#79b46a', '#86c075', '#6aa35e', '#93c97f'];
+    for (let k = 0; k < 9; k++) {
+      const a = R() * 6.28, r = (k === 0 ? 0 : 0.35 + R() * 0.3) * s, y = top[1] + (0.45 + R() * 0.55) * s - (k === 0 ? 0 : 0.1 * s);
+      const rad = (k === 0 ? 0.75 : 0.42 + R() * 0.2) * s;
+      items.push({ g: G.sphere(1, 16, 12), m: TRS([top[0] + Math.sin(a) * r, y, top[2] + Math.cos(a) * r], [0, R() * 3, 0], [rad, rad * 0.85, rad]), color: cols[k % 4] });
+    }
+    return items;
+  }
+
+  // ------------------------------------------------------------ environment
+  function buildEnvironment(scene, frames) {
+    const env = new Node('env'); scene.add(env);
+    // sky dome with vertex-colour gradient
+    const sky = G.sphere(260, 24, 16); const col = new Float32Array(sky.pos.length);
+    const top = M3.hexToRgb('#8ecdf0'), mid = M3.hexToRgb('#cbe9f6'), hor = M3.hexToRgb('#fde6d6');
+    for (let i = 0; i < sky.pos.length; i += 3) { const y = sky.pos[i + 1] / 260; const c = y > 0.18 ? v3.lerp(mid, top, clamp((y - 0.18) / 0.6)) : v3.lerp(hor, mid, clamp((y + 0.05) / 0.23)); col.set(c, i); }
+    const skyG = new M3.Geometry(sky.pos, sky.nrm, sky.uv, sky.idx, col);
+    mk(skyG, mat('#ffffff', { unlit: true, fog: false }), env);
+    // sea
+    mk(G.disc(250, 64), mat('#9fdcea', { fog: true }), env, [0, -0.45, 0]);
+    // island
+    mk(G.cylinder(46.5, 49, 0.9, 72), mat(P.sand), env, [0, -0.5, 0]);
+    mk(G.cylinder(44, 45.5, 1.2, 72), mat(P.grass), env, [0, -0.62, 0]);
+
+    const R = rng(7), items = [];
+    const clear = (x, z, pad = 0) => {
+      if (Math.hypot(x, z) < 7 + pad) return false;
+      for (const f of frames) { // keep each station's view corridor clear
+        const inv = m4.invert(m4.create(), f.world); const l = m4.point(inv, [x, 0, z]);
+        if (l[2] < 2.5 + pad && l[2] > -11 - pad && Math.abs(l[0]) < 5.2 + pad + (-l[2]) * 0.35) return false;
+      }
+      return true;
+    };
+    // grass patches
+    for (let i = 0; i < 40; i++) { const a = R() * Math.PI * 2, r = 6 + R() * 36; items.push({ g: G.disc(1 + R() * 2.5, 18), m: TRS([Math.cos(a) * r, 0.005, Math.sin(a) * r], [0, R() * 3, 0], [1, 1, 0.6 + R() * 0.4]), color: R() > 0.5 ? P.grass2 : '#c9eab2' }); }
+    // path ring + spokes
+    const ringG = new GB(); const RR = 15, w = 0.7; for (let i = 0; i <= 96; i++) { const a = i / 96 * Math.PI * 2; for (const s of [-1, 1]) ringG.v(Math.sin(a) * (RR + s * w), 0.012, -Math.cos(a) * (RR + s * w), 0, 1, 0); } for (let i = 0; i < 96; i++) ringG.q(i * 2, i * 2 + 1, i * 2 + 3, i * 2 + 2);
+    items.push({ g: ringG.build(), m: TRS(), color: P.path });
+    // hills (far ring)
+    for (let i = 0; i < 26; i++) { const a = i / 26 * Math.PI * 2 + R() * 0.15, r = 36 + R() * 6, s = 4 + R() * 5; items.push({ g: G.ico(1, 1, 0.08, R), m: TRS([Math.cos(a) * r, -0.6, Math.sin(a) * r], [0, R() * 6, 0], [s * 1.5, s * (0.5 + R() * 0.4), s * 1.2]), color: [P.grass2, P.grassDark, '#b6dfa0', '#c8e6a8'][i % 4] }); }
+    // trees, bushes, flowers, rocks
+    const tree = (x, z, s) => { items.push(...treeItems(x, z, s, R)); };
+    const palm = (x, z, s, lean) => { items.push(...palmItems(x, z, s, lean, R)); };
+    let n = 0; for (let tries = 0; tries < 900 && n < 70; tries++) { const a = R() * Math.PI * 2, r = 7 + R() * 28, x = Math.cos(a) * r, z = Math.sin(a) * r; if (!clear(x, z)) continue; n++; R() > 0.7 ? palm(x, z, 0.8 + R() * 0.4, R() * 6) : tree(x, z, 0.8 + R() * 0.7); }
+    for (let k = 0; k < 5; k++) { const a = Math.PI * 0.62 + k * 0.42; palm(Math.sin(a) * 5.4, -Math.cos(a) * 5.4, 0.9 + (k % 2) * 0.15, a + 0.3); }
+    let b = 0; for (let tries = 0; tries < 900 && b < 90; tries++) { const a = R() * Math.PI * 2, r = 5 + R() * 34, x = Math.cos(a) * r, z = Math.sin(a) * r; if (!clear(x, z, -1)) continue; b++; const s = 0.3 + R() * 0.35; for (let q = 0; q < 3; q++) { const qa = R() * 6.28, qr = q ? s * 0.55 : 0, qs = s * (q ? 0.7 : 1); items.push({ g: G.sphere(1, 12, 9), m: TRS([x + Math.cos(qa) * qr, qs * 0.45, z + Math.sin(qa) * qr], null, [qs, qs * 0.75, qs]), color: ['#78b46a', '#8cc27a', '#6aa35e'][q] }); } if (R() > 0.4) for (let f = 0; f < 4; f++) items.push({ g: G.sphere(0.07, 6, 4), m: TRS([x + (R() - 0.5) * 1.2, 0.08, z + (R() - 0.5) * 1.2]), color: ['#ffb3c1', '#fff2a8', '#ffffff', '#c9b8ff'][f] }); }
+    for (let k = 0; k < 30; k++) { const a = R() * Math.PI * 2, r = 6 + R() * 34, x = Math.cos(a) * r, z = Math.sin(a) * r; if (!clear(x, z, -1)) continue; const s = 0.2 + R() * 0.5; items.push({ g: G.ico(1, 0, 0.2, R), m: TRS([x, s * 0.3, z], [R(), R(), R()], [s, s * 0.7, s]), color: P.rock }); }
+    // hub plaza
+    items.push({ g: G.cylinder(4.2, 4.4, 0.08, 40), m: TRS([0, 0.03, -1.6]), color: P.path });
+    mk(G.merge(items), mat('#ffffff'), env);
+
+    // drifting clouds
+    const clouds = new Node('clouds'); env.add(clouds);
+    for (let i = 0; i < 14; i++) {
+      const a = R() * Math.PI * 2, r = 30 + R() * 60, y = 16 + R() * 14, its = [];
+      for (let k = 0; k < 7; k++) { const sx = (k - 3) * 1.25 + R() * 0.6, rad = 1.3 + R() * 1.1 - Math.abs(k - 3) * 0.18; its.push({ g: G.sphere(1, 18, 12), m: TRS([sx, rad * 0.35 + R() * 0.3, (R() - 0.5) * 1.4], null, [rad * 1.15, rad * 0.8, rad]), color: '#ffffff' }); }
+      its.push({ g: G.sphere(1, 18, 10), m: TRS([0, 0.15, 0], null, [5.2, 0.9, 1.9]), color: '#ffffff' });
+      mk(G.merge(its), mat('#ffffff', { emissive: '#8a8f99', rim: 0 }), clouds, [Math.cos(a) * r, y, Math.sin(a) * r], [0, -a, 0], [1.4, 1.1, 1.4]);
+    }
+    return { env, clouds };
+  }
+
+  // ------------------------------------------------------------ shadow blob texture
+  let shadowTex = null;
+  function blob(parent, r, pos, op = 0.22) {
+    if (!shadowTex) { const c = makeCanvas(128, 128), x = c.getContext('2d'); const g = x.createRadialGradient(64, 64, 4, 64, 64, 62); g.addColorStop(0, 'rgba(70,60,90,1)'); g.addColorStop(1, 'rgba(70,60,90,0)'); x.fillStyle = g; x.fillRect(0, 0, 128, 128); shadowTex = new Texture(c); }
+    const m = mk(G.disc(r, 24), new Material({ map: shadowTex, unlit: true, opacity: op }), parent, pos || [0, 0.01, 0]);
+    m.material.depthWrite = false; return m;
+  }
+
+  // ------------------------------------------------------------ Explorer Ali
+  function flagTexture() {
+    const c = makeCanvas(160, 100), x = c.getContext('2d');
+    x.fillStyle = '#e7546a'; x.fillRect(0, 0, 160, 100); x.fillStyle = '#ffffff'; x.beginPath(); x.moveTo(0, 0); x.lineTo(40, 0);
+    for (let i = 0; i < 5; i++) { x.lineTo(66, i * 20 + 10); x.lineTo(40, i * 20 + 20); } x.lineTo(0, 100); x.closePath(); x.fill();
+    return new Texture(c);
+  }
+  function buildAli() {
+    // natural 9-year-old proportions (~1.32 m): head ≈ 1/6 of height
+    const ali = new Node('ali'); const body = new Node('body'); ali.add(body);
+    const skin = '#d9a77f', skinDark = '#c48f68', white = '#f7f6f1', khaki = '#cdb183', hair = '#2f2624';
+    const smooth = (r) => G.sphere(r, 20, 14);
+    blob(ali, 0.34, [0, 0.012, 0], 0.3);
+    // feet & sandals
+    for (const s of [-1, 1]) {
+      mk(G.roundedBox(0.085, 0.022, 0.2, 0.01), '#7a5a44', body, [s * 0.07, 0.011, 0.025]);
+      mk(G.roundedBox(0.07, 0.04, 0.16, 0.02), skin, body, [s * 0.07, 0.04, 0.03]);
+      mk(G.box(0.08, 0.012, 0.02), '#7a5a44', body, [s * 0.07, 0.062, 0.05]);
+    }
+    const torso = new Node('torso'); body.add(torso);
+    // thobe (dishdasha): shoulders, chest, gentle flare to the ankles
+    const cloth = new Node(); cloth.setScale(1, 1, 0.74); torso.add(cloth);
+    mk(G.lathe([[0.0, 1.075], [0.045, 1.075], [0.1, 1.06], [0.145, 1.03], [0.16, 0.99], [0.158, 0.92], [0.148, 0.8], [0.14, 0.68], [0.145, 0.55], [0.158, 0.35], [0.172, 0.15], [0.178, 0.07], [0.0, 0.07]], 28, true), white, cloth);
+    mk(G.cylinder(0.052, 0.058, 0.035, 18), white, torso, [0, 1.085, 0]);
+    mk(G.box(0.02, 0.2, 0.006), '#e6e3da', torso, [0, 0.98, 0.121]);
+    for (let k = 0; k < 3; k++) mk(G.sphere(0.006, 6, 4), '#bdb6a8', torso, [0, 1.05 - k * 0.06, 0.125]);
+    // explorer vest (open front) and small backpack
+    const vest = new Node(); vest.setScale(1, 1, 0.76); torso.add(vest);
+    mk(G.cylinder(0.168, 0.157, 0.3, 26, true, 0.62, Math.PI * 2 - 1.24), khaki, vest, [0, 0.86, 0]);
+    for (const s of [-1, 1]) mk(G.roundedBox(0.06, 0.055, 0.015, 0.008), '#b99d6f', torso, [s * 0.085, 0.82, 0.118], [0, s * 0.45, 0]);
+    mk(G.roundedBox(0.2, 0.25, 0.09, 0.035), '#d9826e', torso, [0, 0.86, -0.165]);
+    mk(G.roundedBox(0.17, 0.08, 0.03, 0.015), '#c7705d', torso, [0, 0.93, -0.215]);
+    const flag = mk(G.plane(0.09, 0.056), new Material({ map: flagTexture(), unlit: true }), torso, [0, 0.84, -0.212], [0, Math.PI, 0]); flag.material.transparent = false;
+    for (const s of [-1, 1]) mk(G.box(0.025, 0.2, 0.012), '#c7705d', torso, [s * 0.075, 0.95, 0.11], [0.15, 0, 0]);
+    // neck & head
+    mk(G.cylinder(0.038, 0.042, 0.08, 14), skin, torso, [0, 1.12, 0]);
+    const head = new Node('head'); head.setPos(0, 1.22, 0.005); torso.add(head);
+    mk(smooth(0.106), skin, head, [0, 0, 0], null, [0.93, 1.04, 1.0]);
+    for (const s of [-1, 1]) mk(G.sphere(0.02, 10, 8), mat('#e79a8a', { opacity: 0.35 }), head, [s * 0.052, -0.03, 0.085], [0, s * 0.5, 0], [1, 0.7, 0.3]);
+    for (const s of [-1, 1]) mk(G.sphere(0.024, 10, 8), skinDark, head, [s * 0.09, 0, -0.005], null, [0.45, 1, 0.8]);
+    mk(G.sphere(0.109, 20, 10, Math.PI * 0.5), hair, head, [0, 0.014, -0.006], [-0.28, 0, 0], [0.95, 1.02, 1.02]);
+    const eyes = new Node('eyes'); head.add(eyes);
+    for (const s of [-1, 1]) {
+      const e = new Node(); e.setPos(s * 0.037, 0.008, 0.092); eyes.add(e);
+      mk(G.sphere(0.0145, 12, 8), '#fbf8f2', e, [0, 0, 0], null, [1.25, 0.85, 0.6]);
+      mk(G.sphere(0.0085, 10, 8), '#3b2a22', e, [0, 0, 0.007], null, [1, 1, 0.5]);
+      mk(G.sphere(0.0025, 6, 4), mat('#ffffff', { unlit: true }), e, [-0.003, 0.003, 0.011]);
+      mk(G.roundedBox(0.03, 0.006, 0.006, 0.003), hair, head, [s * 0.038, 0.034, 0.096], [0, 0, s * -0.08]);
+    }
+    head.userData.eyes = eyes.children;
+    mk(G.sphere(0.012, 10, 8), skin, head, [0, -0.016, 0.104], null, [1, 1.1, 0.9]);
+    mk(G.torus(0.018, 0.0035, 5, 12, Math.PI), '#a15a55', head, [0, -0.048, 0.094], [0.3, 0, Math.PI]);
+    // explorer bush hat sized to the head
+    const hat = new Node('hat'); hat.setPos(0, 0.078, -0.004); hat.setRot(-0.06, 0, 0.03); head.add(hat);
+    mk(G.lathe([[0.17, 0.0], [0.155, 0.012], [0.106, 0.02], [0.104, 0.075], [0.08, 0.09], [0.0, 0.092]], 28, true), khaki, hat);
+    mk(G.cylinder(0.106, 0.106, 0.018, 28, true), '#3f8f86', hat, [0, 0.03, 0]);
+    // arms: shoulder -> elbow -> hand (long thobe sleeves)
+    const arms = [];
+    for (const s of [-1, 1]) { // -1: right arm (on -X), +1: left arm
+      const sh = new Node('shoulder'); sh.setPos(s * 0.152, 1.0, 0); torso.add(sh);
+      mk(smooth(0.045), white, sh, [0, 0, 0]);
+      mk(G.cylinder(0.042, 0.046, 0.25, 14), white, sh, [0, -0.125, 0]);
+      const el = new Node('elbow'); el.setPos(0, -0.25, 0); sh.add(el);
+      mk(smooth(0.041), white, el, [0, 0, 0]);
+      mk(G.cylinder(0.04, 0.036, 0.21, 14), white, el, [0, -0.105, 0]);
+      const hand = new Node('hand'); hand.setPos(0, -0.235, 0); el.add(hand);
+      mk(smooth(0.033), skin, hand, [0, -0.015, 0], null, [0.75, 1.15, 0.55]);
+      mk(G.cylinder(0.009, 0.01, 0.04, 8), skin, hand, [s * -0.022, -0.005, 0.012], [0.3, 0, s * 0.5]);
+      arms.push({ sh, el, side: s });
+    }
+    const bubble = new Panel(1.38, 0.58, { depth: 0, bg: null, ppm: 560 }); bubble.setPos(-0.62, 1.68, 0.05); bubble.setRot(0, 0.22, 0); ali.add(bubble); bubble.face.renderOrder = 3;
+    ali.userData = { body, torso, head, arms, bubble, gesture: 'idle', gt: 0, blink: 2, bubbleT: 0 };
+    return ali;
+  }
+  function drawBubble(bubble, text) {
+    bubble.draw((c, W, H) => {
+      const bh = H * 0.86, r = 46;
+      c.fillStyle = 'rgba(60,50,90,0.14)'; rr(c, 10, 14, W - 16, bh - 8, r); c.fill();
+      c.fillStyle = '#ffffff'; c.strokeStyle = COL.teal; c.lineWidth = 10;
+      rr(c, 6, 6, W - 16, bh - 12, r); c.fill(); c.stroke();
+      c.beginPath(); c.moveTo(W / 2 - 34, bh - 10); c.lineTo(W / 2, H - 6); c.lineTo(W / 2 + 34, bh - 10); c.closePath(); c.fill();
+      c.beginPath(); c.moveTo(W / 2 - 34, bh - 6); c.lineTo(W / 2, H - 6); c.lineTo(W / 2 + 34, bh - 6); c.stroke();
+      c.fillStyle = '#ffffff'; c.fillRect(W / 2 - 30, bh - 18, 60, 14);
+      textBox(c, text, W / 2 - 4, bh / 2, W - 90, bh - 50, 62, { weight: 700, lh: 1.32, maxLines: 3 });
+    });
+    bubble.userData.pop = 0;
+  }
+  function animateAli(ali, dt, time) {
+    const u = ali.userData; u.gt += dt;
+    const g = u.gesture, t = u.gt, [R_, L_] = u.arms;
+    // shoulder (x: forward/back swing, y: twist, z: raise sideways) + elbow bend (x)
+    const r = { x: 0.05, y: 0, z: -0.09, e: -0.18 }, l = { x: 0.05, y: 0, z: 0.09, e: -0.18 };
+    let hop = 0, nod = 0, tilt = 0, turn = 0;
+    const sway = Math.sin(time * 1.4) * 0.03; r.x += sway; l.x -= sway;
+    if (g === 'wave') { const k = clamp(t * 3) * clamp((2.8 - t) * 3); r.z = lerp(r.z, -1.35, k); r.x = lerp(r.x, -0.25, k); r.e = lerp(r.e, -1.5 + Math.sin(t * 8) * 0.35, k); tilt = Math.sin(t * 2.5) * 0.06 * k; if (t > 2.8) u.gesture = 'idle', u.gt = 0; }
+    else if (g === 'point') { const k = clamp(t * 3); r.z = lerp(r.z, -1.25, k); r.y = lerp(0, -0.55, k); r.x = lerp(r.x, -0.35, k); r.e = lerp(r.e, -0.08, k); turn = -0.25 * k; nod = -0.05 * k; }
+    else if (g === 'cheer') { const k = clamp(t * 4) * clamp((2.8 - t) * 3); const w = Math.sin(t * 9) * 0.15; r.z = lerp(r.z, -2.6 + w, k); l.z = lerp(l.z, 2.6 - w, k); r.e = lerp(r.e, -0.35, k); l.e = lerp(l.e, -0.35, k); hop = Math.abs(Math.sin(t * 5.5)) * 0.06 * k; if (t > 2.8) u.gesture = 'idle', u.gt = 0; }
+    else if (g === 'talk') { const k = clamp(t * 3) * clamp((2.4 - t) * 2); l.x = lerp(l.x, -0.25, k); l.e = lerp(l.e, -1.2 + Math.sin(t * 4) * 0.25, k); l.z = lerp(l.z, 0.2, k); nod = Math.sin(t * 6) * 0.04 * k; if (t > 2.4) u.gesture = 'idle', u.gt = 0; }
+    else if (g === 'encourage') { const k = clamp(t * 3) * clamp(3 - t); l.x = lerp(l.x, -0.5, k); l.e = lerp(l.e, -1.35, k); l.z = lerp(l.z, 0.25, k); tilt = 0.1 * k; nod = Math.sin(t * 4) * 0.05 * k; if (t > 3) u.gesture = 'idle', u.gt = 0; }
+    R_.sh.setRot(r.x, r.y, r.z); R_.el.setRot(r.e, 0, 0);
+    L_.sh.setRot(l.x, l.y, l.z); L_.el.setRot(l.e, 0, 0);
+    u.body.position[1] = hop; u.torso.rotation[1] = turn; u.torso.setScale(1, 1 + Math.sin(time * 2.2) * 0.006, 1);
+    u.head.setRot(nod + Math.sin(time * 0.9) * 0.025, -turn * 0.6 + Math.sin(time * 0.6) * 0.06, tilt);
+    u.blink -= dt; const eyesY = u.blink < 0.12 ? 0.15 : 1; if (u.blink < 0) u.blink = 2.5 + Math.random() * 2.5;
+    for (const e of u.head.userData.eyes) e.scale[1] = eyesY;
+    const b = u.bubble; b.userData.pop = Math.min(1, (b.userData.pop || 0) + dt * 4); const pk = b.userData.pop; const s = pk < 1 ? backOut(pk) : 1; b.setScale(s, s, 1);
+  }
+
+  // ------------------------------------------------------------ station builders
+  function platform(D, color, side) {
+    mk(G.cylinder(3.15, 3.3, 0.3, 40), side || '#e9d6bd', D, [0, -0.15, 0]);
+    mk(G.cylinder(3.12, 3.12, 0.04, 40), color, D, [0, 0.0, 0]);
+    blob(D, 3.9, [0, -0.29, 0], 0.18);
+  }
+  function crackGeo(pts, width) { // strip geometry ordered along path (for grow animation via drawCount)
+    const b = new GB(); const n = pts.length;
+    for (let i = 0; i < n; i++) {
+      const p = pts[i], q = pts[Math.min(i + 1, n - 1)], o = pts[Math.max(i - 1, 0)];
+      const dx = q[0] - o[0], dz = q[1] - o[1], L = Math.hypot(dx, dz) || 1; const nx = -dz / L, nz = dx / L;
+      const w = width * (i === 0 || i === n - 1 ? 0.15 : (0.6 + 0.4 * Math.sin(i * 1.7) ** 2));
+      b.v(p[0] + nx * w / 2, 0, p[1] + nz * w / 2, 0, 1, 0); b.v(p[0] - nx * w / 2, 0, p[1] - nz * w / 2, 0, 1, 0);
+    }
+    for (let i = 0; i < n - 1; i++) b.q(i * 2, i * 2 + 1, i * 2 + 3, i * 2 + 2);
+    const g = b.build(); g.segs = n - 1; return g;
+  }
+  function zig(x0, z0, x1, z1, n, amp, R) { const pts = []; for (let i = 0; i <= n; i++) { const u = i / n; const px = lerp(x0, x1, u), pz = lerp(z0, z1, u); const dx = x1 - x0, dz = z1 - z0, L = Math.hypot(dx, dz); const off = (i % 2 ? 1 : -1) * amp * (0.5 + R() * 0.5) * (i && i < n ? 1 : 0); pts.push([px - dz / L * off, pz + dx / L * off]); } return pts; }
+
+  function house(parent, x, z, w, h, d, wall, rot, barjeel) {
+    const g = new Node(); g.setPos(x, 0, z); g.setRot(0, rot || 0, 0); parent.add(g);
+    mk(G.roundedBox(w, h, d, 0.03), wall, g, [0, h / 2, 0]);
+    mk(G.box(w + 0.06, 0.06, d + 0.06), P.parapet, g, [0, h + 0.03, 0]);
+    for (let i = 0; i < Math.round(w / 0.16); i++) mk(G.box(0.07, 0.07, 0.04), P.parapet, g, [-w / 2 + 0.06 + i * 0.16, h + 0.09, d / 2 + 0.01]);
+    mk(G.roundedBox(0.2, 0.34, 0.03, 0.02), P.door, g, [w * 0.15, 0.17, d / 2 + 0.01]);
+    for (const wx of [-w * 0.25, w * 0.42]) { if (Math.abs(wx) > w / 2 - 0.08) continue; mk(G.box(0.2, 0.2, 0.025), '#ffffff', g, [wx, h * 0.58, d / 2 + 0.008]); mk(G.box(0.15, 0.15, 0.03), P.window, g, [wx, h * 0.58, d / 2 + 0.012]); }
+    if (barjeel) {
+      const bx = -w / 2 + 0.22, bz = -d / 2 + 0.22;
+      mk(G.box(0.34, 0.62, 0.34), wall, g, [bx, h + 0.31, bz]);
+      for (const s of [[0, 0.172], [0.172, 0]]) mk(G.box(s[0] ? 0.02 : 0.2, 0.3, s[0] ? 0.2 : 0.02), '#9d8aa8', g, [bx + s[0], h + 0.42, bz + s[1]]);
+      mk(G.box(0.4, 0.06, 0.4), P.parapet, g, [bx, h + 0.65, bz]);
+    }
+    blob(g, Math.max(w, d) * 0.7, [0, 0.01, 0], 0.18);
+    return g;
+  }
+  function roundTree(parent, x, z, s, R) {
+    const t = new Node(); t.setPos(x, 0, z); parent.add(t);
+    mk(G.merge(treeItems(0, 0, s * 0.62, R)), mat('#ffffff'), t);
+    blob(t, 0.5 * s, [0, 0.01, 0]); return t;
+  }
+
+
+  // ---- 1. Earthquake
+  function buildQuake(D) {
+    const R = rng(11); platform(D, P.grass);
+    const content = new Node('quakeContent'); D.add(content);
+    const road = new Node(); content.add(road);
+    mk(G.box(5.9, 0.04, 0.95), P.road, road, [0, 0.02, 0.85]);
+    for (let i = 0; i < 7; i++) mk(G.box(0.42, 0.045, 0.07), P.roadLine, road, [-2.55 + i * 0.85, 0.024, 0.85]);
+    const houses = [house(content, -1.7, -0.7, 1.0, 0.85, 0.8, P.wallA, 0.12, true), house(content, -0.15, -1.15, 0.9, 1.05, 0.8, P.wallB, -0.05), house(content, 1.45, -0.75, 1.05, 0.8, 0.85, P.wallC, -0.14, true)];
+    const trees = [roundTree(content, 2.45, 0.05, 1, R), roundTree(content, -2.55, 0.1, 0.9, R), roundTree(content, 0.75, -2.1, 0.8, R)];
+    for (let i = 0; i < 8; i++) { const a = R() * 6.28, r = 1.8 + R() * 1.0; mk(G.sphere(0.06, 6, 4), ['#ffb3c1', '#fff2a8', '#c9b8ff'][i % 3], content, [Math.cos(a) * r, 0.06, Math.sin(a) * r + 0.6 > 2.6 ? 2.2 : Math.sin(a) * r * 0.5 + 1.9]); }
+    const crackMat = mat(P.crack);
+    const cracks = [
+      { g: crackGeo(zig(0.25, 0.4, 0.45, 1.3, 7, 0.11, R), 0.13), y: 0.043, a: 0.35 },
+      { g: crackGeo(zig(-1.25, 0.38, -1.55, 1.32, 6, 0.1, R), 0.12), y: 0.043, a: 0.42 },
+      { g: crackGeo(zig(0.6, 1.45, 2.1, 2.05, 8, 0.12, R), 0.11), y: 0.008, a: 0.5 },
+      { g: crackGeo(zig(-0.5, 1.45, -1.9, 2.15, 7, 0.11, R), 0.1), y: 0.008, a: 0.55 },
+      { g: crackGeo(zig(1.9, -0.05, 2.7, -0.9, 5, 0.09, R), 0.09), y: 0.008, a: 0.6 }
+    ].map(c => { const m = mk(c.g, crackMat, D, [0, c.y, 0]); m.userData.a = c.a; return m; });
+    const puffs = cracks.slice(0, 4).map((c, i) => { const m = mk(G.ico(0.14, 1, 0.1, R), mat('#efe6f2', { opacity: 0 }), D, [[0.3, -1.3, 0.9, -0.7][i], 0.12, [0.7, 0.7, 1.6, 1.6][i]]); m.userData.a = c.userData.a; return m; });
+    return {
+      duration: 6.5,
+      apply(t) {
+        const amp = Math.sin(Math.PI * seg(t, 0.05, 0.6)) * 0.045;
+        const ph = t * 6.5 * 26;
+        content.position[0] = Math.sin(ph) * amp; content.position[2] = Math.cos(ph * 1.3) * amp * 0.6;
+        houses.forEach((h, i) => { h.rotation[2] = Math.sin(ph + i * 1.7) * amp * 0.9; });
+        trees.forEach((tr, i) => { tr.rotation[2] = Math.sin(ph * 0.8 + i) * amp * 2; });
+        for (const c of cracks) { const p = easeOut(seg(t, c.userData.a, c.userData.a + 0.28)); c.geometry.drawCount = Math.floor(p * c.geometry.segs) * 6; c.visible = p > 0; }
+        for (const pf of puffs) { const p = seg(t, pf.userData.a, pf.userData.a + 0.35); pf.visible = p > 0 && p < 1; pf.material.opacity = Math.sin(p * Math.PI) * 0.75; const s = 0.5 + p * 1.6; pf.setScale(s, s * 0.6, s); pf.position[1] = 0.1 + p * 0.25; }
+      },
+      sound(S) { S.rumble(3.6); }
+    };
+  }
+
+  // ---- 2. Volcano
+  function buildVolcano(D0) {
+    const R = rng(23); platform(D0, '#cde8b0');
+    const D = new Node('volcano'); D.setScale(0.74, 0.74, 0.74); D0.add(D);
+    const prof = [[2.35, 0], [2.1, 0.3], [1.7, 0.8], [1.25, 1.35], [0.82, 1.85], [0.6, 2.06], [0.52, 2.1], [0.4, 1.98], [0.0, 1.95]];
+    const mtn = mk(G.lathe(prof, 18), P.volcano, D);
+    // lighter top band + green skirt
+    mk(G.lathe([[2.42, 0], [2.2, 0.22], [1.9, 0.5]], 18), '#b9dc9e', D, [0, 0.005, 0]);
+    for (let i = 0; i < 12; i++) { const a = i / 12 * 6.28 + 0.2, r = 2.5 + R() * 0.4; if (Math.abs(Math.sin(a / 2)) < 0.25) continue; mk(G.ico(0.22 + R() * 0.15, 1, 0.12, R), R() > 0.5 ? P.leaf2 : P.leaf3, D, [Math.sin(a) * r, 0.12, Math.cos(a) * r], null, [1, 0.75, 1]); }
+    for (let i = 0; i < 6; i++) { const a = R() * 6.28, r = 2.6 + R() * 0.3; mk(G.ico(0.12 + R() * 0.1, 0, 0.2, R), P.rock, D, [Math.sin(a) * r, 0.08, Math.cos(a) * r]); }
+    const h = (r) => { if (r >= prof[0][0]) return 0; for (let i = 0; i < 5; i++) { const [r0, y0] = prof[i], [r1, y1] = prof[i + 1]; if (r <= r0 && r >= r1) return lerp(y0, y1, (r0 - r) / (r0 - r1)); } return 2.06; };
+    const lavaMat = new Material({ color: P.lava, unlit: true, emissive: '#000000' });
+    const pool = mk(G.disc(0.42, 20), lavaMat, D, [0, 1.99, 0]);
+    const glow = mk(G.sphere(0.5, 16, 10), new Material({ color: '#ffc49a', unlit: true, opacity: 0, depthWrite: false }), D, [0, 2.15, 0], null, [1, 0.5, 1]);
+    const flows = [0.15, -0.95, 1.15].map((ph, k) => {
+      const pts = []; for (let i = 0; i <= 40; i++) { const r = 0.48 + i / 40 * 2.35; const a = ph + Math.sin(i * 0.35 + k) * 0.12; pts.push([Math.sin(a) * r, h(r) + 0.06, Math.cos(a) * r]); }
+      const g = G.tube(pts, 0.12 - k * 0.012, 7, (u) => 1 - u * 0.35); return mk(g, lavaMat, D);
+    });
+    const puffs = []; for (let i = 0; i < 7; i++) puffs.push(mk(G.ico(0.28, 1, 0.08, R), mat('#f3eef6', { opacity: 0, depthWrite: false }), D, [0, 2.3, 0]));
+    let tCur = 0;
+    return {
+      duration: 9,
+      apply(t) {
+        tCur = t;
+        const pp = easeOut(seg(t, 0.05, 0.25)); pool.setScale(pp, 1, pp); pool.visible = pp > 0.01; pool.position[1] = 1.96 + pp * 0.07;
+        glow.material.opacity = 0.35 * pp;
+        flows.forEach((f, k) => { const p = ease(seg(t, 0.2 + k * 0.08, 0.85 + k * 0.05)); f.geometry.drawCount = Math.floor(p * f.geometry.segments) * f.geometry.segIndexCount; f.visible = p > 0; });
+      },
+      tick(dt, time) {
+        const k = Math.sin(time * 2.4) * 0.5 + 0.5; lavaMat.color = v3.lerp(M3.hexToRgb(P.lava), M3.hexToRgb(P.lava2), k * 0.6);
+        const on = seg(tCur, 0.08, 0.2);
+        puffs.forEach((p, i) => { const c = ((time * 0.18 + i / puffs.length) % 1); p.visible = on > 0; p.position = [Math.sin(i * 2.3) * 0.25 * c + c * 0.4, 2.25 + c * 1.8, Math.cos(i * 1.7) * 0.2 * c]; const s = 0.5 + c * 1.6; p.setScale(s, s, s); p.material.opacity = on * Math.sin(c * Math.PI) * 0.55; });
+      },
+      sound(S) { S.bubble(7); }
+    };
+  }
+
+  // ---- 3. Weathering
+  function buildWeathering(D) {
+    const R = rng(37); platform(D, '#d4ebb6');
+    const C = [0, 0.86, 0.15];
+    for (let i = 0; i < 9; i++) { const a = R() * 6.28, r = 2.2 + R() * 0.7; mk(G.ico(0.18 + R() * 0.12, 1, 0.12, R), P.leaf3, D, [Math.sin(a) * r, 0.1, Math.cos(a) * r * 0.8 - 0.3], null, [1, 0.7, 1]); }
+    roundTree(D, -2.3, -1.2, 1.1, R); roundTree(D, 2.4, -1.0, 0.9, R);
+    const big = mk(G.ico(0.95, 1, 0.05, rng(5)), P.rock, D, C, [0, 0.4, 0], [1.18, 0.92, 1.0]);
+    const bigShadow = blob(D, 1.5, [C[0], 0.012, C[2]], 0.25);
+    // cracks on the rock surface
+    const crackMat = mat('#4f4462');
+    const arcs = [[[-0.1, 75], [0.05, 40], [-0.08, 10], [0.1, -25]], [[0.15, 30], [0.45, 15], [0.6, -5], [0.85, -30]], [[-0.15, 25], [-0.45, 5], [-0.75, -12], [-0.95, -30]]];
+    const cracks = arcs.map(arc => {
+      const pts = []; const N = 24;
+      for (let i = 0; i <= N; i++) { const u = i / N * (arc.length - 1), k = Math.min(Math.floor(u), arc.length - 2), f = u - k; const az = lerp(arc[k][0], arc[k + 1][0], f) + Math.sin(i * 1.9) * 0.04; const el = lerp(arc[k][1], arc[k + 1][1], f) * Math.PI / 180; pts.push([C[0] + Math.cos(el) * Math.sin(az) * 0.95 * 1.2, C[1] + Math.sin(el) * 0.95 * 0.95, C[2] + Math.cos(el) * Math.cos(az) * 0.95 * 1.04]); }
+      return mk(G.tube(pts, 0.02, 5), crackMat, D);
+    });
+    // fragments: assembled -> resting beside the original spot
+    const sizes = [0.5, 0.46, 0.42, 0.38, 0.34, 0.3, 0.27, 0.23, 0.2];
+    const frags = sizes.map((r, i) => {
+      const a = i * 2.4 + 0.3, el = (i % 3 - 1) * 0.5;
+      const from = [C[0] + Math.cos(el) * Math.sin(a) * 0.45, C[1] + Math.sin(el) * 0.35, C[2] + Math.cos(el) * Math.cos(a) * 0.4];
+      const ra = -1.2 + i * 0.32 + (i % 2) * 0.12, rd = 0.6 + r * 1.4 + (i % 3) * 0.12;
+      const to = [C[0] + Math.sin(ra) * rd * 1.15, r * 0.62, C[2] + Math.cos(ra) * rd * 0.85 - 0.15];
+      const m = mk(G.ico(r, 0, 0.2, R), i % 2 ? P.rock : P.rock2, D, from);
+      m.userData = { from, to, rot0: [R() * 3, R() * 3, R() * 3], rot1: [R() * 3, R() * 3, R() * 3], sh: blob(D, r * 1.1, [to[0], 0.013, to[2]], 0.22) };
+      return m;
+    });
+    const grains = []; for (let i = 0; i < 26; i++) { const a = R() * 6.28, r = 0.4 + R() * 1.2; grains.push(mk(G.ico(0.03 + R() * 0.04, 0, 0.2, R), R() > 0.5 ? P.rock2 : '#d8cfdf', D, [C[0] + Math.sin(a) * r, 0.03, C[2] + Math.cos(a) * r * 0.8])); }
+    const ring = new Node(); D.add(ring); ring.setPos(C[0], 0.015, C[2]);
+    for (let i = 0; i < 22; i++) { const a = i / 22 * 6.28; mk(G.box(0.14, 0.012, 0.045), mat('#ffffff', { opacity: 0.85 }), ring, [Math.sin(a) * 1.15, 0, Math.cos(a) * 1.0], [0, a + Math.PI / 2, 0]); }
+    return {
+      duration: 8,
+      apply(t) {
+        const cp = seg(t, 0.1, 0.42);
+        cracks.forEach((c, i) => { const p = easeOut(seg(cp, i * 0.2, i * 0.2 + 0.6)); c.geometry.drawCount = Math.floor(p * c.geometry.segments) * c.geometry.segIndexCount; c.visible = p > 0 && t < 0.46; });
+        const wob = t > 0.1 && t < 0.46 ? Math.sin(t * 160) * 0.012 * seg(t, 0.25, 0.45) : 0;
+        big.position[0] = C[0] + wob; big.visible = t < 0.46; bigShadow.visible = t < 0.6; bigShadow.material.opacity = 0.25 * (1 - seg(t, 0.46, 0.6));
+        const sp = seg(t, 0.46, 0.82);
+        frags.forEach((f, i) => {
+          const u = f.userData, k = clamp((sp - i * 0.03) / 0.75), e = backOut(k);
+          f.visible = t >= 0.46; f.position = v3.lerp(u.from, u.to, Math.min(1, e)); f.position[1] = lerp(u.from[1], u.to[1], easeOut(k)) + Math.sin(k * Math.PI) * 0.15;
+          f.rotation = v3.lerp(u.rot0, u.rot1, easeOut(k)); u.sh.visible = t >= 0.46; u.sh.material.opacity = 0.22 * k;
+        });
+        grains.forEach((g, i) => { const p = seg(t, 0.6 + i * 0.008, 0.8 + i * 0.008); g.visible = p > 0; const s = easeOut(p); g.setScale(s, s, s); });
+        const rp = seg(t, 0.86, 1); ring.visible = rp > 0; ring.setScale(0.6 + 0.4 * easeOut(rp), 1, 0.6 + 0.4 * easeOut(rp));
+      },
+      sound(S, ctxT) { setTimeout(() => S.crumble(1.2), 900); setTimeout(() => S.crumble(2.2), 3600); }
+    };
+  }
+
+  // ---- 4. Erosion (water carries soil & rock bits from one place to another)
+  function buildErosion(D) {
+    const R = rng(51); platform(D, P.grass);
+    const HC = [-1.85, -1.0], HR = [1.95, 1.0, 1.65];
+    mk(G.sphere(1, 24, 14, Math.PI / 2), '#addb98', D, [HC[0], 0, HC[1]], null, HR);
+    const terrain = (x, z) => { const a = (x - HC[0]) / HR[0], c = (z - HC[1]) / HR[2]; const q = 1 - a * a - c * c; return q > 0 ? Math.sqrt(q) * HR[1] : 0; };
+    // stream path
+    const ctrl = [[-2.3, -1.3], [-1.75, -0.78], [-1.1, -0.25], [-0.3, 0.15], [0.55, 0.38], [1.35, 0.6], [2.0, 0.85]];
+    const cr = (p0, p1, p2, p3, t) => { const t2 = t * t, t3 = t2 * t; return 0.5 * (2 * p1 + (-p0 + p2) * t + (2 * p0 - 5 * p1 + 4 * p2 - p3) * t2 + (-p0 + 3 * p1 - 3 * p2 + p3) * t3); };
+    const path = []; for (let i = 0; i < ctrl.length - 1; i++) for (let s = 0; s < 10; s++) { const t = s / 10; const p0 = ctrl[Math.max(i - 1, 0)], p1 = ctrl[i], p2 = ctrl[i + 1], p3 = ctrl[Math.min(i + 2, ctrl.length - 1)]; path.push([cr(p0[0], p1[0], p2[0], p3[0], t), cr(p0[1], p1[1], p2[1], p3[1], t)]); }
+    path.push(ctrl[ctrl.length - 1]);
+    const lens = [0]; for (let i = 1; i < path.length; i++) lens.push(lens[i - 1] + Math.hypot(path[i][0] - path[i - 1][0], path[i][1] - path[i - 1][1])); const total = lens[lens.length - 1];
+    const at = (u) => { const d = u * total; let i = 1; while (i < lens.length - 1 && lens[i] < d) i++; const f = (d - lens[i - 1]) / (lens[i] - lens[i - 1] || 1); const x = lerp(path[i - 1][0], path[i][0], f), z = lerp(path[i - 1][1], path[i][1], f); return [x, terrain(x, z), z]; };
+    const ribbon = (w, yo, uvScale) => {
+      const b = new GB();
+      for (let i = 0; i < path.length; i++) { const p = path[i], q = path[Math.min(i + 1, path.length - 1)], o = path[Math.max(i - 1, 0)]; const dx = q[0] - o[0], dz = q[1] - o[1], L = Math.hypot(dx, dz) || 1, nx = -dz / L, nz = dx / L; for (const s of [-1, 1]) { const x = p[0] + nx * w / 2 * s, z = p[1] + nz * w / 2 * s; b.v(x, Math.max(terrain(x, z), terrain(p[0], p[1])) + yo, z, 0, 1, 0, (s + 1) / 2, lens[i] * uvScale); } }
+      for (let i = 0; i < path.length - 1; i++) b.q(i * 2, i * 2 + 1, i * 2 + 3, i * 2 + 2);
+      return b.build();
+    };
+    mk(ribbon(0.66, 0.012, 1), '#c4a68a', D);
+    const wc = makeCanvas(64, 256), wx = wc.getContext('2d'); wx.fillStyle = P.water; wx.fillRect(0, 0, 64, 256);
+    for (let i = 0; i < 9; i++) { wx.strokeStyle = i % 2 ? 'rgba(255,255,255,0.75)' : 'rgba(205,243,250,0.9)'; wx.lineWidth = 5; wx.beginPath(); const y = i * 28 + 8, x0 = 8 + (i * 13) % 30; wx.moveTo(x0, y); wx.quadraticCurveTo(x0 + 10, y + 10, x0 + 22, y + 4); wx.stroke(); }
+    const wtex = new Texture(wc); wtex.repeat = true;
+    const waterMat = new Material({ map: wtex, unlit: true }); waterMat.transparent = false; waterMat.depthWrite = true;
+    mk(ribbon(0.42, 0.03, 1.2), waterMat, D);
+    mk(G.disc(0.82, 28), '#c4a68a', D, [2.35, 0.012, 1.05]); const pool = mk(G.disc(0.66, 28), waterMat, D, [2.35, 0.03, 1.05]);
+    // source pile and deposit pile
+    const src = at(0.02); const srcPile = mk(G.sphere(0.36, 14, 8, Math.PI / 2), P.soil, D, [src[0] - 0.12, src[1] - 0.02, src[2] - 0.12], null, [1, 0.75, 1]);
+    const dep = [1.62, 0, 1.05]; const depPile = mk(G.sphere(0.4, 14, 8, Math.PI / 2), P.soil, D, dep, null, [1, 0.6, 1]);
+    // carried items
+    const items = [];
+    for (let i = 0; i < 30; i++) {
+      const rock = i % 3 === 0, r = rock ? 0.06 + R() * 0.035 : 0.045 + R() * 0.02;
+      const g = rock ? G.ico(r, 0, 0.25, R) : G.sphere(r, 8, 6);
+      const a = R() * 6.28, rr0 = R() * 0.28;
+      const start = [src[0] - 0.12 + Math.cos(a) * rr0, 0, src[2] - 0.12 + Math.sin(a) * rr0]; start[1] = Math.max(terrain(start[0], start[2]), src[1]) + 0.12 + R() * 0.08;
+      const b2 = R() * 6.28, rr1 = 0.15 + R() * 0.35;
+      const end = [dep[0] + Math.cos(b2) * rr1, 0.05 + R() * 0.12, dep[2] + Math.sin(b2) * rr1 * 0.8];
+      const m = mk(g, rock ? (R() > 0.5 ? P.rock : P.rock2) : (R() > 0.5 ? P.soil : P.soil2), D, start);
+      m.userData = { start, end, s: 0.1 + (i / 30) * 0.5 + R() * 0.04, lat: (R() - 0.5) * 0.22, spin: R() * 6 };
+      items.push(m);
+    }
+    // flow arrows
+    const arrows = []; const ac = makeCanvas(128, 128), ax = ac.getContext('2d'); ax.fillStyle = '#ffffff'; ax.beginPath(); ax.moveTo(20, 30); ax.lineTo(108, 64); ax.lineTo(20, 98); ax.lineTo(44, 64); ax.closePath(); ax.fill();
+    const atex = new Texture(ac);
+    for (let i = 0; i < 4; i++) { const m = mk(G.plane(0.3, 0.3), new Material({ map: atex, unlit: true, opacity: 0, depthWrite: false }), D); m.renderOrder = 1; arrows.push(m); }
+    // signposts "from here" / "to here"
+    const sign = (txt, pos, col) => {
+      const n = new Node(); n.setPos(pos[0], pos[1], pos[2]); D.add(n);
+      mk(G.cylinder(0.025, 0.03, 0.8, 8), '#b98f78', n, [0, 0.4, 0]);
+      const p = new Panel(0.86, 0.32, { frame: col, ppm: 420, depth: 0.03 }); p.setPos(0, 0.9, 0); p.setRot(0, -0.25, 0); p.text(txt, 64, { weight: 800 }); n.add(p);
+      n.visible = false; return n;
+    };
+    const s1 = sign('من هنا', [src[0] - 0.65, src[1] - 0.25, src[2] + 0.2], COL.coral), s2 = sign('إلى هنا', [dep[0] + 0.15, 0, dep[2] + 0.75], COL.teal);
+    for (let i = 0; i < 6; i++) { const a = R() * 6.28, r = 2.3 + R() * 0.6; mk(G.ico(0.15 + R() * 0.1, 1, 0.12, R), P.leaf2, D, [Math.sin(a) * r * 0.9 + 0.3, 0.08, Math.cos(a) * r * 0.6 + 0.6], null, [1, 0.7, 1]); }
+    roundTree(D, 0.6, -1.5, 1.0, R); roundTree(D, 2.4, -0.5, 0.85, R);
+    let tCur = 0, flow = 0.35;
+    const api = {
+      duration: 10,
+      apply(t) {
+        tCur = t;
+        let arrived = 0, left = 0;
+        for (const m of items) {
+          const u = m.userData, k = clamp((t - u.s) / 0.36);
+          if (k > 0) left++; if (k >= 1) arrived++;
+          if (k <= 0) { m.position = u.start.slice(); }
+          else if (k >= 1) { m.position = u.end.slice(); }
+          else if (k < 0.1) { const a = at(0.0), f = k / 0.1; m.position = v3.lerp(u.start, [a[0], a[1] + 0.07, a[2]], f); }
+          else if (k > 0.9) { const a = at(1), f = (k - 0.9) / 0.1; m.position = v3.lerp([a[0], a[1] + 0.07, a[2]], u.end, f); }
+          else { const uu = (k - 0.1) / 0.8; const p = at(uu); const p2 = at(Math.min(1, uu + 0.01)); const dx = p2[0] - p[0], dz = p2[2] - p[2], L = Math.hypot(dx, dz) || 1; m.position = [p[0] - dz / L * u.lat, p[1] + 0.07 + Math.sin(uu * 30 + u.spin) * 0.015, p[2] + dx / L * u.lat]; }
+          m.rotation = [k * 8 + u.spin, k * 5, 0];
+        }
+        const sp = 1 - 0.55 * (left / items.length); srcPile.setScale(sp, 0.75 * sp, sp);
+        const dp = 0.25 + 0.75 * (arrived / items.length); depPile.setScale(dp, 0.6 * dp, dp);
+        s1.visible = s2.visible = t > 0.05;
+      },
+      tick(dt, time) {
+        const playing = tCur > 0.02 && tCur < 0.99; flow += ((playing ? 1.2 : 0.35) - flow) * Math.min(1, dt * 2);
+        waterMat.uvOffset[1] = (waterMat.uvOffset[1] - dt * flow) % 1;
+        arrows.forEach((a, i) => { const u = ((time * 0.12 + i / arrows.length) % 1) * 0.9 + 0.05; const p = at(u), p2 = at(Math.min(1, u + 0.02)); a.position = [p[0], p[1] + 0.12, p[2]]; a.rotation = [-Math.PI / 2, 0, Math.atan2(-(p2[2] - p[2]), p2[0] - p[0])]; a.material.opacity = (tCur > 0.03 ? 0.85 : 0) * Math.sin(u * Math.PI); });
+      },
+      sound(S) { S.water(8.5); }
+    };
+    return api;
+  }
+
+  // ---- 5. Human changes (excavator levels land and builds a road)
+  function buildExcavator() {
+    const ex = new Node('excavator');
+    for (const s of [-1, 1]) { mk(G.roundedBox(0.2, 0.22, 1.0, 0.09), '#6d6587', ex, [s * 0.3, 0.11, 0]); for (let k = 0; k < 4; k++) mk(G.cylinder(0.06, 0.06, 0.21, 10), '#9a92b4', ex, [s * 0.3, 0.11, -0.36 + k * 0.24], [0, 0, Math.PI / 2]); }
+    const top = new Node(); top.setPos(0, 0.24, 0); ex.add(top);
+    mk(G.roundedBox(0.82, 0.3, 0.86, 0.06), P.yellow, top, [0, 0.16, -0.05]);
+    mk(G.roundedBox(0.42, 0.44, 0.42, 0.05), P.yellow, top, [-0.18, 0.5, 0.05]);
+    mk(G.box(0.36, 0.26, 0.02), mat('#bfe8f6', { emissive: '#1a2a30' }), top, [-0.18, 0.55, 0.265]);
+    mk(G.box(0.02, 0.26, 0.3), mat('#bfe8f6', { emissive: '#1a2a30' }), top, [-0.395, 0.55, 0.05]);
+    mk(G.roundedBox(0.7, 0.2, 0.18, 0.05), '#f2b84b', top, [0, 0.2, -0.5]);
+    mk(G.cylinder(0.025, 0.025, 0.25, 8), '#6d6587', top, [0.28, 0.45, -0.25]);
+    const boom = new Node(); boom.setPos(0.16, 0.36, 0.3); top.add(boom);
+    mk(G.roundedBox(0.12, 0.12, 0.85, 0.04), '#f2b84b', boom, [0, 0, 0.42]);
+    const stick = new Node(); stick.setPos(0, 0, 0.84); boom.add(stick);
+    mk(G.roundedBox(0.1, 0.62, 0.1, 0.04), '#f2b84b', stick, [0, -0.3, 0]);
+    const bucket = new Node(); bucket.setPos(0, -0.6, 0); stick.add(bucket);
+    mk(G.roundedBox(0.3, 0.2, 0.2, 0.04), '#8a82a6', bucket, [0, -0.04, 0.08]);
+    for (let k = 0; k < 3; k++) mk(G.cone(0.025, 0.08, 6), '#8a82a6', bucket, [-0.1 + k * 0.1, -0.17, 0.14], [Math.PI, 0, 0]);
+    blob(ex, 0.75, [0, 0.01, 0], 0.25);
+    ex.userData = { boom, stick, bucket };
+    return ex;
+  }
+  function buildHuman(D) {
+    const R = rng(77); platform(D, P.grass);
+    mk(G.box(5.9, 0.012, 1.25), '#d8c2a2', D, [0, 0.006, 0.3]);
+    const mounds = [-1.05, 0.35, 1.6].map((x, i) => {
+      const m = new Node(); m.setPos(x, 0, 0.3); D.add(m);
+      mk(G.sphere(0.6, 18, 10, Math.PI / 2), i % 2 ? '#b5d996' : '#c2dd9d', m, [0, 0, 0], null, [1, 0.62 + i * 0.08, 0.85]);
+      mk(G.ico(0.11, 0, 0.2, R), P.rock, m, [0.15, 0.36, 0.1]); mk(G.ico(0.15, 1, 0.1, R), P.leaf2, m, [-0.2, 0.3, -0.1]);
+      m.userData.x = x; return m;
+    });
+    const rocks = []; for (let i = 0; i < 6; i++) rocks.push(mk(G.ico(0.07 + R() * 0.05, 0, 0.2, R), P.rock2, D, [-2.4 + i * 0.9 + R() * 0.3, 0.05, 0.1 + R() * 0.5]));
+    const roadN = new Node(); roadN.setPos(-2.85, 0, 0.3); D.add(roadN);
+    mk(G.box(5.7, 0.05, 0.92), P.road, roadN, [2.85, 0.03, 0]);
+    const dashes = []; for (let i = 0; i < 7; i++) dashes.push(mk(G.box(0.38, 0.055, 0.07), P.roadLine, D, [-2.45 + i * 0.82, 0.032, 0.3]));
+    const edges = []; for (const s of [-1, 1]) { const e = new Node(); e.setPos(-2.85, 0, 0.3 + s * 0.48); D.add(e); mk(G.box(5.7, 0.06, 0.05), '#e9e4f2', e, [2.85, 0.03, 0]); edges.push(e); }
+    const exc = buildExcavator(); exc.setRot(0, Math.PI / 2, 0); exc.setScale(0.95, 0.95, 0.95); D.add(exc);
+    for (let i = 0; i < 4; i++) { const a = R() * 6.28; mk(G.ico(0.16 + R() * 0.1, 1, 0.12, R), P.leaf3, D, [Math.sin(a) * 2.6, 0.08, -1.3 - R() * 1.0], null, [1, 0.7, 1]); }
+    roundTree(D, -2.2, -1.6, 1.0, R); roundTree(D, 1.9, -1.7, 1.1, R); house(D, 0.0, -1.9, 0.9, 0.75, 0.7, P.wallA, 0.0, false);
+    let tCur = 0;
+    const exAt = (t) => lerp(-2.6, 1.55, ease(seg(t, 0.05, 0.85)));
+    return {
+      duration: 11,
+      apply(t) {
+        tCur = t; const x = exAt(t); exc.position = [x, 0, 0.3];
+        const tip = x + 0.95;
+        mounds.forEach(m => { const f = seg(tip, m.userData.x - 0.45, m.userData.x + 0.5); m.setScale(1 + 0.25 * f, Math.max(0.02, 1 - f * 0.98), 1 + 0.1 * f); m.visible = f < 0.995; });
+        rocks.forEach(r => { r.visible = tip < r.position[0] - 0.1; });
+        const roadEnd = t >= 0.85 ? lerp(x - 0.25, 2.85, seg(t, 0.85, 1)) : x - 0.25; const len = clamp((roadEnd + 2.85) / 5.7);
+        roadN.setScale(Math.max(0.0001, len), 1, 1); roadN.visible = len > 0.01; edges.forEach(e => { e.setScale(Math.max(0.0001, len), 1, 1); e.visible = len > 0.01; });
+        dashes.forEach(d => { d.visible = d.position[0] + 0.2 < roadEnd; });
+      },
+      tick(dt, time) {
+        const u = exc.userData, working = tCur > 0.04 && tCur < 0.88; const ph = time * 2.4;
+        const k = working ? 1 : 0;
+        u.boom.rotation[0] = lerp(-0.35, 0.05 + Math.sin(ph) * 0.18, k);
+        u.stick.rotation[0] = lerp(0.25, 0.55 + Math.sin(ph + 1) * 0.3, k);
+        u.bucket.rotation[0] = lerp(0.2, 0.3 + Math.sin(ph + 2) * 0.5, k);
+      },
+      sound(S) { S.engine(9.5); }
+    };
+  }
+
+  global.WORLD = { buildEnvironment, buildAli, animateAli, drawBubble, buildQuake, buildVolcano, buildWeathering, buildErosion, buildHuman, blob, mk, mat, rng, clamp, seg, ease, easeOut, backOut, lerp, P };
+})(window);
+
+</script>
+<script>
+/* =========================================================================
+   مغامرة المستكشف علي في عالم الأرض المتغيّرة — منطق التطبيق
+   ========================================================================= */
+(function () {
+  'use strict';
+  const { m4, v3, Node, Mesh, Material, G, Renderer, RenderTarget, raycast } = M3;
+  const { Panel, Button, Card, UI, Sfx, Voice, COL, icon, textBox, setFont, rr } = UIK;
+  const W = WORLD;
+
+  // ------------------------------------------------------------ content (from the lesson «الأرض تتغيّر»)
+  const STATIONS = [
+    { key: 'quake', num: 'المحطة الأولى', name: 'الزلزال', caption: 'اهتزاز الأرض وظهور شقوق', build: W.buildQuake,
+      before: 'انظر إلى الطريق والمنازل، ثم اضغط «شاهِد».', after: 'اهتزّت الأرض وظهرت شقوق في الطريق. هذا هو الزلزال!',
+      thumb: { cam: [0.2, 2.1, 3.3], target: [0.1, 0.25, 0.4], t: 1 } },
+    { key: 'volcano', num: 'المحطة الثانية', name: 'البركان', caption: 'خروج الحمم من فوهة البركان', build: W.buildVolcano,
+      before: 'هذا جبل كبير. اضغط «شاهِد» لترى ماذا يحدث!', after: 'خرجت الحمم من الفوهة وتدفّقت ببطء. هذا هو البركان!',
+      thumb: { cam: [0.45, 1.75, 3.9], target: [0, 0.78, 0], t: 0.92 } },
+    { key: 'weather', num: 'المحطة الثالثة', name: 'التجوية', caption: 'الصخرة تتفتّت، وأجزاؤها تبقى قربها', chip: 'التجوية = تفتُّت', build: W.buildWeathering,
+      before: 'انظر إلى هذه الصخرة الكبيرة، ثم اضغط «شاهِد».', after: 'تفتّتت الصخرة إلى قطع صغيرة بقيت بجوارها. هذه هي التجوية!',
+      thumb: { cam: [0.1, 1.75, 3.0], target: [0, 0.45, 0.1], t: 1 } },
+    { key: 'erosion', num: 'المحطة الرابعة', name: 'التعرية', caption: 'الماء ينقل التربة وفتات الصخور', chip: 'التعرية = انتقال', build: W.buildErosion,
+      before: 'انظر إلى مجرى الماء والتربة، ثم اضغط «شاهِد».', after: 'حمل الماء التربة وفتات الصخور ونقلها إلى مكان آخر. هذه هي التعرية!',
+      thumb: { cam: [0.1, 2.6, 3.0], target: [0.0, 0.25, -0.05], t: 0.55 } },
+    { key: 'human', num: 'المحطة الخامسة', name: 'تغييرات الإنسان لسطح الأرض', caption: 'الحفارة تغيّر شكل الأرض لإنشاء طريق', build: W.buildHuman,
+      before: 'أرض فيها تلال صغيرة. اضغط «شاهِد».', after: 'سوّت الحفارة الأرض وأنشأت طريقًا. الإنسان يغيّر سطح الأرض!',
+      thumb: { cam: [-0.3, 1.9, 3.3], target: [0.0, 0.35, 0.2], t: 0.55 } }
+  ];
+  const PRACTICE = {
+    2: { q: 'صخرة تفتّتت، وبقيت قطعها بجوارها. ما اسم هذا المظهر؟', pic: 'weather', opts: [{ text: 'التجوية' }, { text: 'التعرية' }], correct: 0,
+      ok: 'أحسنت! التجوية تعني تفتُّت الصخور.', no: 'لا بأس! الصخرة تفتّتت في مكانها، فهذه تجوية.' },
+    3: { q: 'أيّ صورة تُظهر التعرية؟', opts: [{ pic: 'weather', text: 'صخرة تتفتّت في مكانها' }, { pic: 'erosion', text: 'ماء ينقل التربة وفتات الصخور' }], correct: 1,
+      ok: 'رائع! التعرية تعني انتقال التربة وفتات الصخور.', no: 'لا بأس! في التعرية ينقل الماء التربة وفتات الصخور إلى مكان آخر.' }
+  };
+  const QUIZ = [
+    { q: 'أيّ صورة تُظهر زلزالًا؟', opts: [{ pic: 'volcano', text: 'بركان تخرج منه الحمم' }, { pic: 'quake', text: 'طريق متشقّق بسبب زلزال' }, { pic: 'weather', text: 'صخرة تتفتّت إلى أجزاء صغيرة' }], correct: 1, no: 'لا بأس! الزلزال يُظهر طريقًا متشقّقًا.' },
+    { q: 'ما اسم هذا المظهر؟', pic: 'volcano', opts: [{ text: 'التعرية' }, { text: 'التجوية' }, { text: 'البركان' }], correct: 2, no: 'لا بأس! هذا بركان تخرج منه الحمم.' },
+    { q: 'أيّ صورة تُمثّل التجوية؟', opts: [{ pic: 'weather', text: 'صخرة تتفتّت وتبقى أجزاؤها قربها' }, { pic: 'erosion', text: 'ماء ينقل التربة وفتات الصخور' }, { pic: 'human', text: 'حفارة تغيّر شكل الأرض' }], correct: 0, no: 'لا بأس! التجوية: صخرة تتفتّت وتبقى أجزاؤها قربها.' },
+    { q: 'أيّ مشهد يُمثّل التعرية؟', opts: [{ pic: 'weather', text: 'صخرة تتفتّت في مكانها' }, { pic: 'erosion', text: 'ماء جارٍ ينقل التربة وفتات الصخور' }, { pic: 'volcano', text: 'بركان تخرج منه الحمم' }], correct: 1, no: 'لا بأس! التعرية: ماء جارٍ ينقل التربة وفتات الصخور.' },
+    { q: 'أيّ صورة تُمثّل تغييرات الإنسان لسطح الأرض؟', opts: [{ pic: 'volcano', text: 'ثوران بركان' }, { pic: 'quake', text: 'تشقّق الأرض بسبب زلزال' }, { pic: 'human', text: 'حفارة تمهّد الأرض لإنشاء طريق' }], correct: 2, no: 'لا بأس! الحفارة تمهّد الأرض لإنشاء طريق.' }
+  ];
+  const PRAISE = ['أحسنت! إجابة صحيحة.', 'رائع! أنت مستكشف ذكي.', 'ممتاز! أحسنت التمييز.', 'صحيح! أحسنت.', 'أحسنت يا بطل!'];
+  const PASS = 4, STORE = 'aliEarthVR.v1';
+
+  // ------------------------------------------------------------ setup
+  const canvas = document.getElementById('c');
+  let R3;
+  try { R3 = new Renderer(canvas); } catch (e) { document.getElementById('nogl').hidden = false; document.getElementById('loading').hidden = true; return; }
+  const scene = new Node('scene');
+  const frames = [];
+  const RAD = 15;
+  for (let i = 0; i < 7; i++) {
+    const f = new Node('frame' + i);
+    if (i === 0) f.setPos(0, 0, 0); else { const phi = (i - 1) * Math.PI / 3; f.setRot(0, phi, 0); f.setPos(-Math.sin(phi) * RAD, 0, -Math.cos(phi) * RAD); }
+    scene.add(f); frames.push(f);
+  }
+  scene.updateWorld(null);
+  const hubF = frames[0], hallF = frames[6];
+  const world = W.buildEnvironment(scene, frames.slice(1));
+  const uiRoot = new Node('ui'); scene.add(uiRoot);
+
+  // viewer pads
+  for (const f of frames) { W.mk(G.cylinder(0.6, 0.62, 0.04, 32), '#fff4e2', f, [0, 0.02, 0]); W.mk(G.torus(0.6, 0.035, 6, 40), COL.teal, f, [0, 0.045, 0], [Math.PI / 2, 0, 0]); }
+
+  // stations
+  const stations = STATIONS.map((s, i) => {
+    const f = frames[i + 1]; const D = new Node('D' + i); D.setPos(0, 0.42, -5.1); f.add(D);
+    const api = s.build(D);
+    const board = new Panel(1.8, 0.82, { frame: [COL.coral, COL.coral, COL.lav, COL.teal, COL.sun][i], ppm: 440 });
+    board.setPos(-2.3, 2.05, -3.7); board.setRot(-0.05, 0.55, 0); f.add(board);
+    W.mk(G.cylinder(0.04, 0.05, 1.7, 8), '#c9a184', f, [-2.3, 0.85, -3.75]);
+    const st = Object.assign({}, s, api, { i, frame: f, D, board, t: 0, playing: false, played: false, practiced: false });
+    st.apply(0); return st;
+  });
+  function drawBoard(st) {
+    const revealed = st.played;
+    st.board.draw((c, Wd, H) => {
+      setFont(c, 44, 700); c.textAlign = 'center'; c.fillStyle = COL.inkSoft; c.fillText(st.num, Wd / 2, H * 0.17);
+      if (!revealed) {
+        textBox(c, 'ما اسم هذا المظهر؟', Wd / 2, H * 0.47, Wd - 70, H * 0.3, 70, { weight: 800 });
+        textBox(c, 'شاهِد لتعرف', Wd / 2, H * 0.78, Wd - 70, H * 0.2, 46, { weight: 600, color: COL.inkSoft });
+      } else {
+        textBox(c, st.name, Wd / 2, st.chip ? H * 0.42 : (st.name.length > 12 ? H * 0.43 : H * 0.47), Wd - 60, st.name.length > 12 ? H * 0.36 : H * 0.3, st.name.length > 12 ? 58 : 96, { weight: 800, color: COL.ink, maxLines: 2 });
+        if (st.chip) {
+          setFont(c, 44, 800); const tw = c.measureText(st.chip).width + 60; c.fillStyle = st.i === 2 ? '#ece7fb' : '#dff3f1';
+          rr(c, Wd / 2 - tw / 2, H * 0.62, tw, 70, 35); c.fill(); c.fillStyle = st.i === 2 ? '#6c5bb8' : COL.tealDark; c.textAlign = 'center'; c.fillText(st.chip, Wd / 2, H * 0.62 + 37);
+          textBox(c, st.caption, Wd / 2, H * 0.88, Wd - 60, H * 0.16, 36, { weight: 600, color: COL.inkSoft, maxLines: 1 });
+        } else textBox(c, st.caption, Wd / 2, H * 0.83, Wd - 60, H * 0.18, 40, { weight: 600, color: COL.inkSoft, maxLines: 2 });
+      }
+    });
+  }
+  stations.forEach(drawBoard);
+
+  // Ali (one character, same look everywhere)
+  const ali = W.buildAli(); scene.add(ali);
+  const ALI_POS = { hub: [1.7, -2.6], st: [1.95, -2.75], hall: [2.15, -2.55] };
+
+  // ------------------------------------------------------------ hub
+  const hubBoard = new Panel(2.7, 1.6, { frame: COL.teal, ppm: 400 }); hubBoard.setPos(-0.4, 1.9, -4.1); hubF.add(hubBoard);
+  hubBoard.draw((c, Wd, H) => {
+    textBox(c, 'مغامرة المستكشف علي', Wd / 2, H * 0.14, Wd - 80, H * 0.18, 92, { weight: 800 });
+    textBox(c, 'في عالم الأرض المتغيّرة', Wd / 2, H * 0.29, Wd - 80, H * 0.12, 54, { weight: 600, color: COL.tealDark });
+    c.fillStyle = '#efe9f8'; rr(c, 40, H * 0.39, Wd - 80, 4, 2); c.fill();
+    textBox(c, 'اختر محطة للمراجعة:', Wd / 2, H * 0.46, Wd - 80, H * 0.08, 40, { weight: 600, color: COL.inkSoft });
+  });
+  const hubBtns = [];
+  const hubLabels = ['١ الزلزال', '٢ البركان', '٣ التجوية', '٤ التعرية', '٥ تغييرات الإنسان', 'قاعة التحدّي'];
+  hubLabels.forEach((l, k) => {
+    const b = new Button(0.78, 0.22, { label: l, color: k === 5 ? COL.coral : COL.lav, size: 30, onClick: () => goTo(k === 5 ? 'hall' : k) });
+    const col = k % 3, row = Math.floor(k / 3);
+    b.setPos(0.86 - col * 0.86, -0.18 - row * 0.3, 0.06); hubBoard.add(b); hubBtns.push(b);
+  });
+  const hubCtl = new Node(); hubCtl.setPos(0, 0.74, -1.32); hubCtl.setRot(-0.85, 0, 0); hubF.add(hubCtl);
+  const startBtn = new Button(0.78, 0.22, { label: 'ابدأ الرحلة', icon: 'next', color: COL.coral, onClick: () => goTo(0) }); hubCtl.add(startBtn); startBtn.glow = 1;
+
+  // ------------------------------------------------------------ station controls (shared, moved to the current station)
+  const ctl = new Node('controls'); uiRoot.add(ctl);
+  const ctlBack = new Panel(1.72, 0.32, { frame: '#e6dff5', ppm: 120, bg: '#f7f3ff' }); ctlBack.draw(); ctl.add(ctlBack);
+  const bPrev = new Button(0.36, 0.19, { label: 'السابق', icon: 'prev', color: COL.lav, onClick: () => prevStation() });
+  const bPlay = new Button(0.5, 0.21, { label: 'شاهِد', icon: 'play', color: COL.coral, onClick: () => playStation() });
+  const bNext = new Button(0.38, 0.19, { label: 'التالي', icon: 'next', color: COL.teal, onClick: () => nextStation() });
+  const bMap = new Button(0.34, 0.17, { label: 'الخريطة', icon: 'home', color: '#9fb7d8', size: 24, onClick: () => goTo('hub') });
+  [[bPrev, 0.6], [bPlay, 0.16], [bNext, -0.29], [bMap, -0.66]].forEach(([b, x]) => { b.setPos(x, 0, 0.05); ctl.add(b); });
+  // before / after compare (station 5)
+  const cmp = new Node('compare'); uiRoot.add(cmp);
+  const cmpLabel = new Panel(0.7, 0.16, { depth: 0, bg: null, ppm: 400 }); cmpLabel.text('قارِن:', 56, { weight: 800 }); cmpLabel.setPos(0, 0.27, 0); cmp.add(cmpLabel);
+  const bBefore = new Button(0.34, 0.2, { label: 'قبل', color: '#b3a3e6', onClick: () => setHuman(0) });
+  const bAfter = new Button(0.34, 0.2, { label: 'بعد', color: COL.teal, onClick: () => setHuman(1) });
+  bBefore.setPos(0.19, 0.04, 0); bAfter.setPos(-0.19, 0.04, 0); cmp.add(bBefore, bAfter);
+  const easel = new Node('easel'); uiRoot.add(easel);
+
+  // ------------------------------------------------------------ practice (in-station)
+  const practice = new Node('practice'); uiRoot.add(practice);
+  let practiceCards = [], practiceExtras = [];
+  const practiceQ = new Panel(1.55, 0.36, { frame: COL.lav, ppm: 420 }); practiceQ.setPos(-0.25, 0.5, 0); practice.add(practiceQ);
+  const practiceTag = new Panel(0.62, 0.14, { depth: 0, bg: null, ppm: 400 }); practiceTag.setPos(0.3, 0.74, 0.02); practice.add(practiceTag);
+  practiceTag.draw((c, Wd, H) => { c.fillStyle = COL.sun; rr(c, 4, 4, Wd - 8, H - 8, (H - 8) / 2); c.fill(); setFont(c, 40, 800); c.fillStyle = COL.ink; c.textAlign = 'center'; c.fillText('سؤال تدريبي', Wd / 2, H / 2 + 3); });
+  const practiceGo = new Button(0.6, 0.24, { label: 'تابِع', icon: 'next', color: COL.teal, onClick: () => { practice.visible = false; ctl.visible = true; advanceFrom(cur); } });
+  practiceGo.setPos(0, -0.72, 0.15); practice.add(practiceGo);
+
+  // ------------------------------------------------------------ challenge hall
+  const hallStars = [];
+  (function buildHall() {
+    const f = hallF;
+    W.mk(G.cylinder(4.6, 4.75, 0.12, 48), '#efe7fb', f, [0, 0.06, -2.6]);
+    W.mk(G.torus(4.65, 0.07, 6, 60), '#c9bdf0', f, [0, 0.13, -2.6], [Math.PI / 2, 0, 0]);
+    for (let i = 0; i < 7; i++) { const a = -1.25 + i * (2.5 / 6); const x = Math.sin(a) * 4.4, z = -2.6 - Math.cos(a) * 4.4; W.mk(G.cylinder(0.16, 0.2, 3.4, 14), ['#ffd7cf', '#d6efe3', '#e2dafb', '#fff1c9'][i % 4], f, [x, 1.75, z]); W.mk(G.sphere(0.26, 14, 10), COL.sun, f, [x, 3.55, z]); }
+    const arch = W.mk(G.torus(2.6, 0.14, 8, 40, Math.PI), '#c9bdf0', f, [0, 0.4, -6.4]);
+    const banner = new Panel(2.6, 0.5, { frame: COL.coral, ppm: 400 }); banner.setPos(0, 3.45, -5.2); banner.setRot(0.12, 0, 0); f.add(banner);
+    banner.draw((c, Wd, H) => { icon(c, 'trophy', Wd - 70, H / 2, 64, COL.sun); icon(c, 'trophy', 70, H / 2, 64, COL.sun); textBox(c, 'قاعة التحدّي', Wd / 2, H / 2, Wd - 220, H - 30, 96, { weight: 800 }); });
+    const R = W.rng(3); for (let i = 0; i < 9; i++) { const s = W.mk(G.star(0.16, 0.07, 5, 0.05), mat2(['#ffd36b', '#ffb7c5', '#b9e6ff'][i % 3]), f, [-3.2 + R() * 6.4, 2.6 + R() * 1.2, -5 - R() * 1.5]); s.userData.spin = 0.3 + R() * 0.5; hallStars.push(s); }
+  })();
+  function mat2(c) { return new Material({ color: c, emissive: '#2a2010' }); }
+  const quizRoot = new Node('quiz'); hallF.add(quizRoot);
+  const qBoard = new Panel(2.15, 0.56, { frame: COL.lav, ppm: 420 }); qBoard.setPos(-0.3, 1.98, -3.1); quizRoot.add(qBoard);
+  const qProgress = new Panel(1.0, 0.16, { depth: 0, bg: null, ppm: 400 }); qProgress.setPos(0.4, 2.32, -3.08); quizRoot.add(qProgress);
+  const qPic = new Node('qpic'); qPic.setPos(-2.1, 1.55, -2.7); qPic.setRot(0, 0.62, 0); quizRoot.add(qPic);
+  W.mk(G.roundedBox(1.02, 0.82, 0.05, 0.05), '#ffffff', qPic);
+  let qPicPlane = null;
+  const qNext = new Button(0.72, 0.21, { label: 'السؤال التالي', icon: 'next', color: COL.teal, onClick: () => nextQuestion() });
+  const qStart = new Button(0.8, 0.22, { label: 'ابدأ التحدّي', icon: 'play', color: COL.coral, onClick: () => startQuiz() });
+  const qCtl = new Node(); qCtl.setPos(0, 0.74, -1.32); qCtl.setRot(-0.85, 0, 0); hallF.add(qCtl); qCtl.add(qNext, qStart);
+  let quizCards = [];
+  // results
+  const resRoot = new Node('results'); hallF.add(resRoot); resRoot.visible = false;
+  const resBoard = new Panel(2.3, 1.0, { frame: COL.teal, ppm: 420 }); resBoard.setPos(-0.15, 1.5, -3.1); resRoot.add(resBoard);
+  const resStars = []; for (let i = 0; i < 5; i++) { const s = W.mk(G.star(0.17, 0.075, 5, 0.07), new Material({ color: '#e4def0' }), resRoot, [0.53 - i * 0.34, 2.15, -3.05]); resStars.push(s); }
+  const badge = new Node('badge'); badge.setPos(-1.55, 1.45, -2.55); badge.setRot(0, 0.55, 0); resRoot.add(badge);
+  W.mk(G.cylinder(0.36, 0.36, 0.06, 40), '#ffcf6b', badge, [0, 0, 0], [Math.PI / 2, 0, 0]);
+  W.mk(G.torus(0.36, 0.035, 8, 40), '#f4b544', badge, [0, 0, 0]);
+  for (const s of [-1, 1]) W.mk(G.box(0.12, 0.4, 0.02), s < 0 ? COL.teal : COL.coral, badge, [s * 0.1, -0.48, -0.03], [0, 0, s * 0.25]);
+  const badgeFace = new Panel(0.62, 0.62, { depth: 0, bg: null, ppm: 420 }); badgeFace.setPos(0, 0, 0.035); badge.add(badgeFace);
+  badgeFace.draw((c, Wd, H) => { c.fillStyle = '#fff7df'; c.beginPath(); c.arc(Wd / 2, H / 2, Wd * 0.42, 0, 7); c.fill(); icon(c, 'star', Wd / 2, H * 0.32, Wd * 0.26, '#f4b544'); textBox(c, 'المستكشف الصغير', Wd / 2, H * 0.62, Wd * 0.7, H * 0.32, 52, { weight: 800, maxLines: 2, lh: 1.15 }); });
+  const bRetry = new Button(0.66, 0.2, { label: 'أعِد التحدّي', icon: 'replay', color: COL.coral, onClick: () => startQuiz() });
+  const bReview = new Button(0.66, 0.2, { label: 'راجِع المحطات', icon: 'home', color: COL.lav, onClick: () => goTo('hub') });
+  bRetry.setPos(0.36, 0, 0); bReview.setPos(-0.36, 0, 0); qCtl.add(bRetry, bReview);
+  const confetti = []; (function () { const R = W.rng(9); const cols = ['#ffb7c5', '#ffd36b', '#9fe0c9', '#b9a8ff', '#8fd0ee']; for (let i = 0; i < 90; i++) { const m = W.mk(G.plane(0.06, 0.1), new Material({ color: cols[i % 5], unlit: true }), resRoot, [0, 0, 0]); m.material.transparent = false; m.userData = { x: -3 + R() * 6, z: -1.2 - R() * 3.5, y0: 3.5 + R() * 3, sp: 0.35 + R() * 0.4, rs: R() * 4, ph: R() * 6 }; confetti.push(m); } })();
+
+  // ------------------------------------------------------------ thumbnails rendered from the real stations (used on cards)
+  const thumbs = {};
+  function renderThumbs() {
+    const proj = m4.perspective(m4.create(), 46 * Math.PI / 180, 4 / 3, 0.05, 200), view = m4.create();
+    uiRoot.visible = false; ali.visible = false; const vis = stations.map(s => s.board.visible); stations.forEach(s => s.board.visible = false);
+    const shot = (st, t, key) => {
+      st.apply(t); st.tick && st.tick(0.016, 3.0);
+      scene.updateWorld(null);
+      const eye = st.D.localToWorld(st.thumb.cam), tg = st.D.localToWorld(st.thumb.target);
+      m4.lookAtView(view, eye, tg, [0, 1, 0]);
+      const rt = new RenderTarget(768, 576); R3.renderToTarget(rt, scene, view, proj, eye); thumbs[key] = rt.texture;
+    };
+    stations.forEach(st => shot(st, st.thumb.t, st.key));
+    shot(stations[4], 0, 'humanBefore');
+    stations.forEach((s, i) => { s.apply(0); s.board.visible = vis[i]; });
+    uiRoot.visible = true; ali.visible = true;
+  }
+  function picPlane(tex, w) { const h = w * 0.75; const m = new Mesh(G.plane(w, h), new Material({ map: tex, unlit: true, fog: false })); m.material.transparent = false; m.material.depthWrite = true; return m; }
+
+  // ------------------------------------------------------------ navigation & state
+  let cur = 'hub'; // 'hub' | 0..4 | 'hall'
+  const rig = { pos: [0, 0, 0], yaw: 0 };
+  let fade = 1, fadeTarget = 0, busy = false;
+  const look = { yaw: 0, pitch: -0.14 };
+  function frameOf(p) { return p === 'hub' ? hubF : p === 'hall' ? hallF : frames[p + 1]; }
+  function say(text, gesture) { W.drawBubble(ali.userData.bubble, text); if (gesture) { ali.userData.gesture = gesture; ali.userData.gt = 0; } Voice.say(text); state.lastLine = text; }
+  function placeAli(p) {
+    const f = frameOf(p); const ap = p === 'hub' ? ALI_POS.hub : p === 'hall' ? ALI_POS.hall : ALI_POS.st;
+    const wp = f.localToWorld([ap[0], 0, ap[1]]), vp = f.localToWorld([0, 0, 0]);
+    ali.setPos(wp[0], typeof p === 'number' ? 0.42 : 0, wp[2]); ali.setRot(0, Math.atan2(vp[0] - wp[0], vp[2] - wp[2]), 0);
+  }
+  function enter(p) {
+    cur = p; const f = frameOf(p);
+    rig.pos = f.worldPos(); rig.yaw = f.rotation[1]; look.yaw = 0; look.pitch = -0.14;
+    if (xr.session && xr.headLocal) { // keep the headset user standing on the pad
+      const h = xr.headLocal, c = Math.cos(rig.yaw), s = Math.sin(rig.yaw);
+      rig.pos = [rig.pos[0] - (h[0] * c + h[2] * s), 0, rig.pos[2] - (-h[0] * s + h[2] * c)];
+    }
+    placeAli(p);
+    practice.visible = false; cmp.visible = false; easel.visible = false;
+    const isSt = typeof p === 'number';
+    ctl.visible = isSt;
+    if (isSt) {
+      const st = stations[p]; ctl.parent && ctl.parent.remove(ctl); f.add(ctl); ctl.setPos(0, 0.74, -1.32); ctl.setRot(-0.85, 0, 0);
+      st.t = 0; st.playing = false; st.apply(0);
+      bPrev.setEnabled(true); bPlay.setLabel(st.played ? 'أعِد المشاهدة' : 'شاهِد', st.played ? 'replay' : 'play'); bPlay.setEnabled(true); bPlay.glow = st.played ? 0 : 1; bNext.glow = st.played ? 1 : 0;
+      bNext.setLabel(p === 4 ? 'التحدّي' : 'التالي', 'next');
+      if (p === 4) setupCompare(f, st);
+      say(st.played ? st.after : st.before, st.played ? 'talk' : 'wave');
+    } else if (p === 'hub') {
+      say(state.visitedHub ? 'اختر محطة لمراجعتها، أو ابدأ الرحلة من جديد.' : 'مرحبًا! أنا المستكشف علي. هيّا نكتشف معًا كيف تتغيّر الأرض!', 'wave');
+      state.visitedHub = true;
+    } else if (p === 'hall') {
+      showHallIntro();
+    }
+    state.place = p;
+  }
+  function goTo(p) {
+    if (busy) return; busy = true; Voice.stop(); Sfx.whoosh();
+    fadeTarget = 1;
+    waitFade(() => { enter(p); fadeTarget = 0; busy = false; });
+  }
+  let fadeCb = null; function waitFade(cb) { fadeCb = cb; }
+  function playStation() {
+    const st = stations[cur]; if (typeof cur !== 'number') return;
+    st.t = 0; st.playing = true; st.apply(0); bPlay.setEnabled(false); bPlay.glow = 0;
+    if (cur === 4) { cmp.visible = false; easel.visible = false; }
+    st.sound && st.sound(Sfx);
+    say('شاهِد جيّدًا…', 'point');
+  }
+  function finishStation(st) {
+    st.playing = false; st.t = 1; st.apply(1);
+    const first = !st.played; st.played = true; drawBoard(st);
+    bPlay.setEnabled(true); bPlay.setLabel('أعِد المشاهدة', 'replay'); bNext.glow = 1;
+    say(st.after, first ? 'cheer' : 'talk'); if (first) Sfx.correct(); else Sfx.pop();
+    if (st.i === 4) { cmp.visible = true; easel.visible = true; }
+    state.stationsDone = stations.filter(s => s.played).length;
+  }
+  function nextStation() {
+    if (typeof cur !== 'number') return;
+    const st = stations[cur];
+    if (PRACTICE[cur] && !st.practiced) { showPractice(cur); return; }
+    advanceFrom(cur);
+  }
+  function advanceFrom(i) { goTo(i >= 4 ? 'hall' : i + 1); }
+  function prevStation() { if (typeof cur !== 'number') return; goTo(cur === 0 ? 'hub' : cur - 1); }
+
+  // station 5 compare
+  function setupCompare(f, st) {
+    cmp.parent && cmp.parent.remove(cmp); f.add(cmp); cmp.setPos(-1.08, 0.98, -1.75); cmp.setRot(-0.45, 0.45, 0); cmp.visible = st.played;
+    easel.parent && easel.parent.remove(easel); f.add(easel); easel.setPos(-1.25, 1.42, -3.2); easel.setRot(0, 0.38, 0); easel.visible = st.played;
+    if (!easel.children.length) {
+      W.mk(G.roundedBox(1.0, 0.98, 0.04, 0.04), '#ffffff', easel, [0, -0.02, 0]);
+      const p = picPlane(thumbs.humanBefore, 0.9); p.setPos(0, 0.06, 0.025); easel.add(p);
+      const lab = new Panel(0.9, 0.17, { depth: 0, bg: null, ppm: 420 }); lab.setPos(0, -0.4, 0.026); easel.add(lab);
+      lab.draw((c, Wd, H) => { c.fillStyle = '#ece7fb'; rr(c, 4, 4, Wd - 8, H - 8, 24); c.fill(); setFont(c, 46, 800); c.fillStyle = '#6c5bb8'; c.textAlign = 'center'; c.fillText('قبل العمل', Wd / 2, H / 2 + 3); });
+      W.mk(G.cylinder(0.025, 0.03, 1.0, 8), '#c9a184', easel, [0, -0.95, -0.03]);
+    }
+  }
+  function setHuman(t) { const st = stations[4]; st.playing = false; st.t = t; st.apply(t); say(t ? 'بعد العمل: أرض مستوية وطريق جديد.' : 'قبل العمل: أرض فيها تلال صغيرة.', 'point'); }
+
+  // practice
+  function showPractice(i) {
+    const P = PRACTICE[i], f = frameOf(i);
+    practice.parent && practice.parent.remove(practice); f.add(practice); practice.setPos(0, 1.22, -2.05); practice.setRot(-0.1, 0, 0);
+    practiceCards.forEach(c => { c.dispose(); c.parent && c.parent.remove(c); }); practiceCards = [];
+    practiceExtras.forEach(e => e.parent && e.parent.remove(e)); practiceExtras = [];
+    practiceQ.text(P.q, 54, { weight: 800, maxLines: 2 });
+    if (P.pic) {
+      const fr = new Node(); fr.setPos(0.62, -0.12, 0); practice.add(fr); practiceExtras.push(fr);
+      W.mk(G.roundedBox(0.8, 0.64, 0.04, 0.04), '#ffffff', fr); const p = picPlane(thumbs[P.pic], 0.72); p.setPos(0, 0, 0.025); fr.add(p);
+    }
+    P.opts.forEach((o, k) => {
+      const card = new Card({ tex: o.pic ? thumbs[o.pic] : null, text: o.text, index: k, w: P.pic ? 0.5 : 0.7, onClick: () => answerPractice(i, k) });
+      if (P.pic) card.setPos(-0.04 - k * 0.56, -0.12, 0); else card.setPos(0.4 - k * 0.8, -0.1, 0);
+      practice.add(card); practiceCards.push(card);
+    });
+    practiceGo.visible = false; ctl.visible = false; practice.visible = true;
+    say('سؤال سريع قبل أن نكمل!', 'talk');
+  }
+  function answerPractice(i, k) {
+    const P = PRACTICE[i]; if (practiceCards.some(c => c.state !== 'idle')) return;
+    practiceCards.forEach((c, j) => { c.setEnabled(false); c.setState(j === P.correct ? 'correct' : j === k ? 'wrong' : 'dim'); });
+    const ok = k === P.correct; stations[i].practiced = true;
+    state.practice[i] = ok;
+    if (ok) { Sfx.correct(); say(P.ok, 'cheer'); } else { Sfx.gentle(); say(P.no, 'encourage'); }
+    practiceGo.visible = true;
+  }
+
+  // quiz
+  const quiz = { i: 0, answers: [], active: false };
+  function showHallIntro() {
+    quizRoot.visible = true; resRoot.visible = false; clearCards(); qPic.visible = false;
+    qBoard.text('خمسة أسئلة مصوّرة. اختر الإجابة الصحيحة!', 58, { weight: 800 }); qProgress.draw();
+    qStart.visible = true; qNext.visible = false; bRetry.visible = bReview.visible = false; qStart.glow = 1;
+    say('أهلًا بك في قاعة التحدّي! هل أنت مستعد؟', 'wave');
+  }
+  function clearCards() { quizCards.forEach(c => { c.dispose(); c.parent && c.parent.remove(c); }); quizCards = []; }
+  function startQuiz() {
+    if (cur !== 'hall') return;
+    quiz.i = 0; quiz.answers = new Array(QUIZ.length).fill(null); quiz.active = true; quiz.saved = false;
+    resRoot.visible = false; quizRoot.visible = true; qStart.visible = false; bRetry.visible = bReview.visible = false;
+    showQuestion(0);
+  }
+  function showQuestion(i) {
+    const Q = QUIZ[i]; clearCards();
+    qBoard.text(Q.q, 66, { weight: 800, maxLines: 2 });
+    qProgress.draw((c, Wd, H) => { c.fillStyle = COL.sun; rr(c, 4, 4, Wd - 8, H - 8, (H - 8) / 2); c.fill(); setFont(c, 40, 800); c.fillStyle = COL.ink; c.textAlign = 'center'; c.fillText(`السؤال ${i + 1} من ${QUIZ.length}`, Wd / 2, H / 2 + 3); });
+    qPic.visible = !!Q.pic;
+    if (Q.pic) { if (qPicPlane) qPic.remove(qPicPlane); qPicPlane = picPlane(thumbs[Q.pic], 0.92); qPicPlane.setPos(0, 0, 0.03); qPic.add(qPicPlane); }
+    Q.opts.forEach((o, k) => {
+      const card = new Card({ tex: o.pic ? thumbs[o.pic] : null, text: o.text, index: k, w: 0.76, onClick: () => answer(k) });
+      card.setPos(0.88 - k * 0.88, o.pic ? 1.12 : 1.22, -2.55); quizRoot.add(card); quizCards.push(card);
+      card.setScale(0.01, 0.01, 0.01); card.userData.appear = 0; card.userData.delay = k * 0.12;
+    });
+    qNext.visible = false;
+    say(Q.q, 'talk');
+  }
+  function answer(k) {
+    const i = quiz.i, Q = QUIZ[i];
+    if (!quiz.active || quiz.answers[i] !== null) return; // only the first confirmed answer counts
+    quiz.answers[i] = k;
+    quizCards.forEach((c, j) => { c.setEnabled(false); c.setState(j === Q.correct ? 'correct' : j === k ? 'wrong' : 'dim'); });
+    if (k === Q.correct) { Sfx.correct(); say(PRAISE[i % PRAISE.length], 'cheer'); }
+    else { Sfx.gentle(); say(Q.no, 'encourage'); }
+    qNext.setLabel(i === QUIZ.length - 1 ? 'اعرض نتيجتي' : 'السؤال التالي', 'next'); qNext.visible = true; qNext.glow = 1;
+  }
+  function score() { return quiz.answers.reduce((s, a, i) => s + (a === QUIZ[i].correct ? 1 : 0), 0); }
+  function nextQuestion() {
+    if (quiz.answers[quiz.i] === null) return;
+    if (quiz.i < QUIZ.length - 1) { quiz.i++; showQuestion(quiz.i); } else showResults();
+  }
+  function showResults() {
+    quiz.active = false; clearCards(); quizRoot.visible = false; qNext.visible = false;
+    const s = score(), pass = s >= PASS, pct = Math.round(s / QUIZ.length * 100);
+    const rec = saveResult(s);
+    resRoot.visible = true; bRetry.visible = bReview.visible = true;
+    resBoard.draw((c, Wd, H) => {
+      setFont(c, 52, 700); c.textAlign = 'center'; c.fillStyle = COL.inkSoft; c.fillText('نتيجتك', Wd / 2, H * 0.14);
+      setFont(c, 130, 800); c.fillStyle = pass ? COL.greenDark : COL.coral; c.fillText(`${s} من ${QUIZ.length}`, Wd / 2, H * 0.36);
+      setFont(c, 46, 700); c.fillStyle = COL.inkSoft; c.direction = 'ltr'; c.fillText(`${pct}%`, Wd / 2, H * 0.6); c.direction = 'rtl';
+      textBox(c, pass ? 'أحسنت! حقّقت الهدف وحصلت على شارة «المستكشف الصغير».' : 'أحسنت المحاولة! راجِع المحطات، ثم أعِد التحدّي.', Wd / 2, H * 0.76, Wd - 100, H * 0.18, 46, { weight: 700, maxLines: 2 });
+      setFont(c, 34, 600); c.fillStyle = COL.inkSoft; c.fillText(`أفضل نتيجة على هذا الجهاز: ${rec.best} من ${QUIZ.length}`, Wd / 2, H * 0.93);
+    });
+    resStars.forEach((st, i) => { st.material.setColor(i < s ? '#ffcf5a' : '#e4def0'); st.material.emissive = i < s ? [0.18, 0.12, 0.0] : [0, 0, 0]; st.setScale(0.01, 0.01, 0.01); st.userData = { delay: 0.25 + i * 0.22, a: 0 }; });
+    badge.visible = pass; badge.userData.a = 0;
+    confetti.forEach(m => m.visible = pass); resRoot.userData.time = 0;
+    if (pass) { Sfx.celebrate(); say('رائع! أنت المستكشف الصغير! هيّا نحتفل!', 'cheer'); }
+    else { Sfx.gentle(); say(`حصلت على ${s} من 5. راجِع المحطات وستنجح!`, 'encourage'); }
+    state.lastScore = s; state.passed = pass;
+    updateIntroResult();
+  }
+  function loadStore() { try { return JSON.parse(localStorage.getItem(STORE)) || { best: 0, attempts: [] }; } catch (e) { return { best: 0, attempts: [] }; } }
+  function saveResult(s) {
+    const rec = loadStore();
+    if (!quiz.saved) { rec.attempts.push({ score: s, of: QUIZ.length, date: new Date().toISOString() }); rec.attempts = rec.attempts.slice(-30); rec.best = Math.max(rec.best || 0, s); rec.last = s; quiz.saved = true; try { localStorage.setItem(STORE, JSON.stringify(rec)); } catch (e) { } }
+    state.memoryBest = Math.max(state.memoryBest || 0, s); rec.best = Math.max(rec.best || 0, state.memoryBest);
+    return rec;
+  }
+
+  // ------------------------------------------------------------ input
+  const pointer = { x: 0, y: 0, down: false, sx: 0, sy: 0, moved: 0, active: false, inside: false };
+  let desktopRay = null;
+  canvas.addEventListener('pointerdown', (e) => { canvas.setPointerCapture(e.pointerId); pointer.down = true; pointer.sx = pointer.x = e.clientX; pointer.sy = pointer.y = e.clientY; pointer.moved = 0; pointer.inside = true; pointer.type = e.pointerType; });
+  canvas.addEventListener('pointermove', (e) => {
+    pointer.inside = true; pointer.type = e.pointerType;
+    if (pointer.down) { const dx = e.clientX - pointer.x, dy = e.clientY - pointer.y; pointer.moved += Math.abs(dx) + Math.abs(dy); if (pointer.moved > 6) { look.yaw += dx * 0.0045; look.pitch = W.clamp(look.pitch + dy * 0.0035, -1.0, 0.9); } }
+    pointer.x = e.clientX; pointer.y = e.clientY;
+  });
+  canvas.addEventListener('pointerup', (e) => { if (pointer.down && pointer.moved <= 8) { pointer.x = e.clientX; pointer.y = e.clientY; const h = pickAt(e.clientX, e.clientY); if (h) h.click(); } pointer.down = false; });
+  canvas.addEventListener('pointerleave', () => { pointer.inside = false; });
+  window.addEventListener('keydown', (e) => { if (e.key === 'ArrowLeft') look.yaw += 0.12; if (e.key === 'ArrowRight') look.yaw -= 0.12; if (e.key === 'ArrowUp') look.pitch = Math.min(0.9, look.pitch + 0.08); if (e.key === 'ArrowDown') look.pitch = Math.max(-1, look.pitch - 0.08); });
+  const camWorld = m4.create(), view = m4.create(), proj = m4.create();
+  function desktopCamera() {
+    const eye = [rig.pos[0], 1.32, rig.pos[2]];
+    m4.compose(camWorld, eye, [look.pitch, rig.yaw + look.yaw, 0], [1, 1, 1]);
+    m4.invert(view, camWorld);
+    const w = canvas.clientWidth || 1, h = canvas.clientHeight || 1, asp = w / h;
+    const fovy = asp < 1 ? 2 * Math.atan(Math.tan(30 * Math.PI / 180) / asp) : 60 * Math.PI / 180; // keep horizontal view on portrait tablets
+    m4.perspective(proj, Math.min(fovy, 110 * Math.PI / 180), asp, 0.05, 400);
+    return eye;
+  }
+  function rayFromScreen(x, y) {
+    const r = canvas.getBoundingClientRect(); const nx = ((x - r.left) / r.width) * 2 - 1, ny = -(((y - r.top) / r.height) * 2 - 1);
+    const vp = m4.mul(m4.create(), proj, view), inv = m4.invert(m4.create(), vp);
+    const p0 = unproj(inv, nx, ny, -1), p1 = unproj(inv, nx, ny, 1);
+    return { o: p0, d: v3.norm(v3.sub(p1, p0)) };
+  }
+  function unproj(inv, x, y, z) { const v = [x, y, z, 1]; const o = [0, 0, 0, 0]; for (let i = 0; i < 4; i++) o[i] = inv[i] * v[0] + inv[4 + i] * v[1] + inv[8 + i] * v[2] + inv[12 + i] * v[3]; return [o[0] / o[3], o[1] / o[3], o[2] / o[3]]; }
+  function pickAt(x, y) { const r = rayFromScreen(x, y); const h = raycast(UI.targets, r.o, r.d); return h && h.node.userData.ctl && h.node.userData.ctl.enabled ? h.node.userData.ctl : null; }
+
+  // ------------------------------------------------------------ WebXR
+  const xr = { session: null, ref: null, local: false, layer: null, pointers: new Map(), headLocal: null, gaze: false, dwell: 0, dwellTarget: null, turnCool: 0 };
+  const rayGeo = (() => { const g = G.box(0.008, 0.008, 1); for (let i = 2; i < g.pos.length; i += 3) g.pos[i] -= 0.5; g.computeBounds(); return g; })();
+  const reticle = new Node('reticle'); scene.add(reticle); reticle.visible = false;
+  W.mk(G.ring(0.012, 0.02, 32), new Material({ color: '#ffffff', unlit: true, depthTest: false, fog: false }), reticle).renderOrder = 10;
+  const dwellRing = W.mk(G.ring(0.026, 0.038, 48), new Material({ color: COL.coral, unlit: true, depthTest: false, fog: false }), reticle); dwellRing.renderOrder = 11;
+  function rigMatrix() { const m = m4.compose(m4.create(), [rig.pos[0], rig.pos[1] + (xr.local ? 1.25 : 0), rig.pos[2]], [0, rig.yaw, 0], [1, 1, 1]); return m; }
+  async function enterVR() {
+    if (!navigator.xr) throw new Error('noxr');
+    const session = await navigator.xr.requestSession('immersive-vr', { optionalFeatures: ['local-floor', 'bounded-floor', 'hand-tracking'] });
+    await R3.gl.makeXRCompatible();
+    const layer = new XRWebGLLayer(session, R3.gl, { antialias: true, framebufferScaleFactor: 1.0 });
+    session.updateRenderState({ baseLayer: layer, depthNear: 0.05, depthFar: 400 });
+    let ref; try { ref = await session.requestReferenceSpace('local-floor'); xr.local = false; } catch (e) { ref = await session.requestReferenceSpace('local'); xr.local = true; }
+    Object.assign(xr, { session, ref, layer });
+    session.addEventListener('end', () => { xr.session = null; xr.pointers.forEach(p => { p.ray.parent && p.ray.parent.remove(p.ray); p.cur.parent && p.cur.parent.remove(p.cur); }); xr.pointers.clear(); reticle.visible = false; document.body.classList.remove('in-vr'); requestAnimationFrame(loop); });
+    session.addEventListener('inputsourceschange', syncSources);
+    session.addEventListener('selectstart', (e) => { const p = xr.pointers.get(e.inputSource); if (p && p.hit) p.hit.press = 1; });
+    session.addEventListener('select', (e) => { const p = xr.pointers.get(e.inputSource); if (p && p.hit) p.hit.click(); else if (xr.gaze && xr.dwellTarget) xr.dwellTarget.click(); });
+    syncSources(); document.body.classList.add('in-vr');
+    Sfx.init();
+    session.requestAnimationFrame(loop);
+  }
+  function syncSources() {
+    if (!xr.session) return;
+    const seen = new Set();
+    for (const src of xr.session.inputSources) {
+      seen.add(src);
+      if (src.targetRayMode !== 'tracked-pointer' || xr.pointers.has(src)) continue;
+      const ray = W.mk(rayGeo, new Material({ color: '#ffffff', unlit: true, opacity: 0.55, fog: false }), scene); ray.renderOrder = 9;
+      const curM = W.mk(G.sphere(0.018, 10, 8), new Material({ color: COL.coral, unlit: true, fog: false }), scene);
+      const grip = W.mk(G.roundedBox(0.045, 0.045, 0.13, 0.02), '#f7f3ff', scene);
+      xr.pointers.set(src, { ray, cur: curM, grip, hit: null, prev: null });
+    }
+    for (const [src, p] of xr.pointers) if (!seen.has(src)) { [p.ray, p.cur, p.grip].forEach(n => scene.remove(n)); xr.pointers.delete(src); }
+    xr.gaze = ![...xr.session.inputSources].some(s => s.targetRayMode === 'tracked-pointer');
+  }
+  function xrInput(frame, rigM, headM, dt) {
+    const hovered = new Set();
+    for (const [src, p] of xr.pointers) {
+      const pose = frame.getPose(src.targetRaySpace, xr.ref);
+      if (!pose) { p.ray.visible = p.cur.visible = false; p.hit = null; continue; }
+      const M = m4.mul(m4.create(), rigM, pose.transform.matrix);
+      const o = [M[12], M[13], M[14]], d = v3.norm(m4.dir(M, [0, 0, -1]));
+      const h = raycast(UI.targets, o, d); const ctlH = h && h.node.userData.ctl && h.node.userData.ctl.enabled ? h.node.userData.ctl : null;
+      const len = h ? h.dist : 3;
+      p.ray.matrixOverride = m4.mul(m4.create(), M, m4.compose(m4.create(), [0, 0, 0], [0, 0, 0], [1, 1, len]));
+      p.ray.visible = true; p.ray.material.opacity = ctlH ? 0.9 : 0.4;
+      p.cur.visible = !!h; if (h) p.cur.setPos(h.point[0], h.point[1], h.point[2]);
+      if (ctlH && ctlH !== p.prev) Sfx.hover();
+      p.prev = ctlH; p.hit = ctlH; if (ctlH) hovered.add(ctlH);
+      if (src.gripSpace) { const gp = frame.getPose(src.gripSpace, xr.ref); if (gp) { p.grip.matrixOverride = m4.mul(m4.create(), rigM, gp.transform.matrix); p.grip.visible = true; } }
+      // comfortable snap turn (30°) with the thumbstick
+      const gpd = src.gamepad; if (gpd && gpd.axes) { const ax = gpd.axes.length >= 4 ? gpd.axes[2] : gpd.axes[0]; xr.turnCool -= dt; if (Math.abs(ax) > 0.75 && xr.turnCool <= 0) { snapTurn(ax > 0 ? -Math.PI / 6 : Math.PI / 6); xr.turnCool = 0.45; } }
+    }
+    // gaze & dwell (for headsets without controllers)
+    if (xr.gaze) {
+      const o = [headM[12], headM[13], headM[14]], d = v3.norm(m4.dir(headM, [0, 0, -1]));
+      const h = raycast(UI.targets, o, d); const ctlH = h && h.node.userData.ctl && h.node.userData.ctl.enabled ? h.node.userData.ctl : null;
+      const dist = h ? Math.min(h.dist - 0.02, 2) : 1.5;
+      reticle.visible = true; reticle.matrixOverride = m4.mul(m4.create(), headM, m4.compose(m4.create(), [0, 0, -dist], [0, 0, 0], [dist, dist, dist]));
+      if (ctlH !== xr.dwellTarget) { xr.dwellTarget = ctlH; xr.dwell = 0; }
+      if (ctlH) { hovered.add(ctlH); xr.dwell += dt; if (xr.dwell > 1.6) { ctlH.click(); xr.dwell = -1.2; } }
+      const prog = W.clamp(xr.dwell / 1.6); dwellRing.geometry.drawCount = Math.floor(prog * 48) * 6; dwellRing.visible = prog > 0;
+    } else reticle.visible = false;
+    return hovered;
+  }
+  function snapTurn(a) {
+    if (!xr.headLocal) { rig.yaw += a; return; }
+    const h = xr.headLocal, c0 = Math.cos(rig.yaw), s0 = Math.sin(rig.yaw);
+    const wx = rig.pos[0] + h[0] * c0 + h[2] * s0, wz = rig.pos[2] - h[0] * s0 + h[2] * c0;
+    rig.yaw += a; const c1 = Math.cos(rig.yaw), s1 = Math.sin(rig.yaw);
+    rig.pos = [wx - (h[0] * c1 + h[2] * s1), rig.pos[1], wz - (-h[0] * s1 + h[2] * c1)];
+    Sfx.click();
+  }
+
+  // ------------------------------------------------------------ main loop
+  const state = { place: 'hub', practice: {}, stationsDone: 0, started: false };
+  let last = performance.now(), time = 0, chirpT = 6;
+  const allCtl = () => UI.targets.map(t => t.userData.ctl);
+  function update(dt) {
+    time += dt;
+    // fade
+    const fs = 3.2; fade += Math.sign(fadeTarget - fade) * Math.min(Math.abs(fadeTarget - fade), dt * fs);
+    if (fadeCb && fade >= 0.999) { const cb = fadeCb; fadeCb = null; cb(); }
+    // station animation
+    if (typeof cur === 'number') { const st = stations[cur]; if (st.playing) { st.t = Math.min(1, st.t + dt / st.duration); st.apply(st.t); if (st.t >= 1) finishStation(st); } }
+    stations.forEach(st => st.tick && st.tick(dt, time));
+    W.animateAli(ali, dt, time);
+    world.clouds.rotation[1] += dt * 0.004;
+    hallStars.forEach(s => { s.rotation[1] += dt * s.userData.spin; });
+    for (const c of allCtl()) c.update(dt, time);
+    quizCards.forEach(c => { const u = c.userData; if (u.appear < 1) { u.appear = Math.min(1, u.appear + dt * 3.5 * (time > 0 ? 1 : 1)); const k = W.clamp((u.appear * 1.4 - u.delay)); const s = k <= 0 ? 0.01 : W.backOut(k); c.setScale(s, s, s); } });
+    if (resRoot.visible) {
+      resRoot.userData.time = (resRoot.userData.time || 0) + dt; const rt = resRoot.userData.time;
+      resStars.forEach(s => { const k = W.clamp((rt - s.userData.delay) * 3); const sc = k <= 0 ? 0.01 : W.backOut(k); s.setScale(sc, sc, sc); s.rotation[1] = Math.sin(time * 1.5 + s.userData.delay * 4) * 0.3; });
+      if (badge.visible) { const k = W.clamp((rt - 1.4) * 1.5); const sc = k <= 0 ? 0.01 : W.backOut(k); badge.setScale(sc, sc, sc); badge.position[1] = 1.45 + Math.sin(time * 1.6) * 0.04; }
+      confetti.forEach(m => { if (!m.visible) return; const u = m.userData; const y = u.y0 - ((rt * u.sp) % 4.5); m.setPos(u.x + Math.sin(time + u.ph) * 0.2, y, u.z); m.setRot(time * u.rs, time * 0.7 + u.ph, 0); });
+    }
+    chirpT -= dt; if (chirpT < 0) { Sfx.chirp(); chirpT = 7 + Math.random() * 9; }
+  }
+  function loop(now, frame) {
+    const t = now || performance.now(); let dt = Math.min(0.05, (t - last) / 1000); last = t; if (dt <= 0) dt = 0.016;
+    if (xr.session) {
+      if (!frame) return;
+      xr.session.requestAnimationFrame(loop);
+      const pose = frame.getViewerPose(xr.ref);
+      update(dt);
+      if (!pose) return;
+      const rigM = rigMatrix(); const headM = m4.mul(m4.create(), rigM, pose.transform.matrix);
+      const hp = pose.transform.position; xr.headLocal = [hp.x, hp.y, hp.z];
+      const hovered = xrInput(frame, rigM, headM, dt);
+      for (const c of allCtl()) c.hoverTarget = hovered.has(c) ? 1 : 0;
+      scene.updateWorld(null);
+      const gl = R3.gl; gl.bindFramebuffer(gl.FRAMEBUFFER, xr.layer.framebuffer);
+      gl.clearColor(0.8, 0.9, 0.96, 1); gl.depthMask(true); gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+      R3.collect(scene);
+      const invRig = m4.invert(m4.create(), rigM);
+      for (const v of pose.views) {
+        const vp = xr.layer.getViewport(v);
+        const vm = m4.mul(m4.create(), v.transform.inverse.matrix, invRig);
+        const cp = m4.point(rigM, [v.transform.position.x, v.transform.position.y, v.transform.position.z]);
+        R3.drawScene(scene, vm, v.projectionMatrix, cp, [vp.x, vp.y, vp.width, vp.height], fade);
+      }
+      return;
+    }
+    requestAnimationFrame(loop);
+    resize();
+    update(dt);
+    const eye = desktopCamera();
+    // desktop hover
+    let hov = null; if (pointer.inside && !pointer.down && pointer.type === 'mouse') hov = pickAt(pointer.x, pointer.y);
+    for (const c of allCtl()) c.hoverTarget = c === hov ? 1 : 0;
+    canvas.style.cursor = hov ? 'pointer' : (pointer.down ? 'grabbing' : 'grab');
+    scene.updateWorld(null);
+    R3.gl.bindFramebuffer(R3.gl.FRAMEBUFFER, null);
+    R3.clear([0, 0, canvas.width, canvas.height]); R3.collect(scene);
+    R3.drawScene(scene, view, proj, eye, [0, 0, canvas.width, canvas.height], fade);
+  }
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2); const w = Math.round(canvas.clientWidth * dpr), h = Math.round(canvas.clientHeight * dpr);
+    if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; }
+  }
+
+  // ------------------------------------------------------------ HTML shell (start screen, HUD)
+  const $ = (id) => document.getElementById(id);
+  function updateIntroResult() { const rec = loadStore(); const el = $('lastResult'); if (!el) return; if (rec.attempts && rec.attempts.length) { el.textContent = `آخر نتيجة على هذا الجهاز: ${rec.last} من 5 — أفضل نتيجة: ${rec.best} من 5`; el.hidden = false; } }
+  async function boot() {
+    try { if (document.fonts && document.fonts.load) await Promise.race([Promise.all([document.fonts.load(`800 40px ${UIK.FONT}`), document.fonts.load(`700 40px ${UIK.FONT}`), document.fonts.load(`600 40px ${UIK.FONT}`)]), new Promise(r => setTimeout(r, 2500))]); } catch (e) { }
+    // re-draw text now that the font is ready
+    stations.forEach(drawBoard); allCtl().forEach(c => c.setLabel ? c.setLabel(c.label) : c.drawLabel && c.drawLabel());
+    hubBoard.draw((c, Wd, H) => {
+      textBox(c, 'مغامرة المستكشف علي', Wd / 2, H * 0.14, Wd - 80, H * 0.18, 92, { weight: 800 });
+      textBox(c, 'في عالم الأرض المتغيّرة', Wd / 2, H * 0.29, Wd - 80, H * 0.12, 54, { weight: 600, color: COL.tealDark });
+      c.fillStyle = '#efe9f8'; rr(c, 40, H * 0.39, Wd - 80, 4, 2); c.fill();
+      textBox(c, 'اختر محطة للمراجعة:', Wd / 2, H * 0.46, Wd - 80, H * 0.08, 40, { weight: 600, color: COL.inkSoft });
+    });
+    cmpLabel.text('قارِن:', 56, { weight: 800 }); practiceTag.draw((c, Wd, H) => { c.fillStyle = COL.sun; rr(c, 4, 4, Wd - 8, H - 8, (H - 8) / 2); c.fill(); setFont(c, 40, 800); c.fillStyle = COL.ink; c.textAlign = 'center'; c.fillText('سؤال تدريبي', Wd / 2, H / 2 + 3); });
+    renderThumbs();
+    Voice.init();
+    enter('hub'); fade = 1; fadeTarget = 1;
+    requestAnimationFrame(loop);
+    $('loading').hidden = true; $('intro').hidden = false; updateIntroResult();
+    let vrOk = false; try { vrOk = !!(navigator.xr && await navigator.xr.isSessionSupported('immersive-vr')); } catch (e) { }
+    const vb = $('startVR'), hv = $('hudVR');
+    if (!vrOk) { vb.disabled = true; vb.setAttribute('aria-disabled', 'true'); $('vrNote').textContent = 'لم يُعثر على نظارة VR في هذا المتصفح. افتح الرابط من متصفح النظارة (مثل متصفح Meta Quest) لتجربة الواقع الافتراضي.'; hv.hidden = true; }
+    const begin = async (vr) => {
+      Sfx.init(); state.started = true; $('intro').hidden = true; $('hud').hidden = false; $('hint').hidden = false;
+      fadeTarget = 0; enter('hub');
+      setTimeout(() => { $('hint').classList.add('fade'); }, 7000);
+      if (vr) { try { await enterVR(); } catch (e) { showToast('تعذّر تشغيل وضع VR هنا. افتح الموقع مباشرة في متصفح النظارة عبر رابط HTTPS.'); } }
+    };
+    $('startScreen').onclick = () => begin(false);
+    vb.onclick = () => begin(true);
+    hv.onclick = async () => { try { await enterVR(); } catch (e) { showToast('تعذّر تشغيل وضع VR هنا. افتح الموقع مباشرة في متصفح النظارة عبر رابط HTTPS.'); } };
+    $('hudSound').onclick = () => { Sfx.setOn(!Sfx.on); $('hudSound').setAttribute('aria-pressed', String(Sfx.on)); $('hudSound').querySelector('span').textContent = Sfx.on ? 'المؤثرات: تشغيل' : 'المؤثرات: إيقاف'; };
+    $('hudVoice').onclick = () => { Voice.on = !Voice.on; if (!Voice.on) Voice.stop(); $('hudVoice').setAttribute('aria-pressed', String(Voice.on)); $('hudVoice').querySelector('span').textContent = Voice.on ? 'صوت علي: تشغيل' : 'صوت علي: إيقاف'; };
+    $('hudHelp').onclick = () => { $('intro').hidden = false; $('startScreen').textContent = 'متابعة'; };
+    setTimeout(() => { if (!Voice.available()) { $('hudVoice').title = 'لا يتوفر صوت عربي في هذا المتصفح؛ النص يظهر في فقاعة علي.'; $('voiceNote').hidden = false; } }, 1500);
+  }
+  function showToast(msg) { const t = $('toast'); t.textContent = msg; t.hidden = false; clearTimeout(showToast.h); showToast.h = setTimeout(() => t.hidden = true, 6000); }
+
+  // test / teacher hooks (read-only state + helpers used by automated tests)
+  window.__ali = {
+    state, quiz, stations, get place() { return cur; }, score, goTo, QUIZ,
+    screenOf(ctlObj) { scene.updateWorld(null); desktopCamera(); const p = ctlObj.body.worldPos(); const vp = m4.mul(m4.create(), proj, view); const x = vp[0] * p[0] + vp[4] * p[1] + vp[8] * p[2] + vp[12], y = vp[1] * p[0] + vp[5] * p[1] + vp[9] * p[2] + vp[13], w = vp[3] * p[0] + vp[7] * p[1] + vp[11] * p[2] + vp[15]; const r = canvas.getBoundingClientRect(); return [r.left + (x / w + 1) / 2 * r.width, r.top + (1 - y / w) / 2 * r.height]; },
+    buttons: { startBtn, bPrev, bPlay, bNext, bMap, qStart, qNext, bRetry, bReview, practiceGo, bBefore, bAfter, hubBtns },
+    get quizCards() { return quizCards; }, get practiceCards() { return practiceCards; },
+    thumbPixel(key) { const t = thumbs[key], gl = R3.gl; gl.bindFramebuffer(gl.FRAMEBUFFER, t.rt.fbo); const px = new Uint8Array(4 * 16); gl.readPixels(380, 280, 4, 4, gl.RGBA, gl.UNSIGNED_BYTE, px); gl.bindFramebuffer(gl.FRAMEBUFFER, null); return Array.from(px.slice(0, 8)); },
+    rig, look, drawCalls() { R3.collect(scene); return R3.list.length + R3.tlist.length; }
+  };
+  boot();
+})();
+
+</script>
+</div>
+
+
+</body></html>

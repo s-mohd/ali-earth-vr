@@ -1,0 +1,1070 @@
+{
+ "eye": 1.2,
+ "desktop": {
+  "welcome": {
+   "info": {
+    "calls": 604,
+    "tris": 480070,
+    "geos": 421,
+    "texs": 22,
+    "programs": 31
+   },
+   "stats": {
+    "meshes": 670,
+    "visMeshes": 507,
+    "std": 467,
+    "basic": 38,
+    "other": 2,
+    "transp": 22,
+    "shadowCasters": 391,
+    "trisVisibleApprox": 348580,
+    "materials": 244,
+    "canvasTextures": 55,
+    "canvasTexMB": 91.7,
+    "maxCanvasDim": 2200
+   }
+  },
+  "station:0": {
+   "info": {
+    "calls": 255,
+    "tris": 354284,
+    "geos": 431,
+    "texs": 24,
+    "programs": 31
+   },
+   "stats": {
+    "meshes": 670,
+    "visMeshes": 511,
+    "std": 469,
+    "basic": 40,
+    "other": 2,
+    "transp": 24,
+    "shadowCasters": 392,
+    "trisVisibleApprox": 349760,
+    "materials": 244,
+    "canvasTextures": 56,
+    "canvasTexMB": 93.6,
+    "maxCanvasDim": 2200
+   }
+  },
+  "station:1": {
+   "info": {
+    "calls": 159,
+    "tris": 334548,
+    "geos": 436,
+    "texs": 25,
+    "programs": 31
+   },
+   "stats": {
+    "meshes": 670,
+    "visMeshes": 510,
+    "std": 468,
+    "basic": 40,
+    "other": 2,
+    "transp": 24,
+    "shadowCasters": 392,
+    "trisVisibleApprox": 349982,
+    "materials": 244,
+    "canvasTextures": 56,
+    "canvasTexMB": 93.7,
+    "maxCanvasDim": 2200
+   }
+  },
+  "station:2": {
+   "info": {
+    "calls": 161,
+    "tris": 353092,
+    "geos": 439,
+    "texs": 26,
+    "programs": 31
+   },
+   "stats": {
+    "meshes": 670,
+    "visMeshes": 510,
+    "std": 468,
+    "basic": 40,
+    "other": 2,
+    "transp": 24,
+    "shadowCasters": 392,
+    "trisVisibleApprox": 349982,
+    "materials": 244,
+    "canvasTextures": 56,
+    "canvasTexMB": 93.5,
+    "maxCanvasDim": 2200
+   }
+  },
+  "station:3": {
+   "info": {
+    "calls": 177,
+    "tris": 378468,
+    "geos": 442,
+    "texs": 27,
+    "programs": 31
+   },
+   "stats": {
+    "meshes": 670,
+    "visMeshes": 510,
+    "std": 468,
+    "basic": 40,
+    "other": 2,
+    "transp": 24,
+    "shadowCasters": 392,
+    "trisVisibleApprox": 349982,
+    "materials": 244,
+    "canvasTextures": 56,
+    "canvasTexMB": 93.4,
+    "maxCanvasDim": 2200
+   }
+  },
+  "station:4": {
+   "info": {
+    "calls": 318,
+    "tris": 381498,
+    "geos": 446,
+    "texs": 28,
+    "programs": 31
+   },
+   "stats": {
+    "meshes": 670,
+    "visMeshes": 510,
+    "std": 468,
+    "basic": 40,
+    "other": 2,
+    "transp": 24,
+    "shadowCasters": 392,
+    "trisVisibleApprox": 349982,
+    "materials": 244,
+    "canvasTextures": 56,
+    "canvasTexMB": 93.5,
+    "maxCanvasDim": 2200
+   }
+  },
+  "challengeGate": {
+   "info": {
+    "calls": 333,
+    "tris": 384504,
+    "geos": 452,
+    "texs": 29,
+    "programs": 31
+   },
+   "stats": {
+    "meshes": 670,
+    "visMeshes": 511,
+    "std": 469,
+    "basic": 40,
+    "other": 2,
+    "transp": 24,
+    "shadowCasters": 394,
+    "trisVisibleApprox": 349760,
+    "materials": 244,
+    "canvasTextures": 56,
+    "canvasTexMB": 94.7,
+    "maxCanvasDim": 2200
+   }
+  },
+  "challenge:0": {
+   "info": {
+    "calls": 332,
+    "tris": 384790,
+    "geos": 452,
+    "texs": 29,
+    "programs": 31
+   },
+   "stats": {
+    "meshes": 670,
+    "visMeshes": 510,
+    "std": 468,
+    "basic": 40,
+    "other": 2,
+    "transp": 24,
+    "shadowCasters": 394,
+    "trisVisibleApprox": 350046,
+    "materials": 244,
+    "canvasTextures": 56,
+    "canvasTexMB": 94.7,
+    "maxCanvasDim": 2200
+   }
+  }
+ },
+ "xr": {
+  "welcome": {
+   "info": {
+    "calls": 1070,
+    "tris": 816598,
+    "geos": 462,
+    "texs": 30,
+    "programs": 31
+   },
+   "player": [
+    0.6,
+    -2.8,
+    67.48
+   ],
+   "head": [
+    0.6,
+    -1.6,
+    67.51
+   ],
+   "targets": [
+    {
+     "id": "gate-start",
+     "dist": 8.98,
+     "centerY": 1.2,
+     "headY": -1.6,
+     "elevDeg": 18.2,
+     "hDeg": 5.2,
+     "wDeg": 20.7,
+     "h_m": 0.81,
+     "w_m": 3.27
+    }
+   ],
+   "text": [
+    {
+     "name": "btn:gate-start",
+     "canvas": "885x221",
+     "w_m": 3.27,
+     "h_m": 0.81,
+     "dist": 8.85,
+     "ppm": 270,
+     "texelsPerDeg": 41.8
+    },
+    {
+     "name": "",
+     "canvas": "1480x470",
+     "w_m": 7.4,
+     "h_m": 2.35,
+     "dist": 17.39,
+     "ppm": 200,
+     "texelsPerDeg": 60.7
+    }
+   ],
+   "bubble": null,
+   "ali": {
+    "aliToHeadDot": -0.91,
+    "aliDist": 11.1
+   }
+  },
+  "station:0": {
+   "info": {
+    "calls": 416,
+    "tris": 577570,
+    "geos": 465,
+    "texs": 30,
+    "programs": 31
+   },
+   "player": [
+    -24.07,
+    0,
+    24.92
+   ],
+   "head": [
+    -24.05,
+    1.2,
+    24.89
+   ],
+   "targets": [
+    {
+     "id": "st-earthquake-watch",
+     "dist": 4.46,
+     "centerY": 0.8,
+     "headY": 1.2,
+     "elevDeg": -5.1,
+     "hDeg": 8.7,
+     "wDeg": 31.6,
+     "h_m": 0.67,
+     "w_m": 2.52
+    }
+   ],
+   "text": [
+    {
+     "name": "btn:st-earthquake-watch",
+     "canvas": "753x176",
+     "w_m": 2.69,
+     "h_m": 0.63,
+     "dist": 4.34,
+     "ppm": 280,
+     "texelsPerDeg": 21.2
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 6.66,
+     "ppm": 164,
+     "texelsPerDeg": 19
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 6.67,
+     "ppm": 164,
+     "texelsPerDeg": 19.1
+    },
+    {
+     "name": "speechBubble",
+     "canvas": "1150x322",
+     "w_m": 6.05,
+     "h_m": 1.69,
+     "dist": 7.88,
+     "ppm": 190,
+     "texelsPerDeg": 26.1
+    },
+    {
+     "name": "",
+     "canvas": "1320x780",
+     "w_m": 6.6,
+     "h_m": 3.9,
+     "dist": 12.47,
+     "ppm": 200,
+     "texelsPerDeg": 43.5
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 21.6,
+     "ppm": 164,
+     "texelsPerDeg": 61.7
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 21.63,
+     "ppm": 164,
+     "texelsPerDeg": 61.8
+    }
+   ],
+   "bubble": {
+    "bubblePos": [
+     -28.78,
+     2.42,
+     27.56
+    ],
+    "headPos": [
+     -24.05,
+     1.2,
+     24.89
+    ],
+    "facingDot": -0.48,
+    "distToHead": 5.57
+   },
+   "ali": {
+    "aliToHeadDot": 0.98,
+    "aliDist": 5.83
+   }
+  },
+  "station:1": {
+   "info": {
+    "calls": 284,
+    "tris": 553732,
+    "geos": 465,
+    "texs": 30,
+    "programs": 31
+   },
+   "player": [
+    -34.22,
+    0,
+    -1.01
+   ],
+   "head": [
+    -34.18,
+    1.2,
+    -1.01
+   ],
+   "targets": [
+    {
+     "id": "st-volcano-watch",
+     "dist": 10.42,
+     "centerY": 1.1,
+     "headY": 1.2,
+     "elevDeg": -0.5,
+     "hDeg": 3.9,
+     "wDeg": 15.6,
+     "h_m": 0.71,
+     "w_m": 2.86
+    }
+   ],
+   "text": [
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 6.38,
+     "ppm": 164,
+     "texelsPerDeg": 18.2
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 6.38,
+     "ppm": 164,
+     "texelsPerDeg": 18.3
+    },
+    {
+     "name": "speechBubble",
+     "canvas": "1177x322",
+     "w_m": 6.19,
+     "h_m": 1.69,
+     "dist": 10.02,
+     "ppm": 190,
+     "texelsPerDeg": 33.2
+    },
+    {
+     "name": "btn:st-volcano-watch",
+     "canvas": "781x176",
+     "w_m": 2.94,
+     "h_m": 0.66,
+     "dist": 10.3,
+     "ppm": 266,
+     "texelsPerDeg": 47.8
+    },
+    {
+     "name": "",
+     "canvas": "1320x780",
+     "w_m": 6.6,
+     "h_m": 3.9,
+     "dist": 14.23,
+     "ppm": 200,
+     "texelsPerDeg": 49.7
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 21.63,
+     "ppm": 164,
+     "texelsPerDeg": 61.8
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 21.66,
+     "ppm": 164,
+     "texelsPerDeg": 61.9
+    }
+   ],
+   "bubble": {
+    "bubblePos": [
+     -41.2,
+     2.42,
+     -3.5
+    ],
+    "headPos": [
+     -34.18,
+     1.2,
+     -1.01
+    ],
+    "facingDot": 0.33,
+    "distToHead": 7.55
+   },
+   "ali": {
+    "aliToHeadDot": 0.97,
+    "aliDist": 7.76
+   }
+  },
+  "station:2": {
+   "info": {
+    "calls": 286,
+    "tris": 569754,
+    "geos": 465,
+    "texs": 30,
+    "programs": 31
+   },
+   "player": [
+    -22.26,
+    0,
+    -26.54
+   ],
+   "head": [
+    -22.24,
+    1.2,
+    -26.52
+   ],
+   "targets": [
+    {
+     "id": "st-weathering-watch",
+     "dist": 4.46,
+     "centerY": 0.8,
+     "headY": 1.2,
+     "elevDeg": -5.1,
+     "hDeg": 8.9,
+     "wDeg": 30.3,
+     "h_m": 0.69,
+     "w_m": 2.41
+    }
+   ],
+   "text": [
+    {
+     "name": "btn:st-weathering-watch",
+     "canvas": "735x176",
+     "w_m": 2.7,
+     "h_m": 0.65,
+     "dist": 4.33,
+     "ppm": 272,
+     "texelsPerDeg": 20.6
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 6.66,
+     "ppm": 164,
+     "texelsPerDeg": 19
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 6.67,
+     "ppm": 164,
+     "texelsPerDeg": 19.1
+    },
+    {
+     "name": "speechBubble",
+     "canvas": "1044x322",
+     "w_m": 5.49,
+     "h_m": 1.69,
+     "dist": 6.94,
+     "ppm": 190,
+     "texelsPerDeg": 23
+    },
+    {
+     "name": "",
+     "canvas": "1320x780",
+     "w_m": 6.6,
+     "h_m": 3.9,
+     "dist": 12.47,
+     "ppm": 200,
+     "texelsPerDeg": 43.5
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 21.6,
+     "ppm": 164,
+     "texelsPerDeg": 61.7
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 21.63,
+     "ppm": 164,
+     "texelsPerDeg": 61.8
+    }
+   ],
+   "bubble": {
+    "bubblePos": [
+     -24.88,
+     2.42,
+     -31.14
+    ],
+    "headPos": [
+     -22.24,
+     1.2,
+     -26.52
+    ],
+    "facingDot": 0.85,
+    "distToHead": 5.45
+   },
+   "ali": {
+    "aliToHeadDot": 0.98,
+    "aliDist": 5.83
+   }
+  },
+  "station:3": {
+   "info": {
+    "calls": 292,
+    "tris": 617296,
+    "geos": 465,
+    "texs": 30,
+    "programs": 31
+   },
+   "player": [
+    4.03,
+    0,
+    -34.21
+   ],
+   "head": [
+    4.03,
+    1.2,
+    -34.17
+   ],
+   "targets": [
+    {
+     "id": "st-erosion-watch",
+     "dist": 4.45,
+     "centerY": 0.8,
+     "headY": 1.2,
+     "elevDeg": -5.2,
+     "hDeg": 8.7,
+     "wDeg": 35.6,
+     "h_m": 0.68,
+     "w_m": 2.86
+    }
+   ],
+   "text": [
+    {
+     "name": "btn:st-erosion-watch",
+     "canvas": "792x176",
+     "w_m": 2.86,
+     "h_m": 0.63,
+     "dist": 4.33,
+     "ppm": 277,
+     "texelsPerDeg": 21
+    },
+    {
+     "name": "speechBubble",
+     "canvas": "1027x322",
+     "w_m": 5.41,
+     "h_m": 1.69,
+     "dist": 5.31,
+     "ppm": 190,
+     "texelsPerDeg": 17.6
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 5.87,
+     "ppm": 164,
+     "texelsPerDeg": 16.8
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 5.88,
+     "ppm": 164,
+     "texelsPerDeg": 16.8
+    },
+    {
+     "name": "",
+     "canvas": "1320x1000",
+     "w_m": 6.6,
+     "h_m": 5,
+     "dist": 13.11,
+     "ppm": 200,
+     "texelsPerDeg": 45.8
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 22.24,
+     "ppm": 164,
+     "texelsPerDeg": 63.6
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 22.28,
+     "ppm": 164,
+     "texelsPerDeg": 63.7
+    }
+   ],
+   "bubble": {
+    "bubblePos": [
+     6.37,
+     2.41,
+     -39.06
+    ],
+    "headPos": [
+     4.03,
+     1.2,
+     -34.17
+    ],
+    "facingDot": 0.88,
+    "distToHead": 5.55
+   },
+   "ali": {
+    "aliToHeadDot": 0.95,
+    "aliDist": 6.24
+   }
+  },
+  "station:4": {
+   "info": {
+    "calls": 489,
+    "tris": 613898,
+    "geos": 465,
+    "texs": 30,
+    "programs": 31
+   },
+   "player": [
+    27.87,
+    0,
+    -20.28
+   ],
+   "head": [
+    27.85,
+    1.2,
+    -20.26
+   ],
+   "targets": [
+    {
+     "id": "st-human-watch",
+     "dist": 4.38,
+     "centerY": 0.8,
+     "headY": 1.2,
+     "elevDeg": -5.2,
+     "hDeg": 9.1,
+     "wDeg": 43.4,
+     "h_m": 0.7,
+     "w_m": 3.49
+    }
+   ],
+   "text": [
+    {
+     "name": "speechBubble",
+     "canvas": "1051x322",
+     "w_m": 5.53,
+     "h_m": 1.69,
+     "dist": 3.91,
+     "ppm": 190,
+     "texelsPerDeg": 13
+    },
+    {
+     "name": "btn:st-human-watch",
+     "canvas": "1098x176",
+     "w_m": 4.08,
+     "h_m": 0.65,
+     "dist": 4.25,
+     "ppm": 269,
+     "texelsPerDeg": 20
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 5.43,
+     "ppm": 164,
+     "texelsPerDeg": 15.5
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 5.45,
+     "ppm": 164,
+     "texelsPerDeg": 15.6
+    },
+    {
+     "name": "",
+     "canvas": "1320x780",
+     "w_m": 6.6,
+     "h_m": 3.9,
+     "dist": 13.2,
+     "ppm": 200,
+     "texelsPerDeg": 46.1
+    },
+    {
+     "name": "",
+     "canvas": "256x64",
+     "w_m": 2.2,
+     "h_m": 0.32,
+     "dist": 13.95,
+     "ppm": 116,
+     "texelsPerDeg": 28.3
+    },
+    {
+     "name": "",
+     "canvas": "256x64",
+     "w_m": 2.2,
+     "h_m": 0.32,
+     "dist": 16.62,
+     "ppm": 116,
+     "texelsPerDeg": 33.8
+    },
+    {
+     "name": "",
+     "canvas": "256x64",
+     "w_m": 2.2,
+     "h_m": 0.32,
+     "dist": 16.74,
+     "ppm": 116,
+     "texelsPerDeg": 34
+    },
+    {
+     "name": "",
+     "canvas": "256x64",
+     "w_m": 2.2,
+     "h_m": 0.32,
+     "dist": 17.38,
+     "ppm": 116,
+     "texelsPerDeg": 35.3
+    },
+    {
+     "name": "",
+     "canvas": "256x64",
+     "w_m": 2.2,
+     "h_m": 0.32,
+     "dist": 17.77,
+     "ppm": 116,
+     "texelsPerDeg": 36.1
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 22.68,
+     "ppm": 164,
+     "texelsPerDeg": 64.8
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 22.72,
+     "ppm": 164,
+     "texelsPerDeg": 64.9
+    }
+   ],
+   "bubble": {
+    "bubblePos": [
+     33.18,
+     2.42,
+     -21.13
+    ],
+    "headPos": [
+     27.85,
+     1.2,
+     -20.26
+    ],
+    "facingDot": 0.16,
+    "distToHead": 5.54
+   },
+   "ali": {
+    "aliToHeadDot": 0.93,
+    "aliDist": 6.39
+   }
+  },
+  "challengeGate": {
+   "info": {
+    "calls": 547,
+    "tris": 626958,
+    "geos": 465,
+    "texs": 30,
+    "programs": 31
+   },
+   "player": [
+    24.35,
+    0.24,
+    5.58
+   ],
+   "head": [
+    24.32,
+    1.44,
+    5.58
+   ],
+   "targets": [
+    {
+     "id": "challenge-start",
+     "dist": 6.88,
+     "centerY": 1,
+     "headY": 1.44,
+     "elevDeg": -3.7,
+     "hDeg": 6.9,
+     "wDeg": 24.1,
+     "h_m": 0.83,
+     "w_m": 2.93
+    }
+   ],
+   "text": [
+    {
+     "name": "speechBubble",
+     "canvas": "1164x496",
+     "w_m": 6.13,
+     "h_m": 2.61,
+     "dist": 5.83,
+     "ppm": 190,
+     "texelsPerDeg": 19.3
+    },
+    {
+     "name": "btn:challenge-start",
+     "canvas": "806x221",
+     "w_m": 2.9,
+     "h_m": 0.79,
+     "dist": 6.75,
+     "ppm": 278,
+     "texelsPerDeg": 32.7
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 9.76,
+     "ppm": 164,
+     "texelsPerDeg": 27.9
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 9.88,
+     "ppm": 164,
+     "texelsPerDeg": 28.2
+    },
+    {
+     "name": "",
+     "canvas": "1320x290",
+     "w_m": 6.6,
+     "h_m": 1.45,
+     "dist": 11.28,
+     "ppm": 200,
+     "texelsPerDeg": 39.4
+    }
+   ],
+   "bubble": {
+    "bubblePos": [
+     30.34,
+     2.42,
+     9.57
+    ],
+    "headPos": [
+     24.32,
+     1.44,
+     5.58
+    ],
+    "facingDot": -0.55,
+    "distToHead": 7.28
+   },
+   "ali": {
+    "aliToHeadDot": 0.97,
+    "aliDist": 8.21
+   }
+  },
+  "challenge:0": {
+   "info": {
+    "calls": 545,
+    "tris": 627530,
+    "geos": 465,
+    "texs": 30,
+    "programs": 31
+   },
+   "player": [
+    24.35,
+    0.24,
+    5.58
+   ],
+   "head": [
+    24.32,
+    1.44,
+    5.58
+   ],
+   "targets": [
+    {
+     "id": "challenge-start",
+     "dist": 6.88,
+     "centerY": 1,
+     "headY": 1.44,
+     "elevDeg": -3.7,
+     "hDeg": 7.2,
+     "wDeg": 25,
+     "h_m": 0.86,
+     "w_m": 3.05
+    }
+   ],
+   "text": [
+    {
+     "name": "speechBubble",
+     "canvas": "1164x496",
+     "w_m": 6.13,
+     "h_m": 2.61,
+     "dist": 5.83,
+     "ppm": 190,
+     "texelsPerDeg": 19.3
+    },
+    {
+     "name": "btn:challenge-start",
+     "canvas": "806x221",
+     "w_m": 3.02,
+     "h_m": 0.82,
+     "dist": 6.75,
+     "ppm": 267,
+     "texelsPerDeg": 31.4
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 9.76,
+     "ppm": 164,
+     "texelsPerDeg": 27.9
+    },
+    {
+     "name": "",
+     "canvas": "416x144",
+     "w_m": 2.54,
+     "h_m": 0.84,
+     "dist": 9.88,
+     "ppm": 164,
+     "texelsPerDeg": 28.2
+    },
+    {
+     "name": "",
+     "canvas": "1320x290",
+     "w_m": 6.6,
+     "h_m": 1.45,
+     "dist": 11.28,
+     "ppm": 200,
+     "texelsPerDeg": 39.4
+    }
+   ],
+   "bubble": {
+    "bubblePos": [
+     30.34,
+     2.42,
+     9.57
+    ],
+    "headPos": [
+     24.32,
+     1.44,
+     5.58
+    ],
+    "facingDot": -0.55,
+    "distToHead": 7.28
+   },
+   "ali": {
+    "aliToHeadDot": 0.97,
+    "aliDist": 8.21
+   }
+  }
+ },
+ "aliHeight": 2.49,
+ "xrEnter": {
+  "presenting": true,
+  "vrActive": true,
+  "refSpace": true,
+  "foveation": 1,
+  "hudHidden": "hidden"
+ }
+}

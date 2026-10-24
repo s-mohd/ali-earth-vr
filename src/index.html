@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#3fb3a6">
+<meta name="description" content="لعبة علوم للصف الثالث: درس «الأرض تتغيّر» مع المستكشف علي، على الشاشة أو بنظارة الواقع الافتراضي.">
+<title>مغامرة المستكشف علي</title>
+<style>/*@FONTS*/
+/*@CSS*/</style>
+</head>
+<body>
+<div id="app"></div>
+<section id="loading" class="loading" aria-busy="true" aria-labelledby="loading-title">
+  <div class="loading__scene" aria-hidden="true"><i class="loading__sun"></i><i class="loading__sea"></i><i class="loading__sand"></i></div>
+  <div class="loading__card">
+    <svg class="globe" viewBox="0 0 120 120" aria-hidden="true">
+      <defs><clipPath id="globe-clip"><circle cx="60" cy="60" r="48"/></clipPath></defs>
+      <circle cx="60" cy="60" r="54" fill="#fff6e6"/>
+      <circle cx="60" cy="60" r="48" fill="#5fc0e3"/>
+      <g clip-path="url(#globe-clip)"><g class="globe__land" fill="#a8d98a">
+        <path d="M14 34c10-8 26-6 30 4s-6 14-2 22-8 16-18 10S6 42 14 34z"/><path d="M58 22c8-4 18 0 16 8s-12 6-14 2-8-6-2-10z"/>
+        <path d="M62 56c10-6 24-2 26 8s-6 24-16 22-18-22-10-30z"/><path d="M98 40c6-2 12 4 8 10s-14 0-8-10z"/>
+        <path d="M134 34c10-8 26-6 30 4s-6 14-2 22-8 16-18 10S126 42 134 34z"/><path d="M178 22c8-4 18 0 16 8s-12 6-14 2-8-6-2-10z"/>
+        <path d="M182 56c10-6 24-2 26 8s-6 24-16 22-18-22-10-30z"/><path d="M218 40c6-2 12 4 8 10s-14 0-8-10z"/>
+      </g></g>
+      <circle cx="60" cy="60" r="48" fill="none" stroke="#2a8b80" stroke-width="3"/>
+      <path d="M38 34a30 30 0 0 1 20-10" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+    </svg>
+    <h1 id="loading-title" class="loading__title">مغامرة المستكشف علي</h1>
+    <p class="loading__sub">في عالم الأرض المتغيّرة</p>
+    <div class="progress" role="progressbar" aria-label="التحميل" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+    <p class="loading__meta"><span class="loading__label">نجهّز الجزيرة…</span><span class="loading__pct">٠٪</span></p>
+  </div>
+</section>
+<div id="fatal" class="fatal" role="alert" hidden>
+  <div class="fatal__card">
+    <h2>عذرًا، لم تبدأ اللعبة</h2>
+    <p>أعِد تحميل الصفحة. إذا تكرّر ذلك فجرّب متصفحًا أحدث.</p>
+    <button type="button" class="btn btn--primary" onclick="location.reload()">أعِد التحميل</button>
+    <details><summary>تفاصيل للمعلّم</summary><pre></pre></details>
+  </div>
+</div>
+<noscript><p class="noscript">هذه اللعبة تحتاج إلى تفعيل JavaScript في المتصفح.</p></noscript>
+<script>/*@JS*/</script>
+</body>
+</html>

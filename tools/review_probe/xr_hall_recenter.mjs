@@ -1,0 +1,32 @@
+// Probe: headset menu "recenter" while the hall waits for "next question" -> the only buttons left are "next" and the menu,
+// and "next" no longer does anything (no map button either): a soft-lock inside the headset.
+import { launch, DONE_ALL } from './lib.mjs';
+const out = {};
+const T = await launch({ xr: true, store: DONE_ALL() });
+await T.page.evaluate(() => window.__ali.start('vr'));
+await T.waitFor((s) => s.presenting, 'presenting');
+await T.waitFor((s) => s.phase === 'choose', 'hub choose');
+await T.waitClickable('hub:go'); await T.click('hub:go');
+await T.waitFor((s) => s.place === 'hall' && s.phase === 'intro', 'hall');
+await T.waitClickable('hall:start');
+await T.click('hall:start');
+const s = await T.waitFor((x) => x.q === 0 && x.cards === 3, 'q0');
+await T.waitClickable('hall:card' + s.correctCard);
+await T.click('hall:card' + s.correctCard);
+await T.waitClickable('hall:nextq');
+out.beforeRecenter = await T.list();
+const menuId = out.beforeRecenter.find((id) => id.startsWith('menu:open'));
+await T.click(menuId);
+await T.waitClickable('menu:recenter');
+await T.click('menu:recenter');
+await T.waitFor((x) => !x.busy, 'idle');
+await T.page.waitForTimeout(800);
+out.afterRecenter = await T.list();
+await T.waitClickable('hall:nextq');
+out.nextClick = await T.click('hall:nextq');
+await T.page.waitForTimeout(3000);
+out.stateAfterNext = await T.state();
+out.listAfterNext = await T.list();
+out.logs = T.logs;
+await T.browser.close();
+console.log(JSON.stringify(out, null, 1));

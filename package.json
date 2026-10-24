@@ -1,0 +1,23 @@
+{
+  "name": "ali-earth-vr",
+  "version": "1.0.0",
+  "private": true,
+  "description": "مغامرة المستكشف علي في عالم الأرض المتغيّرة — Grade 3 science (Bahrain) WebXR game for Meta Quest 2 and screens",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "build:dev": "node build.mjs --dev",
+    "serve": "node tools/serve.mjs",
+    "quest": "node tools/serve.mjs --quest",
+    "test": "node tools/e2e.mjs dist/index.html --speed 8 --retry",
+    "test:xr": "node tools/e2e.mjs dist/index.html --xr --speed 8"
+  },
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.2",
+    "iwer": "2.4.0",
+    "playwright": "^1.60.0"
+  }
+}

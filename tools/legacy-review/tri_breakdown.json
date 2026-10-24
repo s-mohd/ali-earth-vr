@@ -1,0 +1,480 @@
+{
+ "v1": {
+  "top": [
+   {
+    "path": "world/terrain",
+    "tris": 56448,
+    "inst": 0,
+    "shadow": false
+   },
+   {
+    "path": "world/zone:erosion/station:erosion",
+    "tris": 19360,
+    "inst": 0,
+    "shadow": true
+   },
+   {
+    "path": "world/Mesh",
+    "tris": 15920,
+    "inst": 398,
+    "shadow": false
+   },
+   {
+    "path": "world/Mesh",
+    "tris": 15120,
+    "inst": 20,
+    "shadow": true
+   },
+   {
+    "path": "world/Mesh",
+    "tris": 15120,
+    "inst": 20,
+    "shadow": true
+   },
+   {
+    "path": "world/Mesh",
+    "tris": 15120,
+    "inst": 20,
+    "shadow": true
+   },
+   {
+    "path": "world/Mesh",
+    "tris": 13568,
+    "inst": 16,
+    "shadow": true
+   },
+   {
+    "path": "world/Mesh",
+    "tris": 12720,
+    "inst": 15,
+    "shadow": true
+   },
+   {
+    "path": "world/Mesh",
+    "tris": 10656,
+    "inst": 296,
+    "shadow": false
+   },
+   {
+    "path": "world/Mesh",
+    "tris": 9828,
+    "inst": 13,
+    "shadow": true
+   },
+   {
+    "path": "world/zone:human/station:human",
+    "tris": 9600,
+    "inst": 0,
+    "shadow": false
+   },
+   {
+    "path": "world/Mesh",
+    "tris": 9600,
+    "inst": 40,
+    "shadow": true
+   },
+   {
+    "path": "world/Mesh",
+    "tris": 9600,
+    "inst": 40,
+    "shadow": true
+   },
+   {
+    "path": "world/Mesh",
+    "tris": 5200,
+    "inst": 260,
+    "shadow": false
+   },
+   {
+    "path": "world/zone:erosion/station:erosion",
+    "tris": 2720,
+    "inst": 34,
+    "shadow": true
+   }
+  ],
+  "groups": [
+   [
+    "world/Mesh",
+    {
+     "tris": 137284,
+     "meshes": 14
+    }
+   ],
+   [
+    "world/terrain",
+    {
+     "tris": 56448,
+     "meshes": 1
+    }
+   ],
+   [
+    "world/zone:challenge",
+    {
+     "tris": 33638,
+     "meshes": 117
+    }
+   ],
+   [
+    "world/zone:erosion",
+    {
+     "tris": 33362,
+     "meshes": 39
+    }
+   ],
+   [
+    "world/zone:human",
+    {
+     "tris": 28360,
+     "meshes": 110
+    }
+   ],
+   [
+    "Ali/Group",
+    {
+     "tris": 20410,
+     "meshes": 64
+    }
+   ],
+   [
+    "world/zone:results",
+    {
+     "tris": 16788,
+     "meshes": 62
+    }
+   ],
+   [
+    "world/zone:weathering",
+    {
+     "tris": 15672,
+     "meshes": 49
+    }
+   ],
+   [
+    "world/zone:earthquake",
+    {
+     "tris": 14214,
+     "meshes": 72
+    }
+   ],
+   [
+    "world/zone:gate",
+    {
+     "tris": 12634,
+     "meshes": 29
+    }
+   ],
+   [
+    "world/zone:volcano",
+    {
+     "tris": 8382,
+     "meshes": 28
+    }
+   ],
+   [
+    "world/clouds",
+    {
+     "tris": 7840,
+     "meshes": 16
+    }
+   ],
+   [
+    "world/mountains",
+    {
+     "tris": 3600,
+     "meshes": 20
+    }
+   ],
+   [
+    "world/path-ring",
+    {
+     "tris": 1920,
+     "meshes": 1
+    }
+   ],
+   [
+    "sky",
+    {
+     "tris": 960,
+     "meshes": 1
+    }
+   ]
+  ],
+  "instancedMeshes": 20,
+  "bigCanvases": [
+   {
+    "path": "world/zone:challenge/challenge-hall",
+    "w": 2200,
+    "h": 670
+   },
+   {
+    "path": "world/zone:erosion/station:erosion",
+    "w": 1320,
+    "h": 1000
+   },
+   {
+    "path": "world/zone:results/results-hall",
+    "w": 1320,
+    "h": 920
+   },
+   {
+    "path": "world/zone:earthquake/station:earthquake",
+    "w": 1320,
+    "h": 780
+   },
+   {
+    "path": "world/zone:volcano/station:volcano",
+    "w": 1320,
+    "h": 780
+   },
+   {
+    "path": "world/zone:weathering/station:weathering",
+    "w": 1320,
+    "h": 780
+   },
+   {
+    "path": "world/zone:human/station:human",
+    "w": 1320,
+    "h": 780
+   },
+   {
+    "path": "world/zone:results/results-hall",
+    "w": 1000,
+    "h": 708
+   },
+   {
+    "path": "world/zone:gate/adventure-gate",
+    "w": 1480,
+    "h": 470
+   },
+   {
+    "path": "world/zone:challenge/challenge-hall",
+    "w": 665,
+    "h": 760
+   },
+   {
+    "path": "world/zone:challenge/challenge-hall",
+    "w": 665,
+    "h": 760
+   },
+   {
+    "path": "world/zone:challenge/challenge-hall",
+    "w": 665,
+    "h": 760
+   }
+  ],
+  "images": 5,
+  "pixelRatio": 1,
+  "shadowMap": {
+   "enabled": true,
+   "type": 1
+  },
+  "toneMapping": 4,
+  "cameraNearFar": [
+   0.1,
+   1200
+  ]
+ },
+ "v2": {
+  "top": [
+   {
+    "path": "env/node",
+    "tris": 447884,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "frame1/D0/quakeContent",
+    "tris": 3620,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "frame1/D0/quakeContent",
+    "tris": 3620,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "frame1/D0/quakeContent",
+    "tris": 3620,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "frame3/D2/node",
+    "tris": 3620,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "frame3/D2/node",
+    "tris": 3620,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "frame4/D3/node",
+    "tris": 3620,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "frame4/D3/node",
+    "tris": 3620,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "frame5/D4/node",
+    "tris": 3620,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "frame5/D4/node",
+    "tris": 3620,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "env/clouds/node",
+    "tris": 3384,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "env/clouds/node",
+    "tris": 3384,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "env/clouds/node",
+    "tris": 3384,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "env/clouds/node",
+    "tris": 3384,
+    "vis": true,
+    "transparent": false
+   },
+   {
+    "path": "env/clouds/node",
+    "tris": 3384,
+    "vis": true,
+    "transparent": false
+   }
+  ],
+  "groups": [
+   [
+    "env/node",
+    {
+     "tris": 449292,
+     "meshes": 5
+    }
+   ],
+   [
+    "env/clouds",
+    {
+     "tris": 47376,
+     "meshes": 14
+    }
+   ],
+   [
+    "frame5/D4",
+    {
+     "tris": 15910,
+     "meshes": 61
+    }
+   ],
+   [
+    "frame1/D0",
+    {
+     "tris": 15836,
+     "meshes": 74
+    }
+   ],
+   [
+    "ali/body",
+    {
+     "tris": 13602,
+     "meshes": 51
+    }
+   ],
+   [
+    "frame4/D3",
+    {
+     "tris": 11656,
+     "meshes": 54
+    }
+   ],
+   [
+    "frame6/node",
+    {
+     "tris": 8768,
+     "meshes": 36
+    }
+   ],
+   [
+    "frame3/D2",
+    {
+     "tris": 8456,
+     "meshes": 18
+    }
+   ],
+   [
+    "frame0/panel",
+    {
+     "tris": 6434,
+     "meshes": 14
+    }
+   ],
+   [
+    "frame2/D1",
+    {
+     "tris": 1944,
+     "meshes": 22
+    }
+   ],
+   [
+    "frame0/node",
+    {
+     "tris": 1582,
+     "meshes": 4
+    }
+   ],
+   [
+    "frame6/quiz",
+    {
+     "tris": 1180,
+     "meshes": 4
+    }
+   ],
+   [
+    "frame1/node",
+    {
+     "tris": 640,
+     "meshes": 3
+    }
+   ],
+   [
+    "frame2/node",
+    {
+     "tris": 640,
+     "meshes": 3
+    }
+   ],
+   [
+    "frame3/node",
+    {
+     "tris": 640,
+     "meshes": 3
+    }
+   ]
+  ],
+  "uniqueGeometries": 616,
+  "meshes": 616
+ }
+}

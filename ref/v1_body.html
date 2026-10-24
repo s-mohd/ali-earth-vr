@@ -1,0 +1,41 @@
+<noscript>
+      <div class="noscript">يحتاج هذا الموقع إلى تفعيل JavaScript في المتصفح.</div>
+    </noscript>
+
+    <div id="app">
+      <div id="stage"></div>
+      <div id="hud" class="hidden" aria-live="polite"></div>
+      <div id="modals"></div>
+      <div id="toasts" aria-live="assertive"></div>
+    </div>
+
+    <!-- شاشة التحميل -->
+    <div id="loading" role="status">
+      <div class="loading-card">
+        <div class="loading-globe" aria-hidden="true">
+          <svg viewBox="0 0 120 120">
+            <circle cx="60" cy="60" r="52" fill="#7ccbe4" />
+            <path d="M18 66c10-14 22-6 32-16s16-22 30-13 14 24 18 31c-10 24-60 34-80-2z" fill="#a6dc8e" />
+            <path d="M64 40l9-16 9 16z" fill="#c9b39a" />
+            <path d="M70 30c2-4 4-6 3-10" stroke="#ff9f5a" stroke-width="4" fill="none" stroke-linecap="round" />
+            <circle cx="60" cy="60" r="52" fill="none" stroke="#1f3b63" stroke-width="5" />
+          </svg>
+        </div>
+        <h1>مغامرة المستكشف علي</h1>
+        <p class="loading-sub">لنكتشف كيف تتغير الأرض!</p>
+        <div class="loading-bar"><span id="loading-fill"></span></div>
+        <p id="loading-text">جارٍ تجهيز عالم المغامرة…</p>
+      </div>
+    </div>
+
+    <!-- شاشة الخطأ -->
+    <div id="error-screen" class="hidden" role="alert">
+      <div class="loading-card">
+        <h1>عذرًا!</h1>
+        <p id="error-text">حدث خطأ أثناء تحميل المغامرة.</p>
+        <p id="error-detail" class="error-detail"></p>
+        <button id="error-retry" class="btn btn-primary" type="button">إعادة المحاولة</button>
+      </div>
+    </div>
+
+</body></html>

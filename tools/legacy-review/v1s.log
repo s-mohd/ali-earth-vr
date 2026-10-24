@@ -1,0 +1,11 @@
+{
+ "aliHeight": 2.49,
+ "xrEnter": {
+  "presenting": true,
+  "vrActive": true,
+  "refSpace": true,
+  "foveation": 1,
+  "hudHidden": "hidden"
+ }
+}
+warning: THREE.WebGLRenderer: KHR_parallel_shader_compile extension not supported.
